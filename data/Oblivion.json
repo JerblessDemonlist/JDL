@@ -3,15 +3,9 @@
     "name": "Oblivion",
     "author": "Dice88",
     "creators": ["Benji", "More.."],
-    "verifier": "Dice88",
-    "JerblessVerifier": "Ant_Gam3r",
+    "verifier": "Ant_Gam3r",
     "verification": "https://www.youtube.com/watch?v=v-Aru3KG560",
     "percentToQualify": 54,
     "records": [
-        {
-            "user": "Sample_Victor_1",
-            "link": "https://www.youtube.com/watch?v=MgJeijBGKHU",
-            "percent": 100
-        }
     ]
 }
