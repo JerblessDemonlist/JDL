@@ -1,0 +1,17 @@
+{
+    "id": 88203501,
+    "name": "Unknown",
+    "author": "NineDice",
+    "creators": ["Gusearth", "More.."],
+    "verifier": "Diamond",
+    "Jerbless verifier": "BluuTemp",
+    "verification": "https://www.youtube.com/watch?v=cXhy97JzsdY",
+    "percentToQualify": 45,
+    "records": [
+        {
+            "user": "Sample_Victor_1",
+            "link": "https://www.youtube.com/watch?v=MgJeijBGKHU",
+            "percent": 100,
+        }
+    ]
+}
