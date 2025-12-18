@@ -3,15 +3,9 @@
     "name": "IRIS",
     "author": "KazaGD",
     "creators": ["Kaza", "More.."],
-    "verifier": "bnuuy",
-    "JerblessVerifier": "BluuTemp",
+    "verifier": "Bluutemp",
     "verification": "Tobeuploaded",
     "percentToQualify": 54,
     "records": [
-        {
-            "user": "Sample_Victor_1",
-            "link": "https://www.youtube.com/watch?v=MgJeijBGKHU",
-            "percent": 100
-        }
     ]
 }
