@@ -3,15 +3,9 @@
     "name": "Zodiac",
     "author": "BIANOX",
     "creators": ["Bianox", "More.."],
-    "verifier": "Technical",
-    "JerblessVerifier": "Ant_Gam3r",
-    "verification": "https://www.youtube.com/live/NeT8lhf6KaI?si=mfBdfmj5rcrfiNew&t=4993",
+    "verifier": "Ant_Gam3r",
+    "verification": "https://www.youtube.com/watch?v=NeT8lhf6KaI",
     "percentToQualify": 67,
     "records": [
-        {
-            "user": "Sample_Victor_1",
-            "link": "https://www.youtube.com/watch?v=MgJeijBGKHU",
-            "percent": 100
-        }
     ]
 }
