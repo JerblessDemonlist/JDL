@@ -103,7 +103,7 @@ export default {
                         Cheating is not allowed, for a full list of disallowed hacks check here: (currently under maintenance)
                     </p>
                     <p>
-                        Completions that are in private copies are not allowed, you must have beaten the level on the rated (or unrated official copy if it is an unrated level) version. Verifica
+                        Completions that are in private copies are not allowed, you must have beaten the level on the rated (or unrated official copy if it is an unrated level) version. If you do use a private copy you must share it with list staff. Verifications obviously do not have to be beaten on a rated copy.
                     </p>
                     <p>
                         You must have clicks or taps audible throughout the whole recording, handcams do not exempt you from this, but it will add more legitimacy to your completion and may give your completion a higher chance of acceptance.
