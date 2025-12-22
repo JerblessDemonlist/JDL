@@ -1,0 +1,52 @@
+{
+    "id": 10565740,
+    "name": "Bloodbath",
+    "author": "Riot",
+    "creators": ["Riot", "More.."],
+    "verifier": "Ant_Gam3r",
+    "verification": "https://www.youtube.com/watch?v=nhk5EXW57mk",
+    "percentToQualify": 70,
+    "records": [
+        {
+            "user": "Bluutemp",
+            "percent": 100
+        },
+        {
+            "user": "Risp",
+            "percent": 100
+        },
+        {
+            "user": "MathGenius",
+            "percent": 100
+        },
+        {
+            "user": "LuckyNS",
+            "link": "https://www.youtube.com/watch?v=1itIk5BMWNE",
+            "percent": 100
+        },
+        {
+            "user": "Tylr",
+            "link": "https://www.youtube.com/watch?v=bwI2u5KrJM4",
+            "percent": 100
+        },
+        {
+            "user": "Xtinct",
+            "link": "https://www.youtube.com/watch?v=EY3Td1D_DaI",
+            "percent": 100
+        },
+        {
+            "user": "SilverSanctuary",
+            "link": "https://www.youtube.com/watch?v=FFC98VRZ4PI",
+            "percent": 100
+        },
+        {
+            "user": "Vernosis",
+            "percent": 100
+        },
+        {
+            "user": "Zovori",
+            "link": "https://www.youtube.com/watch?v=jeCL-Dc836A",
+            "percent": 87
+        }
+    ]
+}
