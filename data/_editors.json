@@ -21,6 +21,11 @@
     },
     {
         "role": "dev",
+        "name": "hivehead",
+        "link": "https://www.youtube.com/@hiveheadgd"
+    },
+    {
+        "role": "dev",
         "name": "Holo"
     }
 ]
