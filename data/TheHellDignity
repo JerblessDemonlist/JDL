@@ -1,0 +1,20 @@
+{
+    "id": 35579890,
+    "name": "The Hell Dignity",
+    "author": "Stormfly",
+    "creators": ["Sohn0924", "More.."],
+    "verifier": "LuckyNS",
+    "verification": "https://www.youtube.com/watch?v=lfMoe8YcArM",
+    "percentToQualify": 53,
+    "records": [
+        {
+            "user": "Bluutemp",
+            "percent": 100
+        },
+        {
+            "user": "Overconfident",
+            "link": "https://www.youtube.com/watch?v=wPgppc9Zl0A",
+            "percent": 100
+        }
+    ]
+}
