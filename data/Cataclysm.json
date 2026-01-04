@@ -14,7 +14,7 @@
         },
         {
             "user": "Risp",
-            "link": "https://www.youtube.com/watch?v=YSSkfCFQrfU"
+            "link": "https://www.youtube.com/watch?v=YSSkfCFQrfU",
             "percent": 100
         },
         {
@@ -23,7 +23,7 @@
         },
         {
             "user": "Bluutemp",
-            "link": "https://www.youtube.com/watch?v=7fvuWufBNoQ"
+            "link": "https://www.youtube.com/watch?v=7fvuWufBNoQ",
             "percent": 100
         },
         {
@@ -55,12 +55,12 @@
             "percent": 100
         },
         {
-            "user": "Overconfident"
-            "link": "https://www.youtube.com/watch?v=LR-V0ZAh-O8"
+            "user": "Overconfident",
+            "link": "https://www.youtube.com/watch?v=LR-V0ZAh-O8",
             "percent": 100
         },
         {
-            "user": "Hivehead"
+            "user": "Hivehead",
             "percent": 100
         }
     ]
