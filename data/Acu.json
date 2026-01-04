@@ -7,5 +7,48 @@
     "verification": "https://www.youtube.com/watch?v=75ib6xSVIlM",
     "percentToQualify": 72,
     "records": [
+        {
+            "user": "Silversanctuary",
+            "link": "https://www.youtube.com/watch?v=8ovJNlBUSQM",
+            "percent": 100
+        },
+        {
+            "user": "Zovori",
+            "link": "https://www.youtube.com/watch?v=JE18ZKd7mmo",
+            "percent": 100
+        },
+        {
+            "user": "Ant_Gam3r",
+            "link": "https://www.youtube.com/watch?v=9seH1SI4bUc",
+            "percent": 100
+        },
+        {
+            "user": "Bluutemp",
+            "percent": 100
+        },
+        {
+            "user": "Xtinct",
+            "link": "https://www.youtube.com/watch?v=PxlO62hZumw",
+            "percent": 100
+        },
+        {
+            "user": "Overconfident",
+            "link": "https://www.youtube.com/watch?v=WimrbJNSwQw",
+            "percent": 100
+        },
+        {
+            "user": "Vernosis",
+            "percent": 100
+        },
+        {
+            "user": "Risp",
+            "link": "https://www.youtube.com/watch?v=aLcSzifTK6U",
+            "percent": 100
+        },
+        {
+            "user": "LuckyNS",
+            "link": "https://www.youtube.com/watch?v=uod8aii1Hfc",
+            "percent": 100
+        }
     ]
 }
