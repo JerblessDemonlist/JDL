@@ -1,0 +1,67 @@
+{
+    "id": 3979721,
+    "name": "Cataclysm",
+    "author": "GgB0y",
+    "creators": ["GgB0y"],
+    "verifier": "MathGenius",
+    "verification": "https://www.youtube.com/watch?v=fQoNxAdRFHY",
+    "percentToQualify": 75,
+    "records": [
+        {
+            "user": "Ant_Gam3r",
+            "link": "https://www.youtube.com/watch?v=4PibKBBhNaE",
+            "percent": 100
+        },
+        {
+            "user": "Risp",
+            "link": "https://www.youtube.com/watch?v=YSSkfCFQrfU"
+            "percent": 100
+        },
+        {
+            "user": "Bencar",
+            "percent": 100
+        },
+        {
+            "user": "Bluutemp",
+            "link": "https://www.youtube.com/watch?v=7fvuWufBNoQ"
+            "percent": 100
+        },
+        {
+            "user": "LuckyNS",
+            "link": "https://www.youtube.com/watch?v=5xVCP90ZlzY",
+            "percent": 100
+        },
+        {
+            "user": "Tylr",
+            "percent": 100
+        },
+        {
+            "user": "Xtinct",
+            "link": "https://www.youtube.com/watch?v=wM05Ve0bIPs",
+            "percent": 100
+        },
+        {
+            "user": "SilverSanctuary",
+            "link": "https://www.youtube.com/watch?v=xxakw1dMB7A",
+            "percent": 100
+        },
+        {
+            "user": "Vernosis",
+            "percent": 100
+        },
+        {
+            "user": "Zovori",
+            "link": "https://www.youtube.com/watch?v=qcXsygi3zPM",
+            "percent": 100
+        },
+        {
+            "user": "Overconfident"
+            "link": "https://www.youtube.com/watch?v=LR-V0ZAh-O8"
+            "percent": 100
+        },
+        {
+            "user": "Hivehead"
+            "percent": 100
+        }
+    ]
+}
