@@ -8,9 +8,19 @@
     "percentToQualify": 67,
     "records": [
         {
-        "user": "Zovori",
-        "link": "https://www.youtube.com/watch?v=LQ5_9rrujJA",
-        "percent": "100"
+            "user": "Ant_Gam3r",
+            "link": "https://www.youtube.com/watch?v=bCCPJn792Wk",
+            "percent": 100
+        },
+        {
+            "user": "Zovori",
+            "link": "https://www.youtube.com/watch?v=LQ5_9rrujJA",
+            "percent": 100
+        },
+        {
+            "user": "SilverSanctuary",
+            "link": "https://medal.tv/games/geometry-dash/clips/ltnqcVAA4gB6jswVT?invite=cr-MSxQUmcsMzExNDU4MDA5",
+            "percent": 71
         }
     ]
 }
