@@ -8,6 +8,20 @@
     "percentToQualify": 63,
     "records": [
         {
+            "user": "Vernosis",
+            "percent": 100
+        },
+        {
+            "user": "Bluutemp",
+            "link": "https://www.youtube.com/watch?v=1IHfSRDct7M",
+            "percent": 100
+        },
+        {
+            "user": "Overconfident",
+            "link": "https://www.youtube.com/watch?v=u41nHUetXck",
+            "percent": 100
+        },
+        {
             "user": "Risp",
             "link": "https://www.youtube.com/watch?v=bupnkGE6sTk",
             "percent": 100
