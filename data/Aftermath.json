@@ -8,18 +8,18 @@
     "percentToQualify": 69,
     "records": [
         {
-        "user": "Bluutemp",
-        "link": "https://www.youtube.com/watch?v=7fvuWufBNoQ",
-        "percent": "100"
+            "user": "Bluutemp",
+            "link": "https://www.youtube.com/watch?v=7fvuWufBNoQ",
+            "percent": "100"
         },
         {
-        "user": "Vernosis",
-        "percent": "100"
+            "user": "Vernosis",
+            "percent": "100"
         },
         {
-        "user": "SilverSanctuary",
-        "link": "https://www.youtube.com/watch?v=Dyy4stcNLVw",
-        "percent": "100"
+            "user": "SilverSanctuary",
+            "link": "https://www.youtube.com/watch?v=Dyy4stcNLVw",
+            "percent": "100"
         }
     ]
 }
