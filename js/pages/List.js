@@ -115,7 +115,7 @@ export default {
                         Do not use secret ways or bugged routes. Swag routes that are roughly the same difficulty as the main path or make the level harder are allowed.
                     </p>
                     <p>
-                        Once a level falls onto the Legacy List, we accept records for it for 24 hours after it falls off, then afterwards we never accept records for said level
+                        Once a level falls onto the Legacy List, we still accept records for said level, it just gives 0 points
                     </p>
                 </div>
             </div>
