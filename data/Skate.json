@@ -1,0 +1,15 @@
+{
+    "id": 122055301,
+    "name": "Skate",
+    "author": "Xtinct",
+    "creators": ["Xtinct", "TarryTar", "Zovori", "Evelyn144p", "Hivehead", "Waterbound"],
+    "verifier": "Xtinct",
+    "verification": "https://www.youtube.com/watch?v=O59p4j3mD18",
+    "percentToQualify": 68,
+    "records": [
+      {
+        "user": "Bluutemp",
+        "percent": 100
+      }
+    ]
+}
