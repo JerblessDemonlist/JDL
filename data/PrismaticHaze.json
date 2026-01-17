@@ -7,5 +7,15 @@
     "verification": "https://www.youtube.com/watch?v=7fvuWufBNoQ",
     "percentToQualify": 64,
     "records": [
+        {
+            "user": "SilverSanctuary",
+            "link": "https://www.youtube.com/watch?v=4SLFqscJIJw",
+            "percent": 100
+        },
+        {
+            "user": "Ant_Gam3r",
+            "link": "https://www.youtube.com/watch?v=RTPkdwX-1ns",
+            "percent": 100
+        }
     ]
 }
