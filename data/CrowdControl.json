@@ -7,5 +7,14 @@
     "verification": "https://www.youtube.com/watch?v=8yDEHB_cUA4",
     "percentToQualify": 70,
     "records": [
+        {
+            "user": "Ant_Gam3r",
+            "link": "https://www.youtube.com/watch?v=cdtCKPtLglM",
+            "percent": 100
+        },
+        {
+            "user": "Vernosis",
+            "percent": 100
+        }
     ]
 }
