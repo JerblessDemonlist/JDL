@@ -95,11 +95,11 @@ export default {
                             </li>
                         </ol>
                     </template>
-                    <h3>Information</h3>
+                    <h2>Information</h2>
                     <p>
                         This is the demonlist for the members of Jerbless, this displays the hardest levels beaten by Jerbless members. Currently trying to figure out how to add packs lol
                     </p>
-                    <h2>Enjoyments</h2>
+                    <h3>Enjoyments</h3>
                     <p>
                         The enjoyments for each level requires 3 or more ratings to be marked as reliable. If it has 2 ratings it will have a [!] marked next to it which shows it is unreliable. Enjoyments will not be added if it only has 1 opinion.
                     </p>
