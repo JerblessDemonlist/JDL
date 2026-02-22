@@ -111,6 +111,34 @@ export default {
                     <p>
                         The enjoyments for each level requires 3 or more ratings to be marked as reliable. If it has 2 ratings it will have a [!] marked next to it which shows it is unreliable. Enjoyments will not be added if it only has 1 opinion.
                     </p>
+                    <h3>Tags</h3>
+                    <p>
+                        Tags tell you what a level is like, here is a full list of what tags mean:
+                    </p>
+                    <p>
+                        Gameplay tags: (Cube, Ship, Ball, UFO, Dual, Wave, Robot, Spider, Swing & Overall) This tag means the level uses a majority of that gamemode, or that the level heavily requires skill on that particular gamemode(s). Overall means there is no particular gamemode that needs more skill.
+                    </p>
+                    <p>
+                        Fast/Slow-Paced: This tag means the level is either fast or slow, pretty self explanitory
+                    </p>
+                    <p>
+                        Timings/Precise: This tag means the level heavily focuses on timings or precise inputs. Timings is typically used for levels with Cube, Ball, UFO, Robot, Spider and Swing. Pecise is typically for Ship and Wave.
+                    </p>
+                    <p>
+                        Claustrophobic/Open: This tag means a level is either very tight or very open.
+                    </p>
+                    <p>
+                        Update Tags: This tag indicates what update a level came out in, this is not applied to 2.1 levels due to the amount.
+                    </p>
+                    <p>
+                        High CPS/Low CPS: This tag indicates the CPS style of the level.
+                    </p>
+                    <p>
+                        Chokepoints/Pre-Drop/Post-Drop/Balanced: These indicate the difficulty style of the level. Chokepoints means the level is reletively balanced with certain clicks or short parts being harder. Pre-Drop means the predrop is the hardest part, and Post-Drop means the post drop is the hardest part. Balanced means there's no discernible hardest part.
+                    </p>
+                    <p>
+                        Bonus tags: (Fuck, Bad Reputation, Good Reputation, Coins, Unrated) Fuck means its either a 2p level or just a wack level. Bad/Good Reputation means the level has a Good/Bad reputation... Pretty self explanitory. Coins means the level has coins and Unrated means it is an unrated means its unrated, also pretty self explanitory.
+                    </p>
                     </template>
                     <h3>Submission Requirements</h3>
                     <p>
