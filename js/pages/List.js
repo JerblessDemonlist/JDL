@@ -58,6 +58,10 @@ export default {
                             <div class="type-title-sm">Tags</div>
                             <p>{{ level.tags || 'Pending' }}</p>
                         </li>
+                        <li>
+                            <div class="type-title-sm">Length</div>
+                            <p>{{ level.length || '1:00' }}</p>
+                        </li>
                     </ul>
                     <h2>Records</h2>
                     <p v-if="selected + 1 <= 75"><strong>{{ level.percentToQualify }}%</strong> or better to qualify</p>
