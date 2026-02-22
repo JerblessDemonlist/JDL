@@ -56,7 +56,7 @@ export default {
                         </li>
                         <li>
                             <div class="type-title-sm">Tags</div>
-                            <p>{{ level.enjoyment || 'Pending' }}</p>
+                            <p>{{ level.tags || 'Pending' }}</p>
                         </li>
                     </ul>
                     <h2>Records</h2>
