@@ -109,7 +109,13 @@ export default {
                     </p>
                     <h3>Enjoyments</h3>
                     <p>
-                        The enjoyments for each level requires 3 or more ratings to be marked as reliable. If it has 2 ratings it will have a [!] marked next to it which shows it is unreliable. Enjoyments will not be added if it only has 1 opinion.
+                        Shows the average enjoyment ratings of each level. Opinions are accepted if you have list % on a level. Enjoyments marked with "[!]" are unreliable. Enjoyments will be marked as unreliable if:
+                        1. It only has 2 opinions
+                        2. If opinions are drastically different (e.g. all opinions are either 9 or 2)
+                        3. If half or more opinions are from list % opinions
+                    </p>
+                    <p>
+                        I will update the system to value completion opinions more than list % opinions.
                     </p>
                     <h3>Tags</h3>
                     <p>
