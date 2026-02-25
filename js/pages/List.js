@@ -109,9 +109,12 @@ export default {
                     </p>
                     <h3>Enjoyments</h3>
                     <p>
-                        Shows the average enjoyment ratings of each level. Opinions are accepted if you have list % on a level. Enjoyments marked with "[!]" are unreliable. Enjoyments will be marked as unreliable if:
-                        1. It only has 2 opinions
-                        2. If opinions are drastically different (e.g. all opinions are either 9 or 2)
+                        Shows the average enjoyment ratings of each level. Opinions are accepted if you have list % on a level. Enjoyments marked with "[!]" are unreliable. 
+                    </p>
+                    <p>
+                        Enjoyments will be marked as unreliable if:<br>
+                        1. It only has 2 opinions<br>
+                        2. If opinions are drastically different (e.g. all opinions are either 9 or 2)<br>
                         3. If half or more opinions are from list % opinions
                     </p>
                     <p>
