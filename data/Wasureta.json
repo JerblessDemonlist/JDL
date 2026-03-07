@@ -9,5 +9,10 @@
     "length": "0:56",
     "percentToQualify": 67,
     "records": [
+        {
+            "user": "Beanie",
+            "link": "https://www.youtube.com/watch?v=gRbFHM48zJ0",
+            "percent": 100,
+        }
     ]
 }
