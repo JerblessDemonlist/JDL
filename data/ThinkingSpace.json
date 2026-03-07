@@ -7,5 +7,10 @@
     "verification": "https://www.youtube.com/watch?v=VlBwHPQlE4Q",
     "percentToQualify": 73,
     "records": [
+        {
+            "user": "Beanie",
+            "link": "https://www.youtube.com/watch?v=xL6xqb2m6H0",
+            "perent": 100
+        }
     ]
 }
