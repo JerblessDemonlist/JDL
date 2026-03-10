@@ -25,7 +25,7 @@ export default {
                 <table class="list" v-if="list">
                     <tr v-for="([level, err], i) in list">
                         <td class="rank">
-                            <p v-if="i + 1 <= 150" class="type-label-lg">#{{ i + 1 }}</p>
+                            <p v-if="i + 1 <= 999" class="type-label-lg">#{{ i + 1 }}</p>
                             <p v-else class="type-label-lg">Legacy</p>
                         </td>
                         <td class="level" :class="{ 'active': selected == i, 'error': !level }">
@@ -44,23 +44,15 @@ export default {
                     <ul class="stats">
                         <li>
                             <div class="type-title-sm">Points when completed</div>
-                            <p>{{ score(selected + 1, 100, level.percentToQualify) }}</p>
+                            <p>{{ score(this.selected + 1, this.list.length, 100, level.percentToQualify) }}</p>
                         </li>
                         <li>
                             <div class="type-title-sm">ID</div>
                             <p>{{ level.id }}</p>
                         </li>
                         <li>
-                            <div class="type-title-sm">Enjoyment</div>
-                            <p>{{ level.enjoyment || 'N/A' }}</p>
-                        </li>
-                        <li>
-                            <div class="type-title-sm">Tags</div>
-                            <p>{{ level.tags || 'Pending' }}</p>
-                        </li>
-                        <li>
-                            <div class="type-title-sm">Length</div>
-                            <p>{{ level.length || '1:00' }}</p>
+                            <div class="type-title-sm">Password</div>
+                            <p>{{ level.password || 'Free to Copy' }}</p>
                         </li>
                     </ul>
                     <h2>Records</h2>
@@ -77,6 +69,9 @@ export default {
                             </td>
                             <td class="mobile">
                                 <img v-if="record.mobile" :src="\`/assets/phone-landscape\${store.dark ? '-dark' : ''}.svg\`" alt="Mobile">
+                            </td>
+                            <td class="hz">
+                                <p>{{ record.hz }}Hz</p>
                             </td>
                         </tr>
                     </table>
@@ -103,73 +98,30 @@ export default {
                             </li>
                         </ol>
                     </template>
-                    <h2>Information</h2>
-                    <p>
-                        This is the demonlist for the members of Jerbless, this displays the hardest levels beaten by Jerbless members. Currently trying to figure out how to add packs lol
-                    </p>
-                    <h3>Enjoyments</h3>
-                    <p>
-                        Shows the average enjoyment ratings of each level. Opinions are accepted if you have list % on a level. Enjoyments marked with "[!]" are unreliable. 
-                    </p>
-                    <p>
-                        Enjoyments will be marked as unreliable if:<br>
-                        1. It only has 2 opinions<br>
-                        2. If opinions are drastically different (e.g. all opinions are either 9 or 2)<br>
-                        3. If half or more opinions are from list % opinions
-                    </p>
-                    <p>
-                        I will update the system to value completion opinions more than list % opinions.
-                    </p>
-                    <h3>Tags</h3>
-                    <p>
-                        Tags tell you what a level is like, here is a full list of what tags mean:
-                    </p>
-                    <p>
-                        Gameplay tags: (Cube, Ship, Ball, UFO, Dual, Wave, Robot, Spider, Swing & Overall) This tag means the level uses a majority of that gamemode, or that the level heavily requires skill on that particular gamemode(s). Overall means there is no particular gamemode that needs more skill.
-                    </p>
-                    <p>
-                        Fast/Slow-Paced: This tag means the level is either fast or slow, pretty self explanitory
-                    </p>
-                    <p>
-                        Timings/Precise: This tag means the level heavily focuses on timings or precise inputs. Timings is typically used for levels with Cube, Ball, UFO, Robot, Spider and Swing. Pecise is typically for Ship and Wave.
-                    </p>
-                    <p>
-                        Claustrophobic/Open: This tag means a level is either very tight or very open.
-                    </p>
-                    <p>
-                        Update Tags: This tag indicates what update a level came out in, this is not applied to 2.1 levels due to the amount.
-                    </p>
-                    <p>
-                        High CPS/Low CPS: This tag indicates the CPS style of the level.
-                    </p>
-                    <p>
-                        Chokepoints/Pre-Drop/Post-Drop/Balanced: These indicate the difficulty style of the level. Chokepoints means the level is reletively balanced with certain clicks or short parts being harder. Pre-Drop means the predrop is the hardest part, and Post-Drop means the post drop is the hardest part. Balanced means there's no discernible hardest part.
-                    </p>
-                    <p>
-                        Bonus tags: (Fuck, Bad Reputation, Good Reputation, Coins, Unrated) Fuck means its either a 2p level or just a wack level. Bad/Good Reputation means the level has a Good/Bad reputation... Pretty self explanitory. Coins means the level has coins and Unrated means it is an unrated means its unrated, also pretty self explanitory.
-                    </p>
-                    </template>
                     <h3>Submission Requirements</h3>
                     <p>
-                        Cheating is not allowed, for a full list of disallowed hacks check here: (currently under maintenance)
+                        Achieved the record without using hacks (however, FPS bypass is allowed, up to 360fps)
                     </p>
                     <p>
-                        Completions that are in private copies are not allowed, you must have beaten the level on the rated (or unrated official copy if it is an unrated level) version. If you do use a private copy you must share it with list staff. Verifications obviously do not have to be beaten on a rated copy.
+                        Achieved the record on the level that is listed on the site - please check the level ID before you submit a record
                     </p>
                     <p>
-                        You must have clicks or taps audible throughout the whole recording, handcams do not exempt you from this, but it will add more legitimacy to your completion and may give your completion a higher chance of acceptance.
+                        Have either source audio or clicks/taps in the video. Edited audio only does not count
                     </p>
                     <p>
-                        The recording must have a previous attempt and entire death animation shown before the completion, unless the completion is on the first attempt, in which case you must show yourself opening the level.
+                        The recording must have a previous attempt and entire death animation shown before the completion, unless the completion is on the first attempt. Everyplay records are exempt from this
                     </p>
                     <p>
                         The recording must also show the player hit the endwall, or the completion will be invalidated.
                     </p>
                     <p>
-                        Do not use secret ways or bugged routes. Swag routes that are roughly the same difficulty as the main path or make the level harder are allowed.
+                        Do not use secret routes or bug routes
                     </p>
                     <p>
-                        Once a level falls onto the Legacy List, we still accept records for said level, it just gives 0 points
+                        Do not use easy modes, only a record of the unmodified level qualifies
+                    </p>
+                    <p>
+                        Once a level falls onto the Legacy List, we accept records for it for 24 hours after it falls off, then afterwards we never accept records for said level
                     </p>
                 </div>
             </div>
