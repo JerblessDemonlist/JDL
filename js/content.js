@@ -46,8 +46,12 @@ export async function fetchEditors() {
     }
 }
 
+//
 export async function fetchLeaderboard() {
     const list = await fetchList();
+    
+    // NEW: Define totalLevels (N) based on the length of the fetched list
+    const totalLevels = list.length;
 
     const scoreMap = {};
     const errs = [];
@@ -70,7 +74,8 @@ export async function fetchLeaderboard() {
         verified.push({
             rank: rank + 1,
             level: level.name,
-            score: score(rank + 1, 100, level.percentToQualify),
+            // UPDATED: Now passing totalLevels as the second argument
+            score: score(rank + 1, totalLevels, 100, level.percentToQualify),
             link: level.verification,
         });
 
@@ -89,7 +94,8 @@ export async function fetchLeaderboard() {
                 completed.push({
                     rank: rank + 1,
                     level: level.name,
-                    score: score(rank + 1, 100, level.percentToQualify),
+                    // UPDATED: Now passing totalLevels as the second argument
+                    score: score(rank + 1, totalLevels, 100, level.percentToQualify),
                     link: record.link,
                 });
                 return;
@@ -99,7 +105,8 @@ export async function fetchLeaderboard() {
                 rank: rank + 1,
                 level: level.name,
                 percent: record.percent,
-                score: score(rank + 1, record.percent, level.percentToQualify),
+                // UPDATED: Now passing totalLevels as the second argument
+                score: score(rank + 1, totalLevels, record.percent, level.percentToQualify),
                 link: record.link,
             });
         });
