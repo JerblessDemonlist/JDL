@@ -54,6 +54,14 @@ export default {
                             <div class="type-title-sm">Password</div>
                             <p>{{ level.password || 'Free to Copy' }}</p>
                         </li>
+                        <li>
+                            <div class="type-title-sm">Tags</div>
+                            <p>{{ level.tags || 'N/A' }}</p>
+                        </li>
+                        <li>
+                            <div class="type-title-sm">Length</div>
+                            <p>{{ level.length || '1:00' }}</p>
+                        </li>
                     </ul>
                     <h2>Records</h2>
                     <p v-if="selected + 1 <= 75"><strong>{{ level.percentToQualify }}%</strong> or better to qualify</p>
