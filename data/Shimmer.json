@@ -5,16 +5,11 @@
     "creators": ["amplitron"],
     "verifier": "Bluutemp",
     "verification": "https://www.youtube.com/watch?v=1PgPyfbnSrg",
-    "percentToQualify": 56,
+    "percentToQualify": 72,
     "records": [
         {
             "user": "Ant_Gam3r",
             "percent": 93
-        },
-        {
-            "user": "SilverSanctuary",
-            "link": "https://medal.tv/games/geometry-dash/clips/mcXSCuiA7_0lcHkrP?invite=cr-MSxlQUQsMzE3ODI5NTky&v=47",
-            "percent": 56
         }
     ]
 }
