@@ -6,13 +6,8 @@
     },
     {
         "role": "admin",
-        "name": "SilverSanctuary",
-        "link": "https://www.youtube.com/@SilverSanctuary"
-    },
-    {
-        "role": "admin",
-        "name": "Bluutemp",
-        "link": "https://www.youtube.com/@BLuuTemp"
+        "name": "MathGenius",
+        "link": "https://www.youtube.com/@MathGeniusGD"
     },
     {
         "role": "dev",
@@ -21,9 +16,14 @@
     },
     {
         "role": "dev",
-        "name": "hivehead",
+        "name": "Hivehead",
         "link": "https://www.youtube.com/@hiveheadgd"
     },
+    {
+        "role": "dev",
+        "name": "MathGenius",
+        "link": "https://www.youtube.com/@MathGeniusGD"
+    },    
     {
         "role": "dev",
         "name": "Ant_Gam3r",
