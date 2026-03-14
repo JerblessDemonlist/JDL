@@ -1,4 +1,4 @@
-import { fetchList } from '../content.js';
+import { fetchList, fetchJerblessList } from '../content.js';
 import { getThumbnailFromId, getYoutubeIdFromUrl, shuffle } from '../util.js';
 
 import Spinner from '../components/Spinner.js';
@@ -23,6 +23,10 @@ export default {
                     <div class="check">
                         <input type="checkbox" id="extended" value="Extended List" v-model="useExtendedList">
                         <label for="extended">Extended List</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" id="jerbless" value="Jerbless List" v-model="useJerblessList">
+                        <label for="jerbless">Jerbless Created List</label>
                     </div>
                     <Btn @click.native.prevent="onStart">{{ levels.length === 0 ? 'Start' : 'Restart'}}</Btn>
                 </form>
@@ -108,6 +112,7 @@ export default {
         showRemaining: false,
         useMainList: true,
         useExtendedList: true,
+        useJerblessList: false,
         toasts: [],
         fileInput: undefined,
     }),
@@ -163,18 +168,18 @@ export default {
                 return;
             }
 
-            if (!this.useMainList && !this.useExtendedList) {
+            if (!this.useMainList && !this.useExtendedList && !this.useJerblessList) {
                 return;
             }
 
             this.loading = true;
 
-            const fullList = await fetchList();
+            const [fullList, jerblessList] = await Promise.all([fetchList(), fetchJerblessList()]);
 
-            if (fullList.filter(([_, err]) => err).length > 0) {
+            if (fullList.filter(([_, err]) => err).length > 0 || jerblessList.filter(([_, err]) => err).length > 0) {
                 this.loading = false;
                 this.showToast(
-                    'List is currently broken. Wait until it\'s fixed to start a roulette.',
+                    'A list is currently broken. Wait until it\'s fixed to start a roulette.',
                 );
                 return;
             }
@@ -185,10 +190,21 @@ export default {
                 name: lvl.name,
                 video: lvl.verification,
             }));
+
+            const jerblessListMapped = jerblessList.map(([lvl, _], i) => ({
+                rank: i + 1,
+                id: lvl.id,
+                name: lvl.name,
+                video: lvl.verification,
+            }));
+
             const list = [];
             if (this.useMainList) list.push(...fullListMapped.slice(0, 75));
             if (this.useExtendedList) {
                 list.push(...fullListMapped.slice(75, 150));
+            }
+            if (this.useJerblessList) {
+                list.push(...jerblessListMapped);
             }
 
             // random 100 levels
