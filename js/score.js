@@ -19,8 +19,8 @@ export function score(rank, totalLevels, percent, minPercent) {
     /**
      * ADJUST THIS VALUE (k) TO CONTROL DROP-OFF:
      * 1.0 = Linear (A straight line from 300 down to 1)
-     * 2.5 = Smooth curve (Significant rewards for top tier, but "less drastic" drop)
-     * 4.3 = Very steep (The AREDL/Pointercrate style)
+     * 2.5 = Smooth curve
+     * 4.3 = Very steep
      */
     const k = 2.5; 
 
