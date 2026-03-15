@@ -16,11 +16,12 @@ export function score(rank, totalLevels, percent, minPercent) {
     const k = 1.18;
     const N = totalLevels;
 
-    let rawScore = 3 + 297 * Math.pow((N - rank) / Math.max(1, N - 1), k);
-    let rawSum = getRawSum(N);
-    let base10kScore = (rawScore / rawSum) * 10000;
-
-    let finalScore = base10kScore * ((percent - (minPercent - 1)) / (100 - (minPercent - 1)));
+    let distribution = Math.pow((N - rank) / Math.max(1, N - 1), k);
+    
+    let baseScore = 1 + (300 - 1) * distribution;
+    
+    let finalScore = baseScore * ((percent - (minPercent - 1)) / (100 - (minPercent - 1)));
+    
     if (percent != 100) {
         return round(finalScore - finalScore / 3);
     }
