@@ -1,0 +1,41 @@
+.packs-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr 220px;
+  height: calc(100vh - 120px);
+}
+
+.level-list {
+  border-right: 1px solid #333;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.level-item {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.level-item:hover {
+  background: #222;
+}
+
+.level-detail {
+  padding: 30px;
+  text-align: center;
+}
+
+.pack-list {
+  border-left: 1px solid #333;
+  padding: 15px;
+}
+
+.pack-item {
+  display: block;
+  width: 100%;
+  border: none;
+  margin-bottom: 10px;
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
