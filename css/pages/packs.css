@@ -20,6 +20,11 @@
   color: #4aa3ff;
 }
 
+.level-item.active {
+  color: #4aa3ff;
+  font-weight: bold;
+}
+
 .level-detail {
   text-align: center;
   max-width: 600px;
