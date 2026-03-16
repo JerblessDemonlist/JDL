@@ -12,11 +12,29 @@ export default {
     loading: true
   }),
 
-  async mounted() {
-    const [levels, packs] = await Promise.all([
-      fetchList(),
-      fetchPacks()
-    ])
+async mounted() {
+  const list = await fetchList()
+
+  const levels = list
+    .filter(([level]) => level !== null)
+    .map(([level]) => level)
+
+  this.levels = levels
+
+  // temporary packs example until packs.json exists
+  this.packs = [
+    {
+      id: "example",
+      name: "Example Pack",
+      color: "#ff5555",
+      levels: [25610878]
+    }
+  ]
+
+  this.selectPack(this.packs[0])
+
+  this.loading = false
+}
       
 const list = await fetchList()
 
