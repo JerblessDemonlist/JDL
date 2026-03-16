@@ -68,11 +68,6 @@ export async function fetchJerblessList() {
     }
 }
 
-export async function fetchPacks() {
-  const res = await fetch('/data/packs.json')
-  return await res.json()
-}
-
 export async function fetchEditors() {
     try {
         const editorsResults = await fetch(`${dir}/_editors.json`);
