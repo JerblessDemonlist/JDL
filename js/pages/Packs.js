@@ -57,63 +57,68 @@ async mounted() {
     }
   },
 
-  template: `
-    <main v-if="loading">
-      <Spinner />
-    </main>
+template: `
+  <main v-if="loading">
+    <Spinner />
+  </main>
 
-    <main v-else class="packs-page">
+  <main v-else class="packs-page">
 
-  <!-- LEFT: Levels in selected pack -->
-  <aside class="level-list">
-    <h3>Levels</h3>
-    <div
-      v-for="level in packLevels"
-      :key="level.id"
-      class="level-item"
-      :class="{ active: selectedLevel && selectedLevel.id === level.id }"
-      @click="selectLevel(level)"
-    >
-      {{ level.name }}
+    <div class="packs-layout">
+
+      <!-- LEFT: Levels -->
+      <aside class="level-list">
+        <h3>Levels</h3>
+
+        <div
+          v-for="level in packLevels"
+          :key="level.id"
+          class="level-item"
+          :class="{ active: selectedLevel && selectedLevel.id === level.id }"
+          @click="selectLevel(level)"
+        >
+          {{ level.name }}
+        </div>
+
+      </aside>
+
+
+      <!-- MIDDLE: Level Info -->
+      <section class="level-detail">
+
+        <div v-if="selectedLevel">
+
+          <h1>{{ selectedLevel.name }}</h1>
+
+          <p><b>Author:</b> {{ selectedLevel.author }}</p>
+          <p><b>Verifier:</b> {{ selectedLevel.verifier }}</p>
+          <p><b>Length:</b> {{ selectedLevel.length }}</p>
+          <p><b>Tags:</b> {{ selectedLevel.tags }}</p>
+
+        </div>
+
+      </section>
+
+
+      <!-- RIGHT: Packs -->
+      <aside class="pack-list">
+
+        <h3>Packs</h3>
+
+        <button
+          v-for="pack in packs"
+          :key="pack.id"
+          class="pack-item"
+          :class="{ active: selectedPack && selectedPack.id === pack.id }"
+          :style="{ backgroundColor: pack.color }"
+          @click="selectPack(pack)"
+        >
+          {{ pack.name }}
+        </button>
+
+      </aside>
+
     </div>
-  </aside>
 
-  <!-- MIDDLE: Selected level -->
-  <section class="level-detail">
-    <div v-if="selectedLevel">
-      <h2>{{ selectedLevel.name }}</h2>
-      <p><b>Author:</b> {{ selectedLevel.author }}</p>
-      <p><b>Verifier:</b> {{ selectedLevel.verifier }}</p>
-      <p><b>Length:</b> {{ selectedLevel.length }}</p>
-      <p><b>Tags:</b> {{ selectedLevel.tags }}</p>
-    </div>
-  </section>
-
-  <!-- RIGHT: Packs -->
-  <aside class="pack-list">
-    <h3>Packs</h3>
-    <button
-      v-for="pack in packs"
-      :key="pack.id"
-      class="pack-item"
-      :class="{ active: selectedPack && selectedPack.id === pack.id }"
-      :style="{ backgroundColor: pack.color }"
-      @click="selectPack(pack)"
-    >
-      {{ pack.name }}
-    </button>
-  </aside>
-
-</div>
-
-        <section class="level-detail">
-          <div v-if="selectedLevel">
-            <h2>{{ selectedLevel.name }}</h2>
-            <p>Author: {{ selectedLevel.author }}</p>
-          </div>
-        </section>
-
-      </div>
-    </main>
-  `
-}
+  </main>
+`
