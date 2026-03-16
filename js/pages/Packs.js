@@ -1,4 +1,4 @@
-import { fetchList } from '../content.js'
+import { fetchList, fetchPacks } from '../content.js'
 import Spinner from '../components/Spinner.js'
 
 export default {
@@ -12,28 +12,25 @@ export default {
     loading: true
   }),
 
-  async mounted() {
-    const list = await fetchList()
+async mounted() {
+  const [list, packs] = await Promise.all([
+    fetchList(),
+    fetchPacks()
+  ])
 
-    const levels = list
-      .filter(([level]) => level !== null)
-      .map(([level]) => level)
+  const levels = list
+    .filter(([level]) => level !== null)
+    .map(([level]) => level)
 
-    this.levels = levels
+  this.levels = levels
+  this.packs = packs
 
-    // temporary example pack
-    this.packs = [
-      {
-        id: "example",
-        name: "Example Pack",
-        color: "#ff5555",
-        levels: [25610878]
-      }
-    ]
+  if (packs.length > 0) {
+    this.selectPack(packs[0])
+  }
 
-    this.selectPack(this.packs[0])
-    this.loading = false
-  },
+  this.loading = false
+}
 
   methods: {
     selectPack(pack) {
