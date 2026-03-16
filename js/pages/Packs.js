@@ -96,6 +96,7 @@ async mounted() {
       v-for="pack in packs"
       :key="pack.id"
       class="pack-item"
+      :class="{ active: selectedPack && selectedPack.id === pack.id }"
       :style="{ backgroundColor: pack.color }"
       @click="selectPack(pack)"
     >
