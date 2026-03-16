@@ -71,6 +71,7 @@ async mounted() {
       v-for="level in packLevels"
       :key="level.id"
       class="level-item"
+      :class="{ active: selectedLevel && selectedLevel.id === level.id }"
       @click="selectLevel(level)"
     >
       {{ level.name }}
