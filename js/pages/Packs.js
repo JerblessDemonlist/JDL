@@ -30,7 +30,7 @@ async mounted() {
   }
 
   this.loading = false
-}
+},
 
   methods: {
     selectPack(pack) {
