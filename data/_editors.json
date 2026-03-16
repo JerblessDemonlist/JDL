@@ -23,7 +23,11 @@
         "role": "dev",
         "name": "MathGenius",
         "link": "https://www.youtube.com/@MathGeniusGD"
-    },    
+    },
+    {
+        "role": "dev",
+        "name": "ChatGPT"
+    },
     {
         "role": "dev",
         "name": "Ant_Gam3r",
