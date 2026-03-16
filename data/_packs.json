@@ -1,0 +1,20 @@
+[
+  {
+    "id": "APT",
+    "name": "Apocalyptic Trilogy",
+    "color": "#9e0b17",
+    "levels": [3979721, 10565740, 25610878]
+  },
+  {
+    "id": "Krmal1",
+    "name": "KrmaL Pack I",
+    "color": "#7f8080",
+    "levels": [24301797, 20321297, 17711004]
+  },
+  {
+    "id": "Krmal2",
+    "name": "KrmaL Pack II",
+    "color": "#7f8080",
+    "levels": [34057654, 60603962, 58825144]
+  }
+]
