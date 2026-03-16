@@ -1,4 +1,4 @@
-import { fetchLevels, fetchPacks } from '../content.js'
+import { fetchList } from '../content.js'
 import Spinner from '../components/Spinner.js'
 
 export default {
@@ -14,9 +14,15 @@ export default {
 
   async mounted() {
     const [levels, packs] = await Promise.all([
-      fetchLevels(),
+      fetchList(),
       fetchPacks()
     ])
+      
+const list = await fetchList()
+
+const levels = list
+  .filter(([level]) => level !== null)
+  .map(([level]) => level)
 
     this.levels = levels
     this.packs = packs
