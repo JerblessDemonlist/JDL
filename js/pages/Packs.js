@@ -64,19 +64,6 @@ async mounted() {
 
     <main v-else class="packs-page">
 
-      <div class="pack-tabs">
-        <button
-          v-for="pack in packs"
-          :key="pack.id"
-          :style="{ backgroundColor: pack.color }"
-          @click="selectPack(pack)"
-        >
-          {{ pack.name }}
-        </button>
-      </div>
-
-   <div class="packs-layout">
-
   <!-- LEFT: Levels in selected pack -->
   <aside class="level-list">
     <h3>Levels</h3>
