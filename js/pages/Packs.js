@@ -1,9 +1,8 @@
 import { fetchLevels, fetchPacks } from '../content.js'
-import LevelCard from '../components/LevelCard.js'
 import Spinner from '../components/Spinner.js'
 
 export default {
-  components: { LevelCard, Spinner },
+  components: { Spinner },
 
   data: () => ({
     levels: [],
@@ -88,7 +87,10 @@ export default {
 
         <!-- Right Side Full Level View -->
         <section class="level-detail">
-          <LevelCard :level="selectedLevel" />
+          <div v-if="selectedLevel">
+          <h2>{{ selectedLevel.name }}</h2>
+          <p>Author: {{ selectedLevel.author }}</p>
+        </div>
         </section>
 
       </div>
