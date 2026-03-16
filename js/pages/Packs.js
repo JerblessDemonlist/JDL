@@ -94,4 +94,4 @@ export default {
       </div>
     </main>
   `
-}
+};
