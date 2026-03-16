@@ -12,50 +12,33 @@ export default {
     loading: true
   }),
 
-async mounted() {
-  const list = await fetchList()
+  async mounted() {
+    const list = await fetchList()
 
-  const levels = list
-    .filter(([level]) => level !== null)
-    .map(([level]) => level)
-
-  this.levels = levels
-
-  // temporary packs example until packs.json exists
-  this.packs = [
-    {
-      id: "example",
-      name: "Example Pack",
-      color: "#ff5555",
-      levels: [25610878]
-    }
-  ]
-
-  this.selectPack(this.packs[0])
-
-  this.loading = false
-}
-      
-const list = await fetchList()
-
-const levels = list
-  .filter(([level]) => level !== null)
-  .map(([level]) => level)
+    const levels = list
+      .filter(([level]) => level !== null)
+      .map(([level]) => level)
 
     this.levels = levels
-    this.packs = packs
 
-    this.selectPack(packs[0])
+    // temporary example pack
+    this.packs = [
+      {
+        id: "example",
+        name: "Example Pack",
+        color: "#ff5555",
+        levels: [25610878]
+      }
+    ]
 
+    this.selectPack(this.packs[0])
     this.loading = false
   },
 
   methods: {
     selectPack(pack) {
       this.selectedPack = pack
-
       const resolvedLevels = this.resolveLevels(pack.levels)
-
       this.selectedLevel = resolvedLevels[0]
     },
 
@@ -84,7 +67,6 @@ const levels = list
 
     <main v-else class="packs-page">
 
-      <!-- Top Pack Tabs -->
       <div class="pack-tabs">
         <button
           v-for="pack in packs"
@@ -98,7 +80,6 @@ const levels = list
 
       <div class="packs-layout">
 
-        <!-- Left Side Level List -->
         <aside class="level-list">
           <div
             v-for="level in packLevels"
@@ -109,16 +90,14 @@ const levels = list
           </div>
         </aside>
 
-        <!-- Right Side Full Level View -->
         <section class="level-detail">
           <div v-if="selectedLevel">
-          <h2>{{ selectedLevel.name }}</h2>
-          <p>Author: {{ selectedLevel.author }}</p>
-        </div>
+            <h2>{{ selectedLevel.name }}</h2>
+            <p>Author: {{ selectedLevel.author }}</p>
+          </div>
         </section>
 
       </div>
     </main>
   `
 }
-
