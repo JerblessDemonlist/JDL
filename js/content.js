@@ -162,17 +162,17 @@ export async function fetchLeaderboard() {
             ...scores,
         };
     });
-
-    export async function fetchPacks() {
-  try {
-    const res = await fetch('/data/packs.json')
-    return await res.json()
-  } catch {
-    console.error("Failed to load packs.")
-    return []
-  }
-}
     
     // Sort by total score
     return [res.sort((a, b) => b.total - a.total), errs];
+}
+
+export async function fetchPacks() {
+    try {
+        const res = await fetch('/data/packs.json');
+        return await res.json();
+    } catch {
+        console.error("Failed to load packs.");
+        return [];
+    }
 }
