@@ -22,5 +22,89 @@
     "name": "Billboard Hot 100",
     "color": "#000000",
     "levels": [48353992, 122055301, 87481937, 112412828, 81148582]
+  },
+  {
+    "id": "IDP",
+    "name": "Insane Demon Pack",
+    "color": "#ee2222",
+    "levels": [814678, 77396433, 83431859]
+  },
+  {
+    "id": "UED",
+    "name": "Unrated Demon Pack",
+    "color": "#898989",
+    "levels": [127135884, 122055301, 124834378, 117939687, 78421544]
+  },
+  {
+    "id": "IP1",
+    "name": "Iconic Pack I",
+    "color": "#7e9680",
+    "levels": [814678, 61079355, 3979721]
+  },
+  {
+    "id": "IP2",
+    "name": "Iconic Pack II",
+    "color": "#79616f",
+    "levels": [16023141, 10565740, 23262780]
+  },
+  {
+    "id": "IP3",
+    "name": "Iconic Pack III",
+    "color": "#ae6378",
+    "levels": [35448603, 34057654, 27122654]
+  },
+  {
+    "id": "IP4",
+    "name": "Iconic Pack IV",
+    "color": "#d87f81",
+    "levels": [27379546, 26681070, 64658786]
+  },
+  {
+    "id": "IP5",
+    "name": "Iconic Pack V",
+    "color": "#eab595",
+    "levels": [42584142, 52374843, 59075347]
+  },
+  {
+    "id": "Cog",
+    "name": "Cognition & Co",
+    "color": "#9fa5d5",
+    "levels": [59075347, 57600307, 64148732]
+  },
+  {
+    "id": "60hz",
+    "name": "Verified on 60hz",
+    "color": "#4db001",
+    "levels": [58825144, 34057654, 55224007]
+  },
+  {
+    "id": "RGB",
+    "name": "RGB Trilogy",
+    "color": "#ffffff",
+    "levels": [31462941, 28220417, 26681070]
+  },
+  {
+    "id": "Tylr",
+    "name": "Tylr-Sized Pack",
+    "color": "#ffffff",
+    "levels": [82172844, 80966089, 84507862, 88203501, 76670086]
+  },
+  {
+    "id": "Zovori",
+    "name": "Zovori-Sized Pack",
+    "color": "#ffffff",
+    "levels": [45239692, 69010770, 48353992, 48175126, 59933468]
+  },
+  {
+    "id": "Science",
+    "name": "Science Pack",
+    "color": "#800080",
+    "levels": [38235367, 75248070, 20321297, 77008332, 123853954]
+  },
+  {
+    "id": "Space",
+    "name": "Celestial Bodies Pack",
+    "color": "#000000",
+    "levels": [45866767, 80177488, 19759411]
   }
 ]
