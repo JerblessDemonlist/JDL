@@ -80,19 +80,19 @@
   {
     "id": "RGB",
     "name": "RGB Trilogy",
-    "color": "#ffffff",
+    "color": "#f5f5f5",
     "levels": [31462941, 28220417, 26681070]
   },
   {
     "id": "Tylr",
     "name": "Tylr-Sized Pack",
-    "color": "#ffffff",
+    "color": "#f5f5f5",
     "levels": [82172844, 80966089, 84507862, 88203501, 76670086]
   },
   {
     "id": "Zovori",
     "name": "Zovori-Sized Pack",
-    "color": "#ffffff",
+    "color": "#f5f5f5",
     "levels": [45239692, 69010770, 48353992, 48175126, 59933468]
   },
   {
