@@ -97,9 +97,9 @@
   },
   {
     "id": "Science",
-    "name": "Science Pack",
+    "name": "Anatomy Pack",
     "color": "#800080",
-    "levels": [38235367, 75248070, 20321297, 77008332, 123853954]
+    "levels": [75248070, 20321297, 123853954]
   },
   {
     "id": "Space",
