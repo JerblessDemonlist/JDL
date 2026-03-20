@@ -2,113 +2,109 @@
   {
     "id": "APT",
     "name": "Apocalyptic Trilogy",
-    "color": "#9e0b17",
-    "description": "A trilogy of levels featuring apocalyptic and end-of-world themes.",
+    "description": "The Apocalyptic Trilogy.",
     "levels": [3979721, 10565740, 25610878]
   },
   {
     "id": "Krmal1",
     "name": "KrmaL Pack I",
-    "color": "#7f8080",
-    "description": "A collection of challenging levels curated by KrmaL.",
+    "description": "A collection of challenging levels created by KrmaL.",
     "levels": [24301797, 20321297, 17711004]
   },
   {
     "id": "Krmal2",
     "name": "KrmaL Pack II",
-    "color": "#7f8080",
     "description": "More challenging levels from KrmaL's selection.",
     "levels": [34057654, 60603962, 58825144]
   },
   {
     "id": "Billboard100",
     "name": "Billboard Hot 100",
-    "color": "#000000",
-    "description": "Levels inspired by songs from the Billboard Hot 100 chart.",
+    "description": "Levels using songs that you would hear on the radio.",
     "levels": [48353992, 122055301, 87481937, 112412828, 81148582]
   },
   {
     "id": "IDP",
     "name": "Insane Demon Pack",
-    "color": "#ee2222",
+    "description": "The only insane demons on the list.",
     "levels": [814678, 77396433, 83431859]
   },
   {
     "id": "UED",
     "name": "Unrated Demon Pack",
-    "color": "#898989",
+    "description": "The unrated levels on the list.",
     "levels": [127135884, 122055301, 124834378, 117939687, 78421544]
   },
   {
     "id": "IP1",
     "name": "Iconic Pack I",
-    "color": "#7e9680",
+    "description": "Very iconic levels for various reasons.",
     "levels": [814678, 61079355, 3979721]
   },
   {
     "id": "IP2",
     "name": "Iconic Pack II",
-    "color": "#79616f",
+    "description": "Even more iconic levels for various reasons.",
     "levels": [16023141, 10565740, 23262780]
   },
   {
     "id": "IP3",
     "name": "Iconic Pack III",
-    "color": "#ae6378",
+    "description": "Harder iconic levels for various reasons.",
     "levels": [35448603, 34057654, 27122654]
   },
   {
     "id": "IP4",
     "name": "Iconic Pack IV",
-    "color": "#d87f81",
+    "description": "Even harder iconic levels for various reasons.",
     "levels": [38754426, 26681070, 64658786]
   },
   {
     "id": "IP5",
     "name": "Iconic Pack V",
-    "color": "#eab595",
+    "description": "You get the point.",
     "levels": [42584142, 52374843, 59075347]
   },
   {
     "id": "Cog",
     "name": "Cognition & Co",
-    "color": "#9fa5d5",
+    "description": "Levels using the cognition style",
     "levels": [71025973, 57600307, 64148732]
   },
   {
     "id": "60hz",
     "name": "Verified on 60hz",
-    "color": "#4db001",
+    "description": "Levels that were verified for the JDL on 60hz.",
     "levels": [58825144, 34057654, 55224007]
   },
   {
     "id": "RGB",
     "name": "RGB Trilogy",
-    "color": "#E6E6E6",
+    "description": "The RGB Trilogy.",
     "levels": [31462941, 28220417, 26681070]
   },
   {
     "id": "Tylr",
     "name": "Tylr-Sized Pack",
-    "color": "#E6E6E6",
+    "description": "The 5 shortest levels on the list.",
     "levels": [82172844, 80966089, 84507862, 88203501, 76670086]
   },
   {
     "id": "Zovori",
     "name": "Zovori-Sized Pack",
-    "color": "#E6E6E6",
+    "description": "The 5 longest levels on the list.",
     "levels": [45239692, 69010770, 48353992, 48175126, 59933468]
   },
   {
     "id": "Anatomy",
     "name": "Anatomy Pack",
-    "color": "#800080",
+    "description": "Levels with theming surrounding the human body.",
     "levels": [75248070, 20321297, 123853954]
   },
   {
     "id": "Space",
     "name": "Celestial Bodies Pack",
-    "color": "#000000",
+    "description": "Levels relating to planets or other celestial bodies in their name.",
     "levels": [45866767, 80177488, 19759411]
   }
 ]
