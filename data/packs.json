@@ -3,24 +3,28 @@
     "id": "APT",
     "name": "Apocalyptic Trilogy",
     "color": "#9e0b17",
+    "description": "A trilogy of levels featuring apocalyptic and end-of-world themes.",
     "levels": [3979721, 10565740, 25610878]
   },
   {
     "id": "Krmal1",
     "name": "KrmaL Pack I",
     "color": "#7f8080",
+    "description": "A collection of challenging levels curated by KrmaL.",
     "levels": [24301797, 20321297, 17711004]
   },
   {
     "id": "Krmal2",
     "name": "KrmaL Pack II",
     "color": "#7f8080",
+    "description": "More challenging levels from KrmaL's selection.",
     "levels": [34057654, 60603962, 58825144]
   },
   {
     "id": "Billboard100",
     "name": "Billboard Hot 100",
     "color": "#000000",
+    "description": "Levels inspired by songs from the Billboard Hot 100 chart.",
     "levels": [48353992, 122055301, 87481937, 112412828, 81148582]
   },
   {
