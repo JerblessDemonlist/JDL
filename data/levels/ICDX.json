@@ -8,6 +8,10 @@
     "percentToQualify": 64,
     "records": [
         {
+            "user": "Ant_Gam3r",
+            "percent": 100
+        },
+        {
             "user": "Zovori",
             "percent": 65
         }
