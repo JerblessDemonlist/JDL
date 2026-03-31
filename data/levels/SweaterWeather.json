@@ -29,9 +29,14 @@
             "link": "https://www.youtube.com/watch?v=0akVELKjGoY",
             "percent": 100
         },
-            {
+        {
             "user": "LuckyNS",
             "link": "https://www.youtube.com/watch?v=F9jt8X8x2dY",
+            "percent": 100
+        },
+        {
+            "user": "Zovori",
+            "link": "https://www.youtube.com/watch?v=EYZi8TjP-ro",
             "percent": 100
         }
     ]
