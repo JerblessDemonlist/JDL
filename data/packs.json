@@ -102,10 +102,10 @@
     "levels": [75248070, 20321297, 123853954]
   },
   {
-    "id": "Celestial",
-    "name": "Celestial Bodies Pack",
-    "description": "Levels relating to planets or other celestial bodies in their name.",
-    "levels": [45866767, 80177488, 19759411]
+    "id": "Solar",
+    "name": "Solar System Pack",
+    "description": "Levels that are named after celestial bodies in our solar system.",
+    "levels": [88943354, 80177488, 19759411]
   },
   {
     "id": "Space",
