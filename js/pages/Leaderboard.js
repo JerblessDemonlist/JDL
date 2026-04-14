@@ -45,28 +45,19 @@ export default {
                     <div class="player">
                         <h1>#{{ selected + 1 }} {{ entry.user }}</h1>
                         <h3>{{ entry.total }}</h3>
-                        <h2 v-if="entry.verified.length > 0">Verified ({{ entry.verified.length}})</h2>
+                        <h2 v-if="entry.verified.length + entry.completed.length > 0">
+                            Completed ({{ entry.verified.length + entry.completed.length}})
+                        </h2>
                         <table class="table">
-                            <tr v-for="score in entry.verified">
+                            <tr v-for="score in [...entry.verified, ...entry.completed].sort((a, b) => b.score - a.score)">
                                 <td class="rank">
                                     <p>#{{ score.rank }}</p>
                                 </td>
                                 <td class="level">
-                                    <a class="type-label-lg" target="_blank" :href="score.link">{{ score.level }}</a>
-                                </td>
-                                <td class="score">
-                                    <p>+{{ localize(score.score) }}</p>
-                                </td>
-                            </tr>
-                        </table>
-                        <h2 v-if="entry.completed.length > 0">Completed ({{ entry.completed.length }})</h2>
-                        <table class="table">
-                            <tr v-for="score in entry.completed">
-                                <td class="rank">
-                                    <p>#{{ score.rank }}</p>
-                                </td>
-                                <td class="level">
-                                    <a class="type-label-lg" target="_blank" :href="score.link">{{ score.level }}</a>
+                                    <a class="type-label-lg" target="_blank" :href="score.link">
+                                        <strong v-if="entry.verified.includes(score)">{{ score.level }} ⭐</strong>
+                                        <template v-else>{{ score.level }}</template>
+                                    </a>
                                 </td>
                                 <td class="score">
                                     <p>+{{ localize(score.score) }}</p>
