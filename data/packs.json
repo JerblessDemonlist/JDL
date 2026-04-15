@@ -25,9 +25,15 @@
   },
   {
     "id": "IDP",
-    "name": "Insane Demon Pack",
-    "description": "The only insane demons on the list.",
-    "levels": [814678, 77396433, 83431859]
+    "name": "Insane Demon Pack I",
+    "description": "The easiest insane demons on the list.",
+    "levels": [10288836, 814678, 21952243]
+  },
+  {
+    "id": "IDPII",
+    "name": "Insane Demon Pack II",
+    "description": "The harder insane demons on the list.",
+    "levels": [79428382, 77396433, 83431859]
   },
   {
     "id": "UED",
@@ -82,6 +88,12 @@
     "name": "RGB Trilogy",
     "description": "The RGB Trilogy.",
     "levels": [31462941, 28220417, 26681070]
+  },
+  {
+    "id": "Boss",
+    "name": "Bossfight Pack",
+    "description": "Levels that feature Bossfights",
+    "levels": [60603962, 56703691, 23579781]
   },
   {
     "id": "Tylr",
