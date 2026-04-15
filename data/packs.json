@@ -18,6 +18,12 @@
     "levels": [34057654, 60603962, 58825144]
   },
   {
+    "id": "Lazerblitz",
+    "name": "Lazerblitz Pack",
+    "description": "Levels using songs that you would hear on the radio.",
+    "levels": [51791710, 35448603, 21952243]
+  },
+  {
     "id": "Billboard100",
     "name": "Billboard Hot 100",
     "description": "Levels using songs that you would hear on the radio.",
