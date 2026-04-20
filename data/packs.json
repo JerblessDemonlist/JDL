@@ -78,6 +78,24 @@
     "levels": [42584142, 52374843, 59075347]
   },
   {
+    "id": "Default1",
+    "name": "Default Songs Pack I",
+    "description": "Levels using default songs.",
+    "levels": [2374518, 814678, 48765988, 20077821, 105290756]
+  },
+  {
+    "id": "Default2",
+    "name": "Default Songs Pack II",
+    "description": "Levels using default songs.",
+    "levels": [35579890, 17711004, 23579781, 22259203, 38235367]
+  },
+  {
+    "id": "Default3",
+    "name": "Default Songs Pack III",
+    "description": "Levels using default songs.",
+    "levels": [85383554, 33498127, 59075347]
+  },
+  {
     "id": "Cog",
     "name": "Cognition & Co",
     "description": "Levels using the cognition style",
