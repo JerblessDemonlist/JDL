@@ -104,13 +104,19 @@ export async function fetchLeaderboard() {
             progressed: [],
             packs: [],
         };
-        const { verified } = scoreMap[verifier];
+        const { verified, completed } = scoreMap[verifier];
         verified.push({
             rank: rank + 1,
             level: level.name,
             // UPDATED: Now passing totalLevels as the second argument
             score: score(rank + 1, totalLevels, 100, level.percentToQualify),
             link: level.verification,
+        });
+        completed.push({
+        rank: rank + 1,
+        level: level.name,
+        score: score(rank + 1, totalLevels, 100, level.percentToQualify),
+        link: level.verification,
         });
 
         // Records
