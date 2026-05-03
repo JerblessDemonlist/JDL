@@ -81,6 +81,7 @@ export async function fetchEditors() {
 //
 export async function fetchLeaderboard() {
     const list = await fetchList();
+    const packs = await fetchPacks();
     
     // NEW: Define totalLevels (N) based on the length of the fetched list
     const totalLevels = list.length;
@@ -101,6 +102,7 @@ export async function fetchLeaderboard() {
             verified: [],
             completed: [],
             progressed: [],
+            packs: [],
         };
         const { verified } = scoreMap[verifier];
         verified.push({
@@ -120,6 +122,7 @@ export async function fetchLeaderboard() {
                 verified: [],
                 completed: [],
                 progressed: [],
+                packs: [],
             };
             const { completed, progressed } = scoreMap[user];
             if (record.percent === 100) {
@@ -144,17 +147,78 @@ export async function fetchLeaderboard() {
         });
     });
 
+    // Track pack completions
+    packs.forEach((pack, packIndex) => {
+        const userCompletions = {};
+        
+        // For each level ID in the pack, find the level and check who completed it
+        pack.levels.forEach((levelId) => {
+            const level = list.find(([l]) => l && l.id === levelId)?.[0];
+            if (!level) return;
+            
+            level.records.forEach((record) => {
+                if (record.percent === 100) {
+                    const user = Object.keys(scoreMap).find(
+                        (u) => u.toLowerCase() === record.user.toLowerCase(),
+                    ) || record.user;
+                    
+                    userCompletions[user] ??= 0;
+                    userCompletions[user]++;
+                }
+            });
+        });
+        
+        // Award points for users who completed all levels in the pack
+        Object.entries(userCompletions).forEach(([user, completed]) => {
+            if (completed === pack.levels.length) {
+                const scoredUser = Object.keys(scoreMap).find(
+                    (u) => u.toLowerCase() === user.toLowerCase(),
+                ) || user;
+                
+                scoreMap[scoredUser] ??= {
+                    verified: [],
+                    completed: [],
+                    progressed: [],
+                    packs: [],
+                };
+                
+                // Calculate pack score based on sum of level scores divided by 2
+                let totalLevelScore = 0;
+                pack.levels.forEach((levelId) => {
+                    // Find this level's rank in the original list
+                    const levelIndex = list.findIndex(([l]) => l && l.id === levelId);
+                    if (levelIndex !== -1) {
+                        const [level] = list[levelIndex];
+                        const levelScore = score(levelIndex + 1, totalLevels, 100, level.percentToQualify);
+                        totalLevelScore += levelScore;
+                    }
+                });
+                const packScore = totalLevelScore / 2;
+                
+                scoreMap[scoredUser].packs.push({
+                    name: pack.name,
+                    id: pack.id,
+                    score: round(packScore),
+                    levelCount: pack.levels.length,
+                });
+            }
+        });
+    });
+
     // Wrap in extra Object containing the user and total score
     const res = Object.entries(scoreMap).map(([user, scores]) => {
-        const { verified, completed, progressed } = scores;
-        const total = [verified, completed, progressed]
+        const { verified, completed, progressed, packs } = scores;
+        const total = [verified, completed, progressed, packs]
             .flat()
             .reduce((prev, cur) => prev + cur.score, 0);
 
         return {
             user,
             total: round(total),
-            ...scores,
+            verified,
+            completed,
+            progressed,
+            packs,
         };
     });
     

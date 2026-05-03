@@ -1,5 +1,5 @@
 import { store } from '../main.js';
-import { fetchList, fetchPacks } from '../content.js';
+import { fetchList, fetchPacks, fetchLeaderboard } from '../content.js';
 import { embed } from '../util.js';
 import Spinner from '../components/Spinner.js';
 import LevelAuthors from '../components/List/LevelAuthors.js';
@@ -13,11 +13,16 @@ export default {
         packs: [],
         selectedPack: null,
         selectedLevel: null,
+        packCompleters: {},
         loading: true,
     }),
 
     async mounted() {
-        const [list, packs] = await Promise.all([fetchList(), fetchPacks()]);
+        const [list, packs, [leaderboard]] = await Promise.all([
+            fetchList(),
+            fetchPacks(),
+            fetchLeaderboard(),
+        ]);
 
         const levels = list
             .filter(([level]) => level !== null)
@@ -25,6 +30,23 @@ export default {
 
         this.levels = levels;
         this.packs = packs;
+
+        // Build pack completers map
+        const completers = {};
+        leaderboard.forEach((entry) => {
+            if (entry.packs && entry.packs.length > 0) {
+                entry.packs.forEach((pack) => {
+                    if (!completers[pack.id]) {
+                        completers[pack.id] = [];
+                    }
+                    completers[pack.id].push({
+                        user: entry.user,
+                        score: pack.score,
+                    });
+                });
+            }
+        });
+        this.packCompleters = completers;
 
         if (packs.length > 0) {
             this.selectPack(packs[0]);
@@ -60,6 +82,10 @@ export default {
                 return;
             }
             return embed(this.selectedLevel.verification);
+        },
+        packCompletersForSelected() {
+            if (!this.selectedPack) return [];
+            return (this.packCompleters[this.selectedPack.id] || []).sort((a, b) => b.score - a.score);
         },
     },
 
@@ -137,6 +163,16 @@ export default {
                                 </td>
                             </tr>
                         </table>
+                        <br>
+                        <h3 class="type-title-md" style="margin-bottom: 1rem;" v-if="packCompletersForSelected.length > 0">Pack Completers ({{ packCompletersForSelected.length }})</h3>
+                        <table v-if="packCompletersForSelected.length > 0" class="list" style="border-collapse: separate; border-spacing: 0 0.75rem;">
+                            <tr v-for="completer in packCompletersForSelected" :key="completer.user">
+                                <td class="level" >
+                                    <span class="type-label-lg">{{ completer.user }}</span>
+                                </td>
+                            </tr>
+                        </table>
+                        <p v-else style="color: var(--gray);">No one has completed this pack yet.</p>
                     </div>
                 </div>
             </div>

@@ -45,8 +45,21 @@ export default {
                     <div class="player">
                         <h1>#{{ selected + 1 }} {{ entry.user }}</h1>
                         <h3>{{ entry.total }}</h3>
+                        <h2 v-if="entry.packs && entry.packs.length > 0">
+                            Completed Packs ({{ entry.packs.length }})
+                        </h2>
+                        <table v-if="entry.packs && entry.packs.length > 0" class="table">
+                            <tr v-for="pack in entry.packs.sort((a, b) => b.score - a.score)">
+                                <td class="level">
+                                    <span class="type-label-lg">{{ pack.name }}</span>
+                                </td>
+                                <td class="score">
+                                    <p>+{{ localize(pack.score) }}</p>
+                                </td>
+                            </tr>
+                        </table>
                         <h2 v-if="entry.verified.length + entry.completed.length > 0">
-                            Completed ({{ entry.verified.length + entry.completed.length}})
+                            Completed Levels ({{ entry.verified.length + entry.completed.length}})
                         </h2>
                         <table class="table">
                             <tr v-for="score in [...entry.verified, ...entry.completed].sort((a, b) => b.score - a.score)">
