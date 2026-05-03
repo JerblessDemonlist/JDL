@@ -148,25 +148,28 @@ export async function fetchLeaderboard() {
     });
 
     // Track pack completions
-    packs.forEach((pack, packIndex) => {
-        const userCompletions = {};
-        
-        // For each level ID in the pack, find the level and check who completed it
-        pack.levels.forEach((levelId) => {
-            const level = list.find(([l]) => l && l.id === levelId)?.[0];
-            if (!level) return;
-            
-            level.records.forEach((record) => {
-                if (record.percent === 100) {
-                    const user = Object.keys(scoreMap).find(
-                        (u) => u.toLowerCase() === record.user.toLowerCase(),
-                    ) || record.user;
-                    
-                    userCompletions[user] ??= 0;
-                    userCompletions[user]++;
-                }
-            });
+    pack.levels.forEach((levelId) => {
+        const level = list.find(([l]) => l && l.id === levelId)?.[0];
+        if (!level) return;
+
+    // Count the verifier as having completed this level
+        const verifier = Object.keys(scoreMap).find(
+            (u) => u.toLowerCase() === level.verifier.toLowerCase(),
+        ) || level.verifier;
+        userCompletions[verifier] ??= 0;
+        userCompletions[verifier]++;
+
+    // Count 100% record completions as before
+        level.records.forEach((record) => {
+            if (record.percent === 100) {
+                const user = Object.keys(scoreMap).find(
+                    (u) => u.toLowerCase() === record.user.toLowerCase(),
+                ) || record.user;
+                userCompletions[user] ??= 0;
+                userCompletions[user]++;
+            }
         });
+    });
         
         // Award points for users who completed all levels in the pack
         Object.entries(userCompletions).forEach(([user, completed]) => {
