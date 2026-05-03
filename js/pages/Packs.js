@@ -164,7 +164,7 @@ export default {
                             </tr>
                         </table>
                         <br>
-                        <h3 class="type-title-md" style="margin-bottom: 1rem;" v-if="packCompletersForSelected.length > 0">Pack Completers ({{ packCompletersForSelected.length }})</h3>
+                        <h3 class="type-title-md" style="margin-bottom: 1rem;" v-if="packCompletersForSelected.length > 0">Pack Victors ({{ packCompletersForSelected.length }})</h3>
                         <table v-if="packCompletersForSelected.length > 0" class="list" style="border-collapse: separate; border-spacing: 0 0.75rem;">
                             <tr v-for="completer in packCompletersForSelected" :key="completer.user">
                                 <td class="level" >
