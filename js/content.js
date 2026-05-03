@@ -147,19 +147,22 @@ export async function fetchLeaderboard() {
         });
     });
 
-    // Track pack completions
+  // Track pack completions
+packs.forEach((pack) => {
+    const userCompletions = {};
+
     pack.levels.forEach((levelId) => {
         const level = list.find(([l]) => l && l.id === levelId)?.[0];
         if (!level) return;
 
-    // Count the verifier as having completed this level
+        // Count the verifier as having completed this level
         const verifier = Object.keys(scoreMap).find(
             (u) => u.toLowerCase() === level.verifier.toLowerCase(),
         ) || level.verifier;
         userCompletions[verifier] ??= 0;
         userCompletions[verifier]++;
 
-    // Count 100% record completions as before
+        // Count 100% record completions as before
         level.records.forEach((record) => {
             if (record.percent === 100) {
                 const user = Object.keys(scoreMap).find(
@@ -170,44 +173,42 @@ export async function fetchLeaderboard() {
             }
         });
     });
-        
-        // Award points for users who completed all levels in the pack
-        Object.entries(userCompletions).forEach(([user, completed]) => {
-            if (completed === pack.levels.length) {
-                const scoredUser = Object.keys(scoreMap).find(
-                    (u) => u.toLowerCase() === user.toLowerCase(),
-                ) || user;
-                
-                scoreMap[scoredUser] ??= {
-                    verified: [],
-                    completed: [],
-                    progressed: [],
-                    packs: [],
-                };
-                
-                // Calculate pack score based on sum of level scores divided by 2
-                let totalLevelScore = 0;
-                pack.levels.forEach((levelId) => {
-                    // Find this level's rank in the original list
-                    const levelIndex = list.findIndex(([l]) => l && l.id === levelId);
-                    if (levelIndex !== -1) {
-                        const [level] = list[levelIndex];
-                        const levelScore = score(levelIndex + 1, totalLevels, 100, level.percentToQualify);
-                        totalLevelScore += levelScore;
-                    }
-                });
-                const packScore = totalLevelScore / 2;
-                
-                scoreMap[scoredUser].packs.push({
-                    name: pack.name,
-                    id: pack.id,
-                    score: round(packScore),
-                    levelCount: pack.levels.length,
-                });
-            }
-        });
-    });
 
+    // Award points for users who completed all levels in the pack
+    Object.entries(userCompletions).forEach(([user, completed]) => {
+        if (completed === pack.levels.length) {
+            const scoredUser = Object.keys(scoreMap).find(
+                (u) => u.toLowerCase() === user.toLowerCase(),
+            ) || user;
+
+            scoreMap[scoredUser] ??= {
+                verified: [],
+                completed: [],
+                progressed: [],
+                packs: [],
+            };
+
+            let totalLevelScore = 0;
+            pack.levels.forEach((levelId) => {
+                const levelIndex = list.findIndex(([l]) => l && l.id === levelId);
+                if (levelIndex !== -1) {
+                    const [level] = list[levelIndex];
+                    const levelScore = score(levelIndex + 1, totalLevels, 100, level.percentToQualify);
+                    totalLevelScore += levelScore;
+                }
+            });
+            const packScore = totalLevelScore / 2;
+
+            scoreMap[scoredUser].packs.push({
+                name: pack.name,
+                id: pack.id,
+                score: round(packScore),
+                levelCount: pack.levels.length,
+            });
+        }
+    });
+});
+    
     // Wrap in extra Object containing the user and total score
     const res = Object.entries(scoreMap).map(([user, scores]) => {
         const { verified, completed, progressed, packs } = scores;
