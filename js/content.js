@@ -112,12 +112,6 @@ export async function fetchLeaderboard() {
             score: score(rank + 1, totalLevels, 100, level.percentToQualify),
             link: level.verification,
         });
-        completed.push({
-        rank: rank + 1,
-        level: level.name,
-        score: score(rank + 1, totalLevels, 100, level.percentToQualify),
-        link: level.verification,
-        });
 
         // Records
         level.records.forEach((record) => {
