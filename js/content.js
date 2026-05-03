@@ -104,7 +104,7 @@ export async function fetchLeaderboard() {
             progressed: [],
             packs: [],
         };
-        const { verified, completed } = scoreMap[verifier];
+        const { verified } = scoreMap[verifier];
         verified.push({
             rank: rank + 1,
             level: level.name,
