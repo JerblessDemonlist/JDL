@@ -22,14 +22,20 @@ export default {
         </main>
         <main v-else class="page-list">
             <div class="list-container">
+                <input
+                    type="text"
+                    v-model="searchQuery"
+                    placeholder="Search levels..."
+                    class="search-bar"
+                />
                 <table class="list" v-if="list">
-                    <tr v-for="([level, err], i) in list">
+                    <tr v-for="([level, err], i) in filteredList">
                         <td class="rank">
-                            <p v-if="i + 1 <= 999" class="type-label-lg">#{{ i + 1 }}</p>
+                            <p v-if="list.indexOf(filteredList[i]) + 1 <= 999" class="type-label-lg">#{{ list.indexOf(filteredList[i]) + 1 }}</p>
                             <p v-else class="type-label-lg">Legacy</p>
-                        </td>
-                        <td class="level" :class="{ 'active': selected == i, 'error': !level }">
-                            <button @click="selected = i">
+                    </td>
+                    <td class="level" :class="{ 'active': selected == list.indexOf(filteredList[i]), 'error': !level }">
+                        <button @click="selected = list.indexOf(filteredList[i])">
                                 <span class="type-label-lg">{{ level?.name || \`Error (\${err}.json)\` }}</span>
                             </button>
                         </td>
@@ -178,16 +184,23 @@ export default {
             </div>
         </main>
     `,
-    data: () => ({
-        list: [],
-        editors: [],
-        loading: true,
-        selected: 0,
-        errors: [],
-        roleIconMap,
-        store
-    }),
+  data: () => ({
+    list: [],
+    editors: [],
+    loading: true,
+    selected: 0,
+    searchQuery: '',
+    errors: [],
+    roleIconMap,
+    store
+}),
     computed: {
+        filteredList() {
+            if (!this.searchQuery) return this.list;
+            return this.list.filter(([level]) => 
+                level?.name?.toLowerCase().includes(this.searchQuery.toLowerCase())
+            );
+        },
         level() {
             return this.list[this.selected][0];
         },
