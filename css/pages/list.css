@@ -15,7 +15,7 @@
     border-radius: 0.5rem;
     background-color: var(--color-background-hover);
     color: var(--color-on-background);
-    font-family: inherit;
+    font-family: 'Lexend Deca', sans-serif;
     font-size: 1rem;
     outline: none;
 }
