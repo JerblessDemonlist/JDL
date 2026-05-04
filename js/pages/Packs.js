@@ -16,6 +16,7 @@ export default {
         selectedLevel: null,
         packCompleters: {},
         loading: true,
+        searchQuery: '',
     }),
 
     async mounted() {
@@ -74,7 +75,13 @@ export default {
         },
     },
 
-    computed: {
+   computed: {
+        filteredPacks() {
+            if (!this.searchQuery) return this.packs;
+            return this.packs.filter((pack) =>
+                pack.name.toLowerCase().includes(this.searchQuery.toLowerCase())
+        );
+    },
         packLevels() {
             if (!this.selectedPack) return [];
             return this.resolveLevels(this.selectedPack.levels);
@@ -104,8 +111,14 @@ export default {
         </main>
         <main v-else class="page-list">
             <div class="list-container">
+                <input
+                    type="text"
+                    v-model="searchQuery"
+                    placeholder="Search packs..."
+                    class="search-bar"
+                />
                 <table class="list">
-                    <tr v-for="pack in packs" :key="pack.id">
+                    <tr v-for="pack in filteredPacks" :key="pack.id">
                         <td class="level" :class="{ 'active': selectedPack && selectedPack.id === pack.id }">
                             <button @click="selectPack(pack)">
                                 <span class="type-label-lg">{{ pack.name }}</span>
