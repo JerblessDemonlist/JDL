@@ -1,7 +1,7 @@
 import { store } from "../main.js";
 import { embed } from "../util.js";
 import { score } from "../score.js";
-import { fetchEditors, fetchList } from "../content.js";
+import { fetchEditors, fetchList, fetchPacks } from "../content.js";
 
 import Spinner from "../components/Spinner.js";
 import LevelAuthors from "../components/List/LevelAuthors.js";
@@ -46,6 +46,17 @@ export default {
                 <div class="level" v-if="level">
                     <h1>{{ level.name }}</h1>
                     <LevelAuthors :author="level.author" :creators="level.creators" :verifier="level.verifier"></LevelAuthors>
+                    <div v-if="levelPacks.length > 0" class="level-packs">
+    
+                            v-for="pack in levelPacks"
+                            :key="pack.id"
+                            class="level-pack-badge"
+                            href="/packs"
+                            @click.prevent="$router.push({ path: '/packs', query: { pack: pack.id } })"
+                        >
+                            {{ pack.name }}
+                        </a>
+                    </div>
                     <iframe class="video" id="videoframe" :src="video" frameborder="0"></iframe>
                     <ul class="stats">
                         <li>
@@ -187,6 +198,7 @@ export default {
   data: () => ({
     list: [],
     editors: [],
+    packs: [],
     loading: true,
     selected: 0,
     searchQuery: '',
@@ -195,6 +207,12 @@ export default {
     store
 }),
     computed: {
+        levelPacks() {
+            if (!this.level || !this.packs) return [];
+            return this.packs.filter((pack) =>
+                pack.levels.includes(this.level.id)
+            );
+        },
         filteredList() {
             if (!this.searchQuery) return this.list;
             return this.list.filter(([level]) => 
@@ -218,8 +236,11 @@ export default {
     },
     async mounted() {
         // Hide loading spinner
-        this.list = await fetchList();
-        this.editors = await fetchEditors();
+         [this.list, this.editors, this.packs] = await Promise.all([
+            fetchList(),
+            fetchEditors(),
+            fetchPacks(),
+        ]);
 
         // Error handling
         if (!this.list) {
