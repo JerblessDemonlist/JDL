@@ -1,6 +1,7 @@
 import { store } from '../main.js';
 import { fetchList, fetchPacks, fetchLeaderboard } from '../content.js';
 import { embed } from '../util.js';
+import { score, round } from '../score.js';
 import Spinner from '../components/Spinner.js';
 import LevelAuthors from '../components/List/LevelAuthors.js';
 
@@ -56,6 +57,7 @@ export default {
     },
 
     methods: {
+        round,
         selectPack(pack) {
             this.selectedPack = pack;
             const resolvedLevels = this.resolveLevels(pack.levels);
@@ -86,6 +88,13 @@ export default {
         packCompletersForSelected() {
             if (!this.selectedPack) return [];
             return (this.packCompleters[this.selectedPack.id] || []).sort((a, b) => b.score - a.score);
+        },
+        packScore() {
+            if (!this.selectedPack) return 0;
+            return this.packLevels.reduce((total, level) => {
+            const rank = this.levels.indexOf(level) + 1;
+            return total + score(rank, this.levels.length, 100, level.percentToQualify);
+          }, 0) / 2;
         },
     },
 
@@ -152,6 +161,8 @@ export default {
                     <div v-if="selectedPack">
                         <h2 class="type-title-lg" style="margin-bottom: 1rem;" >{{ selectedPack.name }}</h2>
                         <p>{{ selectedPack.description }}</p>
+                        <br>
+                        <p class="type-title-sm">Pack Points: +{{ round(packScore) }}</p>
                         <br>
                         <h3 class="type-title-md" style="margin-bottom: 1rem;">Levels</h3>
                         <table class="list">
