@@ -51,7 +51,9 @@ export default {
         this.packCompleters = completers;
 
         if (packs.length > 0) {
-            this.selectPack(packs[0]);
+            const packId = this.$route?.query?.pack;
+            const preSelected = packId && packs.find((p) => p.id === packId);
+            this.selectPack(preSelected || packs[0]);
         }
 
         this.loading = false;
