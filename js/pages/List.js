@@ -45,6 +45,7 @@ export default {
             <div class="level-container">
                 <div class="level" v-if="level">
                     <h1>{{ level.name }}</h1>
+                    <p v-if="level.description" class="level-description">{{ level.description }}</p>
                     <LevelAuthors :author="level.author" :creators="level.creators" :verifier="level.verifier"></LevelAuthors>
                     <div v-if="levelPacks.length > 0" class="level-packs">
                     <a
