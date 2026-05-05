@@ -99,7 +99,7 @@ export default {
                             <div class="type-title-sm">Enjoyment</div>
                             <p>{{ level.enjoyment || 'N/A' }}</p>
                         </li>
-                        <li class="tags">
+                        <li>
                             <div class="type-title-sm">Tags</div>
                             <p>{{ level.tags && level.tags.length > 0 ? level.tags.join(', ') : 'N/A' }}</p>
                         <li>
