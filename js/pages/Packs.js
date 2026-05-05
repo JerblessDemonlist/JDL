@@ -1,5 +1,5 @@
 import { store } from '../main.js';
-import { fetchList, fetchPacks, fetchLeaderboard } from '../content.js';
+import { fetchList, fetchPacks, fetchLeaderboard, fetchTiers } from '../content.js';
 import { embed } from '../util.js';
 import { score, round } from '../score.js';
 import Spinner from '../components/Spinner.js';
@@ -12,6 +12,7 @@ export default {
         store,
         levels: [],
         packs: [],
+        tiers: [],
         selectedPack: null,
         selectedLevel: null,
         packCompleters: {},
@@ -24,6 +25,7 @@ export default {
             fetchList(),
             fetchPacks(),
             fetchLeaderboard(),
+            fetchTiers()
         ]);
 
         const levels = list
@@ -32,6 +34,7 @@ export default {
 
         this.levels = levels;
         this.packs = packs;
+        this.tiers = tiers;
 
         // Build pack completers map
         const completers = {};
@@ -78,6 +81,12 @@ export default {
     },
 
    computed: {
+       packsGroupedByTier() {
+        return this.tiers.map((tier) => ({
+            ...tier,
+            packs: this.filteredPacks.filter((pack) => pack.tier === tier.id),
+        })).filter((tier) => tier.packs.length > 0);
+    },
         filteredPacks() {
             if (!this.searchQuery) return this.packs;
             return this.packs.filter((pack) =>
@@ -119,15 +128,18 @@ export default {
                     placeholder="Search packs..."
                     class="search-bar"
                 />
+                <div v-for="tier in packsGroupedByTier" :key="tier.id">
+                <h3 class="tier-heading" :style="{ color: tier.color }">{{ tier.name }}</h3>
                 <table class="list">
-                    <tr v-for="pack in filteredPacks" :key="pack.id">
+                    <tr v-for="pack in tier.packs" :key="pack.id">
                         <td class="level" :class="{ 'active': selectedPack && selectedPack.id === pack.id }">
-                            <button @click="selectPack(pack)">
-                                <span class="type-label-lg">{{ pack.name }}</span>
-                            </button>
-                        </td>
-                    </tr>
-                </table>
+                                <button @click="selectPack(pack)">
+                                    <span class="type-label-lg">{{ pack.name }}</span>
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
             <div class="level-container">
                 <div class="level" v-if="selectedLevel">
