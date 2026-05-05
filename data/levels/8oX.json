@@ -6,7 +6,7 @@
     "verifier": "LuckyNS",
     "verification": "https://www.youtube.com/watch?v=e8yoYr-8-w8",
     "percentToQualify": 67,
-    "tags": "Ship, UFO, Remake",
+    "tags": ["Ship", "UFO", "Remake"],
     "length": "1:30",
     "records": [
         {
