@@ -1,7 +1,7 @@
 import { store } from "../main.js";
 import { embed } from "../util.js";
 import { score } from "../score.js";
-import { fetchEditors, fetchList, fetchPacks } from "../content.js";
+import { fetchEditors, fetchList, fetchPacks, fetchTiers } from "../content.js";
 
 import Spinner from "../components/Spinner.js";
 import LevelAuthors from "../components/List/LevelAuthors.js";
@@ -47,15 +47,16 @@ export default {
                     <h1>{{ level.name }}</h1>
                     <LevelAuthors :author="level.author" :creators="level.creators" :verifier="level.verifier"></LevelAuthors>
                     <div v-if="levelPacks.length > 0" class="level-packs">
-                        <a
-                            v-for="pack in levelPacks"
-                            :key="pack.id"
-                            class="level-pack-badge"
-                            href="/packs"
-                            @click.prevent="$router.push({ path: '/packs', query: { pack: pack.id } })"
-                        >
-                            {{ pack.name }}
-                        </a>
+                    <a
+                        v-for="pack in levelPacks"
+                        :key="pack.id"
+                        class="level-pack-badge"
+                        href="/packs"
+                        :style="pack.tierColor ? { borderColor: pack.tierColor, backgroundColor: pack.tierColor + '33' } : {}"
+                        @click.prevent="$router.push({ path: '/packs', query: { pack: pack.id } })"
+                    >
+                        {{ pack.name }}
+                    </a>
                     </div>
                     <iframe class="video" id="videoframe" :src="video" frameborder="0"></iframe>
                     <ul class="stats">
@@ -199,6 +200,7 @@ export default {
         list: [],
         editors: [],
         packs: [],
+        tiers: [],
         loading: true,
         selected: 0,
         searchQuery: '',
@@ -208,15 +210,21 @@ export default {
     }),
     computed: {
         levelPacks() {
-            if (!this.level || !this.packs || !this.list?.length) return [];
-            try {
-                return this.packs.filter((pack) =>
-                    pack.levels.includes(this.level.id)
-                );
-            } catch {
-                return [];
-            }
-        },
+    if (!this.level || !this.packs || !this.list?.length) return [];
+    try {
+        return this.packs
+            .filter((pack) => pack.levels.includes(this.level.id))
+            .map((pack) => {
+                const tier = this.tiers.find((t) => t.id === pack.tier);
+                return {
+                    ...pack,
+                    tierColor: tier ? tier.color : null,
+                };
+            });
+    } catch {
+        return [];
+    }
+},
         filteredList() {
             if (!this.searchQuery) return this.list;
             return this.list.filter(([level]) =>
@@ -240,15 +248,17 @@ export default {
         },
     },
     async mounted() {
-        const [list, editors, packs] = await Promise.all([
+        const [list, editors, packs, tiers] = await Promise.all([
             fetchList(),
             fetchEditors(),
             fetchPacks(),
+            fetchTiers(),
         ]);
 
-        this.list = list;
-        this.editors = editors;
-        this.packs = packs;
+            this.list = list;
+            this.editors = editors;
+            this.packs = packs;
+            this.tiers = tiers;
 
         if (!this.list) {
             this.errors = [
