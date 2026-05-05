@@ -86,31 +86,30 @@ export default {
                     </a>
                     </div>
                     <iframe class="video" id="videoframe" :src="video" frameborder="0"></iframe>
-                    <ul class="stats">
-                        <li>
+                    <div class="stats">
+                        <div class="stat">
                             <div class="type-title-sm">Points when completed</div>
                             <p>{{ score(selected + 1, list.filter(([l]) => l).length, 100, level.percentToQualify) }}</p>
-                        </li>
-                        <li>
+                        </div>
+                        <div class="stat">
                             <div class="type-title-sm">ID</div>
                             <p>{{ level.id }}</p>
-                        </li>
-                        <li>
+                        </div>
+                        <div class="stat">
                             <div class="type-title-sm">Enjoyment</div>
                             <p>{{ level.enjoyment || 'N/A' }}</p>
-                        </li>
-</ul>
-<div v-if="level.tags && level.tags.length > 0" class="level-tags">
-    <div class="type-title-sm">Tags</div>
-    <div class="level-tags-list">
-        <span v-for="tag in level.tags" :key="tag" class="level-tag">{{ tag }}</span>
-    </div>
-</div>
-                        <li>
+                        </div>
+                        <div class="stat">
                             <div class="type-title-sm">Length</div>
                             <p>{{ level.length || '1:00' }}</p>
-                        </li>
-                    </ul>
+                        </div>
+                        <div class="stat" v-if="level.tags && level.tags.length > 0">
+                            <div class="type-title-sm">Tags</div>
+                            <div class="level-tags-list">
+                                <span v-for="tag in level.tags" :key="tag" class="level-tag">{{ tag }}</span>
+                            </div>
+                        </div>
+                    </div>
                     <h2>Records</h2>
                     <p v-if="selected + 1 <= 998"><strong>{{ level.percentToQualify }}%</strong> or better to qualify</p>
                     <p v-else-if="selected + 1 <= 999"><strong>100%</strong> or better to qualify</p>
