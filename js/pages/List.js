@@ -99,10 +99,13 @@ export default {
                             <div class="type-title-sm">Enjoyment</div>
                             <p>{{ level.enjoyment || 'N/A' }}</p>
                         </li>
-                        <li>
-                            <div class="type-title-sm">Tags</div>
-                            <p>{{ level.tags && level.tags.length > 0 ? level.tags.join(', ') : 'N/A' }}</p>
-                        </li>
+</ul>
+<div v-if="level.tags && level.tags.length > 0" class="level-tags">
+    <div class="type-title-sm">Tags</div>
+    <div class="level-tags-list">
+        <span v-for="tag in level.tags" :key="tag" class="level-tag">{{ tag }}</span>
+    </div>
+</div>
                         <li>
                             <div class="type-title-sm">Length</div>
                             <p>{{ level.length || '1:00' }}</p>
