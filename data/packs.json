@@ -3,150 +3,175 @@
     "id": "APT",
     "name": "Apocalyptic Trilogy",
     "description": "The Apocalyptic Trilogy.",
-    "levels": [3979721, 10565740, 25610878]
+    "levels": [3979721, 10565740, 25610878],
+    "tier": "copper"
   },
   {
     "id": "Krmal1",
     "name": "KrmaL Pack I",
     "description": "A collection of challenging levels created by KrmaL.",
-    "levels": [24301797, 20321297, 17711004]
+    "levels": [24301797, 20321297, 17711004],
+    "tier": "copper"
   },
   {
     "id": "Krmal2",
     "name": "KrmaL Pack II",
     "description": "More challenging levels from KrmaL's selection.",
-    "levels": [34057654, 60603962, 58825144]
+    "levels": [34057654, 60603962, 58825144],
+    "tier": "gold"
   },
   {
     "id": "Lazerblitz",
     "name": "Lazerblitz Pack",
     "description": "Levels made by Lazerblitz.",
-    "levels": [51791710, 35448603, 21952243]
+    "levels": [51791710, 35448603, 21952243],
+    "tier": "silver"
   },
   {
     "id": "Billboard100",
     "name": "Billboard Hot 100",
     "description": "Levels using songs that you would hear on the radio.",
-    "levels": [48353992, 122055301, 87481937, 112412828, 81148582]
+    "levels": [48353992, 122055301, 87481937, 112412828, 81148582],
+    "tier": "silver"
   },
   {
     "id": "IDP",
     "name": "Insane Demon Pack I",
     "description": "The easiest insane demons on the list.",
-    "levels": [10288836, 814678, 21952243]
+    "levels": [10288836, 814678, 21952243],
+    "tier": "copper"
   },
   {
     "id": "IDPII",
     "name": "Insane Demon Pack II",
     "description": "The harder insane demons on the list.",
-    "levels": [79428382, 77396433, 83431859]
+    "levels": [79428382, 77396433, 83431859],
+    "tier": "copper"
   },
   {
     "id": "UED",
     "name": "Unrated Demon Pack",
     "description": "The unrated levels on the list.",
-    "levels": [122055301, 124834378, 117939687, 78421544, 138356396]
+    "levels": [122055301, 124834378, 117939687, 78421544, 138356396],
+    "tier": "silver"
   },
   {
     "id": "IP1",
     "name": "Iconic Pack I",
     "description": "Very iconic levels for various reasons.",
-    "levels": [814678, 61079355, 3979721]
+    "levels": [814678, 61079355, 3979721],
+    "tier": "copper"
   },
   {
     "id": "IP2",
     "name": "Iconic Pack II",
     "description": "Even more iconic levels for various reasons.",
-    "levels": [16023141, 10565740, 23262780]
+    "levels": [16023141, 10565740, 23262780],
+    "tier": "silver"
   },
   {
     "id": "IP3",
     "name": "Iconic Pack III",
     "description": "Harder iconic levels for various reasons.",
-    "levels": [35448603, 34057654, 27122654]
+    "levels": [35448603, 34057654, 27122654],
+    "tier": "gold"
   },
   {
     "id": "IP4",
     "name": "Iconic Pack IV",
     "description": "Even harder iconic levels for various reasons.",
-    "levels": [38754426, 26681070, 64658786]
+    "levels": [38754426, 26681070, 64658786],
+    "tier": "platinum"
   },
   {
     "id": "IP5",
     "name": "Iconic Pack V",
     "description": "You get the point.",
-    "levels": [42584142, 52374843, 59075347]
+    "levels": [42584142, 52374843, 59075347],
+    "tier": "diamond"
   },
   {
     "id": "Default1",
     "name": "Default Songs Pack I",
     "description": "Levels using default songs.",
-    "levels": [2374518, 814678, 48765988, 20077821, 105290756]
+    "levels": [2374518, 814678, 48765988, 20077821, 105290756],
+    "tier": "copper"
   },
   {
     "id": "Default2",
     "name": "Default Songs Pack II",
     "description": "More levels using default songs.",
-    "levels": [35579890, 17711004, 23579781, 22259203, 38235367]
+    "levels": [35579890, 17711004, 23579781, 22259203, 38235367],
+    "tier": "gold"
   },
   {
     "id": "Default3",
     "name": "Default Songs Pack III",
     "description": "Even more levels using default songs.",
-    "levels": [85383554, 33498127, 59075347]
+    "levels": [85383554, 33498127, 59075347],
+    "tier": "diamond"
   },
   {
     "id": "Cog",
     "name": "Cognition & Co",
     "description": "Levels using the cognition style",
-    "levels": [71025973, 57600307, 64148732]
+    "levels": [71025973, 57600307, 64148732],
+    "tier": "diamond"
   },
   {
     "id": "60hz",
     "name": "Verified on 60hz",
     "description": "Levels that were verified for the JDL on 60hz.",
-    "levels": [58825144, 34057654, 55224007]
+    "levels": [58825144, 34057654, 55224007],
+    "tier": "gold"
   },
   {
     "id": "RGB",
     "name": "RGB Trilogy",
     "description": "The RGB Trilogy.",
-    "levels": [31462941, 28220417, 26681070]
+    "levels": [31462941, 28220417, 26681070],
+    "tier": "platinum"
   },
   {
     "id": "Boss",
     "name": "Bossfight Pack",
     "description": "Levels that feature Bossfights",
-    "levels": [60603962, 56703691, 23579781]
+    "levels": [60603962, 56703691, 23579781],
+    "tier": "platinum"
   },
   {
     "id": "Tylr",
     "name": "Tylr-Sized Pack",
     "description": "The 5 shortest levels on the list.",
-    "levels": [82172844, 80966089, 84507862, 88203501, 138356396]
+    "levels": [82172844, 80966089, 84507862, 88203501, 138356396],
+    "tier": "diamond"
   },
   {
     "id": "Zovori",
     "name": "Zovori-Sized Pack",
     "description": "The 5 longest levels on the list.",
-    "levels": [45239692, 69010770, 48353992, 48175126, 59933468]
+    "levels": [45239692, 69010770, 48353992, 48175126, 59933468],
+    "tier": "silver"
   },
   {
     "id": "Anatomy",
     "name": "Anatomy Pack",
     "description": "Levels with theming surrounding the human body.",
-    "levels": [75248070, 20321297, 123853954]
+    "levels": [75248070, 20321297, 123853954],
+    "tier": "platinum"
   },
   {
     "id": "Solar",
     "name": "Solar System Pack",
     "description": "Levels that are named after celestial bodies in our solar system.",
-    "levels": [88943354, 80177488, 19759411]
+    "levels": [88943354, 80177488, 19759411],
+    "tier": "silver"
   },
   {
     "id": "Space",
     "name": "Space Pack",
     "description": "Levels that are themed or named around space in some way.",
-    "levels": [76159410, 116401475, 112371654]
+    "levels": [76159410, 116401475, 112371654],
+    "tier": "platinum"
   }
 ]
