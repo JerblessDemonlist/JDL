@@ -129,7 +129,7 @@ export default {
                     class="search-bar"
                 />
                 <div v-for="tier in packsGroupedByTier" :key="tier.id">
-                <h3 class="tier-heading" :style="{ color: tier.color }">{{ tier.name }}</h3>
+                <span class="tier-heading" :style="{ borderColor: tier.color, backgroundColor: tier.color + '33', color: tier.color }">{{ tier.name }}</span>
                 <table class="list">
                     <tr v-for="pack in tier.packs" :key="pack.id">
                         <td class="level" :class="{ 'active': selectedPack && selectedPack.id === pack.id }">
