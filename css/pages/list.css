@@ -301,7 +301,7 @@
 .search-container .search-clear {
     position: absolute;
     right: 0.75rem;
-    top: 50%;
+    top: 75%;
     transform: translateY(-50%);
     background: none;
     border: none;
