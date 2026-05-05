@@ -73,6 +73,24 @@
     grid-auto-rows: max-content;
     gap: 1rem;
 }
+.page-list .level-packs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.page-list .level-pack-badge {
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-family: 'Lexend Deca', sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+}
+.page-list .level-pack-badge:hover {
+    opacity: 0.85;
+}
 .page-list .level-container .level .video {
     aspect-ratio: 16/9;
 }
