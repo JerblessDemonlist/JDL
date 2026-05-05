@@ -96,13 +96,9 @@
 }
 .page-list .level-container .level .stats {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-evenly;
     text-align: center;
     gap: 2rem;
-}
-.page-list .level-container .level .stats .tags {
-    max-width: 8rem;
 }
 .page-list .level-container .level .stats li {
     display: flex;
