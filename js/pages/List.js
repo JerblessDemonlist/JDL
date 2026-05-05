@@ -208,10 +208,14 @@ export default {
 }),
     computed: {
         levelPacks() {
-            if (!this.level || !this.packs) return [];
-            return this.packs.filter((pack) =>
-                pack.levels.includes(this.level.id)
-            );
+            if (!this.level || !this.packs || !this.list?.length) return [];
+            try {
+                return this.packs.filter((pack) =>
+                    pack.levels.includes(this.level.id)
+                );
+            } catch {
+                return [];
+            }
         },
         filteredList() {
             if (!this.searchQuery) return this.list;
@@ -220,7 +224,8 @@ export default {
             );
         },
         level() {
-            return this.list[this.selected][0];
+            if (!this.list?.length) return null;
+            return this.list[this.selected]?.[0];
         },
         video() {
             if (!this.level.showcase) {
