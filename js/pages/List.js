@@ -33,9 +33,9 @@ export default {
                         <td class="rank">
                             <p v-if="list.indexOf(filteredList[i]) + 1 <= 999" class="type-label-lg">#{{ list.indexOf(filteredList[i]) + 1 }}</p>
                             <p v-else class="type-label-lg">Legacy</p>
-                    </td>
-                    <td class="level" :class="{ 'active': selected == list.indexOf(filteredList[i]), 'error': !level }">
-                        <button @click="selected = list.indexOf(filteredList[i])">
+                        </td>
+                        <td class="level" :class="{ 'active': selected == list.indexOf(filteredList[i]), 'error': !level }">
+                            <button @click="selected = list.indexOf(filteredList[i])">
                                 <span class="type-label-lg">{{ level?.name || \`Error (\${err}.json)\` }}</span>
                             </button>
                         </td>
@@ -47,13 +47,13 @@ export default {
                     <h1>{{ level.name }}</h1>
                     <LevelAuthors :author="level.author" :creators="level.creators" :verifier="level.verifier"></LevelAuthors>
                     <div v-if="levelPacks.length > 0" class="level-packs">
-    
+                        <a
                             v-for="pack in levelPacks"
                             :key="pack.id"
                             class="level-pack-badge"
                             href="/packs"
                             @click.prevent="$router.push({ path: '/packs', query: { pack: pack.id } })"
-                        <a>
+                        >
                             {{ pack.name }}
                         </a>
                     </div>
@@ -82,7 +82,7 @@ export default {
                     </ul>
                     <h2>Records</h2>
                     <p v-if="selected + 1 <= 998"><strong>{{ level.percentToQualify }}%</strong> or better to qualify</p>
-                    <p v-else-if="selected +1 <= 999"><strong>100%</strong> or better to qualify</p>
+                    <p v-else-if="selected + 1 <= 999"><strong>100%</strong> or better to qualify</p>
                     <p v-else>This level does not accept new records.</p>
                     <table class="records">
                         <tr v-for="record in level.records" class="record">
@@ -195,17 +195,17 @@ export default {
             </div>
         </main>
     `,
-  data: () => ({
-    list: [],
-    editors: [],
-    packs: [],
-    loading: true,
-    selected: 0,
-    searchQuery: '',
-    errors: [],
-    roleIconMap,
-    store
-}),
+    data: () => ({
+        list: [],
+        editors: [],
+        packs: [],
+        loading: true,
+        selected: 0,
+        searchQuery: '',
+        errors: [],
+        roleIconMap,
+        store,
+    }),
     computed: {
         levelPacks() {
             if (!this.level || !this.packs || !this.list?.length) return [];
@@ -219,7 +219,7 @@ export default {
         },
         filteredList() {
             if (!this.searchQuery) return this.list;
-            return this.list.filter(([level]) => 
+            return this.list.filter(([level]) =>
                 level?.name?.toLowerCase().includes(this.searchQuery.toLowerCase())
             );
         },
@@ -237,36 +237,37 @@ export default {
                     ? this.level.showcase
                     : this.level.verification
             );
+        },
     },
-  async mounted() {
-    const [list, editors, packs] = await Promise.all([
-        fetchList(),
-        fetchEditors(),
-        fetchPacks(),
-    ]);
+    async mounted() {
+        const [list, editors, packs] = await Promise.all([
+            fetchList(),
+            fetchEditors(),
+            fetchPacks(),
+        ]);
 
-    this.list = list;
-    this.editors = editors;
-    this.packs = packs;
+        this.list = list;
+        this.editors = editors;
+        this.packs = packs;
 
-    if (!this.list) {
-        this.errors = [
-            "Failed to load list. Retry in a few minutes or notify list staff.",
-        ];
-    } else {
-        this.errors.push(
-            ...this.list
-                .filter(([_, err]) => err)
-                .map(([_, err]) => {
-                    return `Failed to load level. (${err}.json)`;
-                })
-        );
-        if (!this.editors) {
-            this.errors.push("Failed to load list editors.");
+        if (!this.list) {
+            this.errors = [
+                "Failed to load list. Retry in a few minutes or notify list staff.",
+            ];
+        } else {
+            this.errors.push(
+                ...this.list
+                    .filter(([_, err]) => err)
+                    .map(([_, err]) => {
+                        return `Failed to load level. (${err}.json)`;
+                    })
+            );
+            if (!this.editors) {
+                this.errors.push("Failed to load list editors.");
+            }
         }
-    }
 
-    this.loading = false;
+        this.loading = false;
     },
     methods: {
         embed,
