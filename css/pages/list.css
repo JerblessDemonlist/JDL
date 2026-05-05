@@ -290,3 +290,27 @@
     font-family: 'Lexend Deca', sans-serif;
     font-size: 0.875rem;
 }
+.search-container {
+    position: relative;
+    width: 100%;
+}
+.search-container .search-bar {
+    width: 100%;
+    padding-right: 2.5rem;
+}
+.search-container .search-clear {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--color-on-background);
+    cursor: pointer;
+    font-size: 0.875rem;
+    opacity: 0.5;
+    padding: 0;
+}
+.search-container .search-clear:hover {
+    opacity: 1;
+}
