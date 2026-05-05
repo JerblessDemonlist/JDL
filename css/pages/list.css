@@ -96,28 +96,28 @@
 }
 .page-list .level-container .level .stats {
     display: flex;
-    justify-content: space-evenly;
-    text-align: center;
-    gap: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
-.page-list .level-container .level .stats li {
+.page-list .level-container .level .stats .stat {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background-color: var(--color-background-hover);
+    border-radius: 0.5rem;
+    min-width: 6rem;
 }
 .page-list .level-container .level .level-tags {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
-
 .page-list .level-container .level .level-tags-list {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
 }
-
 .page-list .level-container .level .level-tag {
     padding: 0.25rem 0.75rem;
     border-radius: 999px;
