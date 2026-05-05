@@ -239,3 +239,12 @@ export async function fetchPacks() {
         return [];
     }
 }
+export async function fetchTiers() {
+    try {
+        const res = await fetch('/data/tiers.json');
+        return await res.json();
+    } catch {
+        console.error("Failed to load tiers.");
+        return [];
+    }
+}
