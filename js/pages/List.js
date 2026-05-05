@@ -61,7 +61,7 @@ export default {
                     <ul class="stats">
                         <li>
                             <div class="type-title-sm">Points when completed</div>
-                            <p>{{ score(this.selected + 1, this.list.length, 100, level.percentToQualify) }}</p>
+                            <p>{{ score(selected + 1, list.filter(([l]) => l).length, 100, level.percentToQualify) }}</p>
                         </li>
                         <li>
                             <div class="type-title-sm">ID</div>
@@ -228,16 +228,15 @@ export default {
             return this.list[this.selected]?.[0];
         },
         video() {
+            if (!this.level) return null;
             if (!this.level.showcase) {
                 return embed(this.level.verification);
             }
-
             return embed(
                 this.toggledShowcase
                     ? this.level.showcase
                     : this.level.verification
             );
-        },
     },
   async mounted() {
     const [list, editors, packs] = await Promise.all([
