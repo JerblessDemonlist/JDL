@@ -33,8 +33,8 @@ export default {
         {{ filterOpen ? 'Hide Filters' : 'Show Filters' }}
     </button>
     <div v-if="filterOpen" class="filter-content">
-        <div class="filter-match-toggle">
-            <span>Match:</span>
+<div class="filter-match-toggle">
+    <span class="filter-match-label">Match:</span>
             <button :class="{ active: !matchAll }" @click="matchAll = false">Any</button>
             <button :class="{ active: matchAll }" @click="matchAll = true">All</button>
         </div>
