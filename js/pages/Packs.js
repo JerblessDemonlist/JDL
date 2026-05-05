@@ -149,24 +149,24 @@ export default {
                     <h1>{{ selectedLevel.name }}</h1>
                     <LevelAuthors :author="selectedLevel.author" :creators="selectedLevel.creators" :verifier="selectedLevel.verifier"></LevelAuthors>
                     <iframe class="video" id="videoframe" :src="video" frameborder="0"></iframe>
-                    <ul class="stats">
-                        <li>
+                    <div class="stats">
+                        <div class="stat">
                             <div class="type-title-sm">ID</div>
                             <p>{{ selectedLevel.id }}</p>
-                        </li>
-                        <li>
+                        </div>
+                        <div class="stat">
                             <div class="type-title-sm">Enjoyment</div>
                             <p>{{ selectedLevel.enjoyment || 'N/A' }}</p>
-                        </li>
-                        <li>
+                        </div>
+                        <div class="stat">
                             <div class="type-title-sm">Tags</div>
-                            <p>{{ selectedLevel.tags || 'N/A' }}</p>
-                        </li>
-                        <li>
+                            <p>{{ selectedLevel.tags && selectedLevel.tags.length > 0 ? selectedLevel.tags.join(', ') : 'N/A' }}</p>
+                        </div>
+                        <div class="stat">
                             <div class="type-title-sm">Length</div>
                             <p>{{ selectedLevel.length || 'N/A' }}</p>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                     <h2>Records</h2>
                     <table class="records">
                         <tr v-for="record in selectedLevel.records" class="record">
