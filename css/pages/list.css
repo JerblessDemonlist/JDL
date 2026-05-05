@@ -161,8 +161,12 @@
     text-decoration: underline;
 }
 .tier-heading {
+    display: inline-block;
     font-size: 1rem;
-    padding: 0.5rem 1rem;
+    padding: 0.25rem 0.75rem;
     margin-top: 1rem;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
+    border-radius: 999px;
+    border: 2px solid;
+    font-family: 'Lexend Deca', sans-serif;
 }
