@@ -267,3 +267,7 @@
     background-color: var(--color-error);
     color: var(--color-on-error);
 }
+.page-list .filter-match-label {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 0.875rem;
+}
