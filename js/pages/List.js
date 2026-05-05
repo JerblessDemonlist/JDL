@@ -53,7 +53,7 @@ export default {
                             class="level-pack-badge"
                             href="/packs"
                             @click.prevent="$router.push({ path: '/packs', query: { pack: pack.id } })"
-                        >
+                        <a>
                             {{ pack.name }}
                         </a>
                     </div>
@@ -239,33 +239,35 @@ export default {
             );
         },
     },
-    async mounted() {
-        // Hide loading spinner
-         [this.list, this.editors, this.packs] = await Promise.all([
-            fetchList(),
-            fetchEditors(),
-            fetchPacks(),
-        ]);
+  async mounted() {
+    const [list, editors, packs] = await Promise.all([
+        fetchList(),
+        fetchEditors(),
+        fetchPacks(),
+    ]);
 
-        // Error handling
-        if (!this.list) {
-            this.errors = [
-                "Failed to load list. Retry in a few minutes or notify list staff.",
-            ];
-        } else {
-            this.errors.push(
-                ...this.list
-                    .filter(([_, err]) => err)
-                    .map(([_, err]) => {
-                        return `Failed to load level. (${err}.json)`;
-                    })
-            );
-            if (!this.editors) {
-                this.errors.push("Failed to load list editors.");
-            }
+    this.list = list;
+    this.editors = editors;
+    this.packs = packs;
+
+    if (!this.list) {
+        this.errors = [
+            "Failed to load list. Retry in a few minutes or notify list staff.",
+        ];
+    } else {
+        this.errors.push(
+            ...this.list
+                .filter(([_, err]) => err)
+                .map(([_, err]) => {
+                    return `Failed to load level. (${err}.json)`;
+                })
+        );
+        if (!this.editors) {
+            this.errors.push("Failed to load list editors.");
         }
+    }
 
-        this.loading = false;
+    this.loading = false;
     },
     methods: {
         embed,
