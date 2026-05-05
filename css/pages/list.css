@@ -301,8 +301,8 @@
 .search-container .search-clear {
     position: absolute;
     right: 0.75rem;
-    top: 25%;
-    transform: translateY(-25%);
+    top: 30%;
+    transform: translateY(-30%);
     background: none;
     border: none;
     color: var(--color-on-background);
