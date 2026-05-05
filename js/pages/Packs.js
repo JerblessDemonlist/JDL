@@ -25,8 +25,8 @@ export default {
             fetchList(),
             fetchPacks(),
             fetchLeaderboard(),
-            fetchTiers()
         ]);
+        const tiers = await fetchTiers();
 
         const levels = list
             .filter(([level]) => level !== null)
