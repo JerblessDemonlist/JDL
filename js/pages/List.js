@@ -253,12 +253,15 @@ export default {
         return [];
     }
 },
-        allTags() {
-            const tags = new Set();
-            this.list.forEach(([level]) => {
-                  if (level?.tags) level.tags.forEach((tag) => tags.add(tag));
-            });
-            return [...tags].sort();
+allTags() {
+    if (!this.list?.length) return [];
+    const tags = new Set();
+    this.list.forEach(([level]) => {
+        if (level?.tags && Array.isArray(level.tags)) {
+            level.tags.forEach((tag) => tags.add(tag));
+        }
+    });
+    return [...tags].sort();
 },
 filteredList() {
     return this.list.filter(([level]) => {
