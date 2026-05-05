@@ -40,28 +40,28 @@ export default {
                     <h1>{{ level.name }}</h1>
                     <LevelAuthors :author="level.author" :creators="level.creators" :verifier="level.verifier"></LevelAuthors>
                     <iframe class="video" id="videoframe" :src="video" frameborder="0"></iframe>
-                    <ul class="stats">
-                        <li>
-                            <div class="type-title-sm">Points when completed</div>
-                            <p>{{ score(this.selected + 1, this.totalLevels, 100, level.percentToQualify) }}</p>
-                        </li>
-                        <li>
+                    <div class="stats">
+                        <div class="stat">
+                             <div class="type-title-sm">Points when completed</div>
+                            <p>{{ score(selected + 1, totalLevels, 100, level.percentToQualify) }}</p>
+                        </div>
+                        <div class="stat">
                             <div class="type-title-sm">ID</div>
                             <p>{{ level.id }}</p>
-                        </li>
-                        <li>
+                        </div>
+                        <div class="stat">
                             <div class="type-title-sm">Enjoyment</div>
                             <p>{{ level.enjoyment || 'N/A' }}</p>
-                        </li>
-                         <li>
+                        </div>
+                        <div class="stat">
                             <div class="type-title-sm">Tags</div>
-                            <p>{{ level.tags || 'N/A' }}</p>
-                        </li>
-                        <li>
+                            <p>{{ level.tags && Array.isArray(level.tags) && level.tags.length > 0 ? level.tags.join(', ') : (level.tags || 'N/A') }}</p>
+                        </div>
+                        <div class="stat">
                             <div class="type-title-sm">Length</div>
                             <p>{{ level.length || '1:00' }}</p>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                     <h2>Records</h2>
                     <p><strong>{{ level.percentToQualify }}%</strong> or better to qualify</p>
                     <table class="records">
