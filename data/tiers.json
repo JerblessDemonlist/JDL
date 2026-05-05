@@ -1,0 +1,27 @@
+[
+    {
+        "id": "copper",
+        "name": "Copper Tier",
+        "color": "#C68346"
+    },
+    {
+        "id": "silver",
+        "name": "Silver Tier",
+        "color": "#E0DDDD"
+    },
+    {
+        "id": "gold",
+        "name": "Gold Tier",
+        "color": "#FDDC5C"
+    },
+    {
+        "id": "platinum",
+        "name": "Platinum Tier",
+        "color": "#B8C3B7"
+    },
+    {
+        "id": "diamond",
+        "name": "Diamond Tier",
+        "color": "#B9F2FF"
+    }
+]
