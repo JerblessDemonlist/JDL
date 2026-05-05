@@ -179,7 +179,7 @@
 .page-list .meta .editors li a:hover {
     text-decoration: underline;
 }
-.tier-heading {
+.page-list .tier-heading {
     display: inline-block;
     font-size: 1rem;
     padding: 0.25rem 0.75rem;
@@ -290,15 +290,15 @@
     font-family: 'Lexend Deca', sans-serif;
     font-size: 0.875rem;
 }
-.search-container {
+.page-list .search-container {
     position: relative;
     width: 100%;
 }
-.search-container .search-bar {
+.page-list .search-container .search-bar {
     width: 100%;
     padding-right: 2.5rem;
 }
-.search-container .search-clear {
+.page-list .search-container .search-clear {
     position: absolute;
     right: 0.75rem;
     top: 30%;
@@ -311,6 +311,6 @@
     opacity: 0.5;
     padding: 0;
 }
-.search-container .search-clear:hover {
+.page-list .search-container .search-clear:hover {
     opacity: 1;
 }
