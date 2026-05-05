@@ -22,12 +22,38 @@ export default {
         </main>
         <main v-else class="page-list">
             <div class="list-container">
-                <input
-                    type="text"
-                    v-model="searchQuery"
-                    placeholder="Search levels..."
-                    class="search-bar"
-                />
+<input
+    type="text"
+    v-model="searchQuery"
+    placeholder="Search levels..."
+    class="search-bar"
+/>
+<div class="filter-panel">
+    <button class="filter-toggle" @click="filterOpen = !filterOpen">
+        {{ filterOpen ? 'Hide Filters' : 'Show Filters' }}
+    </button>
+    <div v-if="filterOpen" class="filter-content">
+        <div class="filter-match-toggle">
+            <span>Match:</span>
+            <button :class="{ active: !matchAll }" @click="matchAll = false">Any</button>
+            <button :class="{ active: matchAll }" @click="matchAll = true">All</button>
+        </div>
+        <div class="filter-tags">
+            <button
+                v-for="tag in allTags"
+                :key="tag"
+                class="filter-tag"
+                :class="{ active: selectedTags.includes(tag) }"
+                @click="selectedTags.includes(tag) ? selectedTags.splice(selectedTags.indexOf(tag), 1) : selectedTags.push(tag)"
+            >
+                {{ tag }}
+            </button>
+        </div>
+        <button v-if="selectedTags.length > 0" class="filter-clear" @click="selectedTags = []">
+            Clear Filters
+        </button>
+    </div>
+</div>
                 <table class="list" v-if="list">
                     <tr v-for="([level, err], i) in filteredList">
                         <td class="rank">
@@ -203,6 +229,9 @@ export default {
         loading: true,
         selected: 0,
         searchQuery: '',
+        selectedTags: [],
+        matchAll: false,
+        filterOpen: false,
         errors: [],
         roleIconMap,
         store,
@@ -224,12 +253,25 @@ export default {
         return [];
     }
 },
-        filteredList() {
-            if (!this.searchQuery) return this.list;
-            return this.list.filter(([level]) =>
-                level?.name?.toLowerCase().includes(this.searchQuery.toLowerCase())
-            );
-        },
+        allTags() {
+            const tags = new Set();
+            this.list.forEach(([level]) => {
+                  if (level?.tags) level.tags.forEach((tag) => tags.add(tag));
+            });
+            return [...tags].sort();
+},
+filteredList() {
+    return this.list.filter(([level]) => {
+        const matchesSearch = !this.searchQuery ||
+            level?.name?.toLowerCase().includes(this.searchQuery.toLowerCase());
+        const matchesTags = this.selectedTags.length === 0 || (
+            this.matchAll
+                ? this.selectedTags.every((tag) => level?.tags?.includes(tag))
+                : this.selectedTags.some((tag) => level?.tags?.includes(tag))
+        );
+        return matchesSearch && matchesTags;
+    });
+},
         level() {
             if (!this.list?.length) return null;
             return this.list[this.selected]?.[0];
