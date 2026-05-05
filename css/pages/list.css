@@ -170,3 +170,9 @@
     border: 2px solid;
     font-family: 'Lexend Deca', sans-serif;
 }
+.page-list .level-container .level .level-description {
+    font-size: 0.95rem;
+    color: var(--color-on-background);
+    opacity: 0.75;
+    font-style: italic;
+}
