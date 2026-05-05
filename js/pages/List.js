@@ -103,11 +103,11 @@ export default {
                             <div class="type-title-sm">Length</div>
                             <p>{{ level.length || '1:00' }}</p>
                         </div>
-                        <div class="stat" v-if="level.tags && level.tags.length > 0">
-                            <div class="type-title-sm">Tags</div>
-                            <div class="level-tags-list">
-                                <span v-for="tag in level.tags" :key="tag" class="level-tag">{{ tag }}</span>
-                            </div>
+                    </div>
+                    <div v-if="level.tags && level.tags.length > 0" class="level-tags">
+                        <div class="type-title-sm">Tags</div>
+                        <div class="level-tags-list">
+                            <span v-for="tag in level.tags" :key="tag" class="level-tag">{{ tag }}</span>
                         </div>
                     </div>
                     <h2>Records</h2>
