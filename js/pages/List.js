@@ -22,12 +22,15 @@ export default {
         </main>
         <main v-else class="page-list">
             <div class="list-container">
-<input
-    type="text"
-    v-model="searchQuery"
-    placeholder="Search levels..."
-    class="search-bar"
-/>
+<div class="search-container">
+    <input
+        type="text"
+        v-model="searchQuery"
+        placeholder="Search levels..."
+        class="search-bar"
+    />
+    <button v-if="searchQuery" class="search-clear" @click="searchQuery = ''">✕</button>
+</div>
 <div class="filter-panel">
     <button class="filter-toggle" @click="filterOpen = !filterOpen">
         {{ filterOpen ? 'Hide Filters' : 'Show Filters' }}
