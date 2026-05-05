@@ -102,6 +102,7 @@ export default {
                         <li>
                             <div class="type-title-sm">Tags</div>
                             <p>{{ level.tags && level.tags.length > 0 ? level.tags.join(', ') : 'N/A' }}</p>
+                        </li>
                         <li>
                             <div class="type-title-sm">Length</div>
                             <p>{{ level.length || '1:00' }}</p>
