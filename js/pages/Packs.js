@@ -160,7 +160,7 @@ export default {
                         </div>
                         <div class="stat">
                             <div class="type-title-sm">Tags</div>
-                            <p>{{ selectedLevel.tags && selectedLevel.tags.length > 0 ? selectedLevel.tags.join(', ') : 'N/A' }}</p>
+                            <p>{{ selectedLevel.tags && Array.isArray(selectedLevel.tags) && selectedLevel.tags.length > 0 ? selectedLevel.tags.join(', ') : (selectedLevel.tags || 'N/A') }}</p>
                         </div>
                         <div class="stat">
                             <div class="type-title-sm">Length</div>
