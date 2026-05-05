@@ -79,10 +79,10 @@
     gap: 0.5rem;
 }
 .page-list .level-pack-badge {
-    background-color: var(--color-primary);
-    color: var(--color-on-primary);
+    color: var(--color-on-background);
     padding: 0.25rem 0.75rem;
     border-radius: 999px;
+    border: 2px solid var(--color-primary);
     font-size: 0.875rem;
     font-family: 'Lexend Deca', sans-serif;
     cursor: pointer;
@@ -159,4 +159,10 @@
 }
 .page-list .meta .editors li a:hover {
     text-decoration: underline;
+}
+.tier-heading {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
 }
