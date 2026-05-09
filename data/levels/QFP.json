@@ -9,5 +9,9 @@
     "length": "1:18",
     "percentToQualify": 74,
     "records": [
+        {
+            "user": "Tylr",
+            "percent": 100
+        }
     ]
 }
