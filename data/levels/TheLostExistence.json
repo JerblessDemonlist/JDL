@@ -7,5 +7,9 @@
     "verification": "https://www.youtube.com/watch?v=ooOXSdBEW1c",
     "percentToQualify": 63,
     "records": [
+        {
+            "user": "Tylr",
+            "percent": 100
+        }
     ]
 }
