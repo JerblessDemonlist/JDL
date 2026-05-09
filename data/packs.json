@@ -28,6 +28,13 @@
     "tier": "silver"
   },
   {
+    "id": "Jon",
+    "name": "JonathanGD Pack",
+    "description": "Levels made by JonathanGD.",
+    "levels": [45239692, 69010770, 57433866],
+    "tier": "silver"
+  },
+  {
     "id": "Billboard100",
     "name": "Billboard Hot 100",
     "description": "Levels using songs that you would hear on the radio.",
