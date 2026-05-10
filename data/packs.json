@@ -98,6 +98,20 @@
     "tier": "diamond"
   },
   {
+    "id": "NC1",
+    "name": "Nine Circles Pack I",
+    "description": "Levels using the Nine Circles theme.",
+    "levels": [112515547, 8147005, 38765979, 55385816],
+    "tier": "silver"
+  },
+  {
+    "id": "NC2",
+    "name": "Nine Circles Pack II",
+    "description": "Harder levels using the Nine Circles theme.",
+    "levels": [26681070, 42117203, 52919433, 76159410],
+    "tier": "platinum"
+  },
+  {
     "id": "Default1",
     "name": "Default Songs Pack I",
     "description": "Levels using default songs.",
