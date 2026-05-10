@@ -180,5 +180,12 @@
     "description": "Levels that are themed or named around space in some way.",
     "levels": [76159410, 116401475, 112371654],
     "tier": "platinum"
+  },
+  {
+    "id": "First",
+    "name": "Unique First Extremes Pack",
+    "description": "Unique levels that Jerbless members beat as their first extreme.",
+    "levels": [25241513, 55184818, 35579890],
+    "tier": "silver"
   }
 ]
