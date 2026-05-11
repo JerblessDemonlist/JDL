@@ -248,3 +248,12 @@ export async function fetchTiers() {
         return [];
     }
 }
+export async function fetchIcons() {
+    try {
+        const res = await fetch('/data/icons.json');
+        return await res.json();
+    } catch {
+        console.error("Failed to load icons.");
+        return {};
+    }
+}
