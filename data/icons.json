@@ -1,1 +1,132 @@
- 
+{
+    "Ant_Gam3r": {
+        "cube": "/assets/icons/Ant_Gam3r/cube.png",
+        "ship": "/assets/icons/Ant_Gam3r/ship.png",
+        "ball": "/assets/icons/Ant_Gam3r/ball.png",
+        "ufo": "/assets/icons/Ant_Gam3r/ufo.png",
+        "wave": "/assets/icons/Ant_Gam3r/wave.png",
+        "robot": "/assets/icons/Ant_Gam3r/robot.png",
+        "spider": "/assets/icons/Ant_Gam3r/spider.png",
+        "swing": "/assets/icons/Ant_Gam3r/swing.png"
+    },
+    "Beanie": {
+        "cube": "/assets/icons/Beanie/cube.png",
+        "ship": "/assets/icons/Beanie/ship.png",
+        "ball": "/assets/icons/Beanie/ball.png",
+        "ufo": "/assets/icons/Beanie/ufo.png",
+        "wave": "/assets/icons/Beanie/wave.png",
+        "robot": "/assets/icons/Beanie/robot.png",
+        "spider": "/assets/icons/Beanie/spider.png",
+        "swing": "/assets/icons/Beanie/swing.png"
+    },
+    "Bluutemp": {
+        "cube": "/assets/icons/Bluutemp/cube.png",
+        "ship": "/assets/icons/Bluutemp/ship.png",
+        "ball": "/assets/icons/Bluutemp/ball.png",
+        "ufo": "/assets/icons/Bluutemp/ufo.png",
+        "wave": "/assets/icons/Bluutemp/wave.png",
+        "robot": "/assets/icons/Bluutemp/robot.png",
+        "spider": "/assets/icons/Bluutemp/spider.png",
+        "swing": "/assets/icons/Bluutemp/swing.png"
+    },
+    "Hivehead": {
+        "cube": "/assets/icons/Hivehead/cube.png",
+        "ship": "/assets/icons/Hivehead/ship.png",
+        "ball": "/assets/icons/Hivehead/ball.png",
+        "ufo": "/assets/icons/Hivehead/ufo.png",
+        "wave": "/assets/icons/Hivehead/wave.png",
+        "robot": "/assets/icons/Hivehead/robot.png",
+        "spider": "/assets/icons/Hivehead/spider.png",
+        "swing": "/assets/icons/Hivehead/swing.png"
+    },
+    "LuckyNS": {
+        "cube": "/assets/icons/LuckyNS/cube.png",
+        "ship": "/assets/icons/LuckyNS/ship.png",
+        "ball": "/assets/icons/LuckyNS/ball.png",
+        "ufo": "/assets/icons/LuckyNS/ufo.png",
+        "wave": "/assets/icons/LuckyNS/wave.png",
+        "robot": "/assets/icons/LuckyNS/robot.png",
+        "spider": "/assets/icons/LuckyNS/spider.png",
+        "swing": "/assets/icons/LuckyNS/swing.png"
+    },
+    "MathGenius": {
+        "cube": "/assets/icons/MathGenius/cube.png",
+        "ship": "/assets/icons/MathGenius/ship.png",
+        "ball": "/assets/icons/MathGenius/ball.png",
+        "ufo": "/assets/icons/MathGenius/ufo.png",
+        "wave": "/assets/icons/MathGenius/wave.png",
+        "robot": "/assets/icons/MathGenius/robot.png",
+        "spider": "/assets/icons/MathGenius/spider.png",
+        "swing": "/assets/icons/MathGenius/swing.png"
+    },
+    "Overconfident": {
+        "cube": "/assets/icons/Overconfident/cube.png",
+        "ship": "/assets/icons/Overconfident/ship.png",
+        "ball": "/assets/icons/Overconfident/ball.png",
+        "ufo": "/assets/icons/Overconfident/ufo.png",
+        "wave": "/assets/icons/Overconfident/wave.png",
+        "robot": "/assets/icons/Overconfident/robot.png",
+        "spider": "/assets/icons/Overconfident/spider.png",
+        "swing": "/assets/icons/Overconfident/swing.png"
+    },
+    "Risp": {
+        "cube": "/assets/icons/Risp/cube.png",
+        "ship": "/assets/icons/Risp/ship.png",
+        "ball": "/assets/icons/Risp/ball.png",
+        "ufo": "/assets/icons/Risp/ufo.png",
+        "wave": "/assets/icons/Risp/wave.png",
+        "robot": "/assets/icons/Risp/robot.png",
+        "spider": "/assets/icons/Risp/spider.png",
+        "swing": "/assets/icons/Risp/swing.png"
+    },
+    "SilverSanctuary": {
+        "cube": "/assets/icons/SilverSanctuary/cube.png",
+        "ship": "/assets/icons/SilverSanctuary/ship.png",
+        "ball": "/assets/icons/SilverSanctuary/ball.png",
+        "ufo": "/assets/icons/SilverSanctuary/ufo.png",
+        "wave": "/assets/icons/SilverSanctuary/wave.png",
+        "robot": "/assets/icons/SilverSanctuary/robot.png",
+        "spider": "/assets/icons/SilverSanctuary/spider.png",
+        "swing": "/assets/icons/SilverSanctuary/swing.png"
+    },
+    "Tylr": {
+        "cube": "/assets/icons/Tylr/cube.png",
+        "ship": "/assets/icons/Tylr/ship.png",
+        "ball": "/assets/icons/Tylr/ball.png",
+        "ufo": "/assets/icons/Tylr/ufo.png",
+        "wave": "/assets/icons/Tylr/wave.png",
+        "robot": "/assets/icons/Tylr/robot.png",
+        "spider": "/assets/icons/Tylr/spider.png",
+        "swing": "/assets/icons/Tylr/swing.png"
+    },
+    "Vernosis": {
+        "cube": "/assets/icons/Vernosis/cube.png",
+        "ship": "/assets/icons/Vernosis/ship.png",
+        "ball": "/assets/icons/Vernosis/ball.png",
+        "ufo": "/assets/icons/Vernosis/ufo.png",
+        "wave": "/assets/icons/Vernosis/wave.png",
+        "robot": "/assets/icons/Vernosis/robot.png",
+        "spider": "/assets/icons/Vernosis/spider.png",
+        "swing": "/assets/icons/Vernosis/swing.png"
+    },
+    "Xtinct": {
+        "cube": "/assets/icons/Xtinct/cube.png",
+        "ship": "/assets/icons/Xtinct/ship.png",
+        "ball": "/assets/icons/Xtinct/ball.png",
+        "ufo": "/assets/icons/Xtinct/ufo.png",
+        "wave": "/assets/icons/Xtinct/wave.png",
+        "robot": "/assets/icons/Xtinct/robot.png",
+        "spider": "/assets/icons/Xtinct/spider.png",
+        "swing": "/assets/icons/Xtinct/swing.png"
+    },
+    "Zovori": {
+        "cube": "/assets/icons/Zovori/cube.png",
+        "ship": "/assets/icons/Zovori/ship.png",
+        "ball": "/assets/icons/Zovori/ball.png",
+        "ufo": "/assets/icons/Zovori/ufo.png",
+        "wave": "/assets/icons/Zovori/wave.png",
+        "robot": "/assets/icons/Zovori/robot.png",
+        "spider": "/assets/icons/Zovori/spider.png",
+        "swing": "/assets/icons/Zovori/swing.png"
+    }
+}
