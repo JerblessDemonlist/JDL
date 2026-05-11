@@ -4,10 +4,10 @@
 .page-leaderboard {
     height: 100%;
     display: grid;
-    grid-template-columns: minmax(24rem, 2fr) 4fr;
+    grid-template-columns: minmax(24rem, 2fr) 5fr;
     grid-template-rows: max-content 1fr;
     column-gap: 2rem;
-    max-width: 90rem;
+    max-width: 100rem;
     margin: 0 auto;
 }
 .page-leaderboard > div {
