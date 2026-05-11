@@ -34,20 +34,22 @@ export default {
                             <td class="total">
                                 <p class="type-label-lg">{{ localize(ientry.total) }}</p>
                             </td>
-                                <td class="user" :class="{ 'active': selected == i }">
-                                    <button @click="selected = i">
-                                        <div class="user-icons" v-if="icons[ientry.user]">
-                                            <img v-for="(src, type) in icons[ientry.user]" :key="type" :src="src" :alt="type" class="user-icon">
-                                        </div>
-                                        <span class="type-label-lg">{{ ientry.user }}</span>
-                                    </button>
-                                </td>
+                            <td class="user" :class="{ 'active': selected == i }">
+                                <button @click="selected = i">
+                                    <span class="type-label-lg">{{ ientry.user }}</span>
+                                </button>
+                            </td>
                         </tr>
                     </table>
                 </div>
                 <div class="player-container">
                     <div class="player">
-                        <h1>#{{ selected + 1 }} {{ entry.user }}</h1>
+                        <div class="player-header">
+                            <h1>#{{ selected + 1 }} {{ entry.user }}</h1>
+                            <div class="user-icons" v-if="icons[entry.user]">
+                                <img v-for="(src, type) in icons[entry.user]" :key="type" :src="src" :alt="type" class="user-icon">
+                            </div>
+                        </div>
                         <h3>{{ entry.total }}</h3>
                         <h2 v-if="entry.packs && entry.packs.length > 0">
                             Completed Packs ({{ entry.packs.length }})
