@@ -1,4 +1,4 @@
-import { fetchLeaderboard } from '../content.js';
+import { fetchLeaderboard, fetchIcons } from '../content.js';
 import { localize } from '../util.js';
 
 import Spinner from '../components/Spinner.js';
@@ -9,6 +9,7 @@ export default {
     },
     data: () => ({
         leaderboard: [],
+        icons: {},
         loading: true,
         selected: 0,
         err: [],
@@ -33,11 +34,14 @@ export default {
                             <td class="total">
                                 <p class="type-label-lg">{{ localize(ientry.total) }}</p>
                             </td>
-                            <td class="user" :class="{ 'active': selected == i }">
-                                <button @click="selected = i">
-                                    <span class="type-label-lg">{{ ientry.user }}</span>
-                                </button>
-                            </td>
+                                <td class="user" :class="{ 'active': selected == i }">
+                                    <button @click="selected = i">
+                                        <div class="user-icons" v-if="icons[ientry.user]">
+                                            <img v-for="(src, type) in icons[ientry.user]" :key="type" :src="src" :alt="type" class="user-icon">
+                                        </div>
+                                        <span class="type-label-lg">{{ ientry.user }}</span>
+                                    </button>
+                                </td>
                         </tr>
                     </table>
                 </div>
@@ -102,9 +106,13 @@ export default {
         },
     },
     async mounted() {
-        const [leaderboard, err] = await fetchLeaderboard();
+        const [[leaderboard, err], icons] = await Promise.all([
+            fetchLeaderboard(),
+            fetchIcons(),
+        ]);
         this.leaderboard = leaderboard;
         this.err = err;
+        this.icons = icons;
         // Hide loading spinner
         this.loading = false;
     },
