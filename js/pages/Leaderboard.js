@@ -50,7 +50,7 @@ export default {
                                 <img v-for="(src, type) in icons[entry.user]" :key="type" :src="src" :alt="type" class="user-icon">
                             </div>
                         </div>
-                        <h3>{{ entry.total }}</h3>
+                        <h3>{{ entry.total }} points</h3>
                         <h2 v-if="entry.packs && entry.packs.length > 0">
                             Completed Packs ({{ entry.packs.length }})
                         </h2>
