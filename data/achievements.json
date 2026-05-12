@@ -1,0 +1,146 @@
+[
+    {
+        "id": "points_1",
+        "name": "Point Grinder I",
+        "description": "Reach 500 points on the leaderboard.",
+        "image": "/assets/achievements/points_1.png",
+        "type": "auto",
+        "category": "points",
+        "tier": 1
+    },
+    {
+        "id": "points_2",
+        "name": "Point Grinder II",
+        "description": "Reach 1,000 points on the leaderboard.",
+        "image": "/assets/achievements/points_2.png",
+        "type": "auto",
+        "category": "points",
+        "tier": 2
+    },
+    {
+        "id": "points_3",
+        "name": "Point Grinder III",
+        "description": "Reach 2,000 points on the leaderboard.",
+        "image": "/assets/achievements/points_3.png",
+        "type": "auto",
+        "category": "points",
+        "tier": 3
+    },
+    {
+        "id": "points_4",
+        "name": "Point Grinder IV",
+        "description": "Reach 5,000 points on the leaderboard.",
+        "image": "/assets/achievements/points_4.png",
+        "type": "auto",
+        "category": "points",
+        "tier": 4
+    },
+    {
+        "id": "points_5",
+        "name": "Point Grinder V",
+        "description": "Reach 10,000 points on the leaderboard.",
+        "image": "/assets/achievements/points_5.png",
+        "type": "auto",
+        "category": "points",
+        "tier": 5
+    },
+    {
+        "id": "levels_1",
+        "name": "Demon Slayer I",
+        "description": "Complete 5 levels on the list.",
+        "image": "/assets/achievements/levels_1.png",
+        "type": "auto",
+        "category": "levels",
+        "tier": 1
+    },
+    {
+        "id": "levels_2",
+        "name": "Demon Slayer II",
+        "description": "Complete 10 levels on the list.",
+        "image": "/assets/achievements/levels_2.png",
+        "type": "auto",
+        "category": "levels",
+        "tier": 2
+    },
+    {
+        "id": "levels_3",
+        "name": "Demon Slayer III",
+        "description": "Complete 25 levels on the list.",
+        "image": "/assets/achievements/levels_3.png",
+        "type": "auto",
+        "category": "levels",
+        "tier": 3
+    },
+    {
+        "id": "levels_4",
+        "name": "Demon Slayer IV",
+        "description": "Complete 50 levels on the list.",
+        "image": "/assets/achievements/levels_4.png",
+        "type": "auto",
+        "category": "levels",
+        "tier": 4
+    },
+    {
+        "id": "levels_5",
+        "name": "Demon Slayer V",
+        "description": "Complete 100 levels on the list.",
+        "image": "/assets/achievements/levels_5.png",
+        "type": "auto",
+        "category": "levels",
+        "tier": 5
+    },
+    {
+        "id": "levels_6",
+        "name": "Demon Slayer VI",
+        "description": "Complete 200 levels on the list.",
+        "image": "/assets/achievements/levels_6.png",
+        "type": "auto",
+        "category": "levels",
+        "tier": 6
+    },
+    {
+        "id": "packs_1",
+        "name": "Pack Hunter I",
+        "description": "Complete 1 pack.",
+        "image": "/assets/achievements/packs_1.png",
+        "type": "auto",
+        "category": "packs",
+        "tier": 1
+    },
+    {
+        "id": "packs_2",
+        "name": "Pack Hunter II",
+        "description": "Complete 3 packs.",
+        "image": "/assets/achievements/packs_2.png",
+        "type": "auto",
+        "category": "packs",
+        "tier": 2
+    },
+    {
+        "id": "packs_3",
+        "name": "Pack Hunter III",
+        "description": "Complete 5 packs.",
+        "image": "/assets/achievements/packs_3.png",
+        "type": "auto",
+        "category": "packs",
+        "tier": 3
+    },
+    {
+        "id": "packs_4",
+        "name": "Pack Hunter IV",
+        "description": "Complete 10 packs.",
+        "image": "/assets/achievements/packs_4.png",
+        "type": "auto",
+        "category": "packs",
+        "tier": 4
+    },
+    {
+        "id": "packs_5",
+        "name": "Pack Hunter V",
+        "description": "Complete 25 packs.",
+        "image": "/assets/achievements/packs_5.png",
+        "type": "auto",
+        "category": "packs",
+        "tier": 5
+    }
+]
