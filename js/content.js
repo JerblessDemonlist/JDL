@@ -257,3 +257,22 @@ export async function fetchIcons() {
         return {};
     }
 }
+export async function fetchAchievements() {
+    try {
+        const res = await fetch('/data/achievements.json');
+        return await res.json();
+    } catch {
+        console.error("Failed to load achievements.");
+        return [];
+    }
+}
+
+export async function fetchPlayerAchievements() {
+    try {
+        const res = await fetch('/data/player-achievements.json');
+        return await res.json();
+    } catch {
+        console.error("Failed to load player achievements.");
+        return {};
+    }
+}
