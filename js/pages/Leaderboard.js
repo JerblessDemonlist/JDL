@@ -1,4 +1,4 @@
-import { fetchLeaderboard, fetchIcons } from '../content.js';
+import { fetchLeaderboard, fetchIcons, fetchAchievements, fetchPlayerAchievements } from '../content.js';
 import { localize } from '../util.js';
 
 import Spinner from '../components/Spinner.js';
@@ -10,6 +10,8 @@ export default {
     data: () => ({
         leaderboard: [],
         icons: {},
+        achievements: [],
+        playerAchievements: {},
         loading: true,
         selected: 0,
         err: [],
@@ -51,6 +53,19 @@ export default {
                             </div>
                         </div>
                         <h3>{{ entry.total }} points</h3>
+                            <div v-if="entryAchievements.length > 0" class="achievements">
+                                <h2>Achievements ({{ entryAchievements.length }})</h2>
+                                <div class="achievement-list">
+                                    <div v-for="achievement in entryAchievements" :key="achievement.id" class="achievement">
+                                        <span class="achievement-name type-label-lg">{{ achievement.name }}</span>
+                                        <div class="achievement-badge-container">
+                                                <img :src="achievement.image" :alt="achievement.name" class="achievement-badge">
+                                            <div class="achievement-tooltip">{{ achievement.description }}</div>
+                                            </div>
+                                        <span class="achievement-date">{{ achievement.unlockedOn }}</span>
+                                    </div>
+                                </div>
+                            </div>
                         <h2 v-if="entry.packs && entry.packs.length > 0">
                             Completed Packs ({{ entry.packs.length }})
                         </h2>
@@ -102,23 +117,82 @@ export default {
             </div>
         </main>
     `,
-    computed: {
-        entry() {
-            return this.leaderboard[this.selected];
-        },
+computed: {
+    entry() {
+        return this.leaderboard[this.selected];
     },
-    async mounted() {
-        const [[leaderboard, err], icons] = await Promise.all([
-            fetchLeaderboard(),
-            fetchIcons(),
-        ]);
-        this.leaderboard = leaderboard;
-        this.err = err;
-        this.icons = icons;
-        // Hide loading spinner
-        this.loading = false;
+    entryAchievements() {
+        if (!this.entry) return [];
+        const user = this.entry.user;
+        const total = this.entry.total;
+        const levelsCompleted = this.entry.verified.length + this.entry.completed.length;
+        const packsCompleted = this.entry.packs.length;
+        const earned = [];
+
+        // Points achievements - highest tier only
+        const pointsTiers = [
+            { id: 'points_1', threshold: 500 },
+            { id: 'points_2', threshold: 1000 },
+            { id: 'points_3', threshold: 2000 },
+            { id: 'points_4', threshold: 5000 },
+            { id: 'points_5', threshold: 10000 },
+        ];
+        const highestPoints = [...pointsTiers].reverse().find(t => total >= t.threshold);
+        if (highestPoints) {
+            const achievement = this.achievements.find(a => a.id === highestPoints.id);
+            if (achievement) earned.push({ ...achievement, unlockedOn: 'Auto' });
+        }
+
+        // Levels achievements - highest tier only
+        const levelsTiers = [
+            { id: 'levels_1', threshold: 5 },
+            { id: 'levels_2', threshold: 10 },
+            { id: 'levels_3', threshold: 25 },
+            { id: 'levels_4', threshold: 50 },
+            { id: 'levels_5', threshold: 100 },
+            { id: 'levels_6', threshold: 200 },
+        ];
+        const highestLevels = [...levelsTiers].reverse().find(t => levelsCompleted >= t.threshold);
+        if (highestLevels) {
+            const achievement = this.achievements.find(a => a.id === highestLevels.id);
+            if (achievement) earned.push({ ...achievement, unlockedOn: 'Auto' });
+        }
+
+        // Packs achievements - highest tier only
+        const packsTiers = [
+            { id: 'packs_1', threshold: 1 },
+            { id: 'packs_2', threshold: 3 },
+            { id: 'packs_3', threshold: 5 },
+            { id: 'packs_4', threshold: 10 },
+            { id: 'packs_5', threshold: 25 },
+        ];
+        const highestPacks = [...packsTiers].reverse().find(t => packsCompleted >= t.threshold);
+        if (highestPacks) {
+            const achievement = this.achievements.find(a => a.id === highestPacks.id);
+            if (achievement) earned.push({ ...achievement, unlockedOn: 'Auto' });
+        }
+
+        // Manual achievements
+        const manual = this.playerAchievements[user] || [];
+        manual.forEach(({ id, unlockedOn }) => {
+            const achievement = this.achievements.find(a => a.id === id);
+            if (achievement) earned.push({ ...achievement, unlockedOn });
+        });
+
+        return earned;
     },
-    methods: {
-        localize,
-    },
-};
+},
+async mounted() {
+    const [[leaderboard, err], icons, achievements, playerAchievements] = await Promise.all([
+        fetchLeaderboard(),
+        fetchIcons(),
+        fetchAchievements(),
+        fetchPlayerAchievements(),
+    ]);
+    this.leaderboard = leaderboard;
+    this.err = err;
+    this.icons = icons;
+    this.achievements = achievements;
+    this.playerAchievements = playerAchievements;
+    this.loading = false;
+},
