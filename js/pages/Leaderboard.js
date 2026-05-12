@@ -61,8 +61,7 @@ export default {
                                         <div class="achievement-badge-container">
                                                 <img :src="achievement.image" :alt="achievement.name" class="achievement-badge">
                                             <div class="achievement-tooltip">{{ achievement.description }}</div>
-                                            </div>
-                                        <span class="achievement-date">{{ achievement.unlockedOn }}</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
