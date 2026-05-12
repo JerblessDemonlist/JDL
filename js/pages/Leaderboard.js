@@ -195,4 +195,8 @@ async mounted() {
     this.achievements = achievements;
     this.playerAchievements = playerAchievements;
     this.loading = false;
-},
+        },
+        methods: {
+            localize,
+        },
+    };
