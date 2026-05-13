@@ -11,7 +11,19 @@
     top: 0;
     background-color: var(--color-background);
     z-index: 10;
-    padding-block: 0.5rem;
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+    margin-top: -2rem;
+}
+.page-list .list-container .list-sticky::after {
+    content: '';
+    position: absolute;
+    bottom: -1.5rem;
+    left: 0;
+    right: 0;
+    height: 1.5rem;
+    background: linear-gradient(to bottom, var(--color-background), transparent);
+    pointer-events: none;
 }
 .page-list .search-bar {
     width: 100%;
