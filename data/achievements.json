@@ -196,5 +196,37 @@
         "type": "auto",
         "category": "list_rank",
         "tier": 6
+    },
+    {
+        "id": "top_1_player",
+        "name": "The Best",
+        "description": "Has ranked #1 on the leaderboard at some point.",
+        "image": "/assets/achievements/misc/top_1_leaderboard.png",
+        "type": "manual",
+        "category": "manual"
+    },
+    {
+        "id": "creator_1",
+        "name": "Creator I",
+        "description": "Created a level on the list.",
+        "image": "/assets/achievements/misc/creator_1.png",
+        "type": "manual",
+        "category": "manual"
+    },
+    {
+        "id": "creator_2",
+        "name": "Creator II",
+        "description": "Created, verified, and published a rated level on the list.",
+        "image": "/assets/achievements/misc/creator_2.png",
+        "type": "manual",
+        "category": "manual"
+    },
+    {
+        "id": "verifier",
+        "name": "Verifier",
+        "description": "Officially verified a level on the list",
+        "image": "/assets/achievements/misc/verifier.png",
+        "type": "manual",
+        "category": "manual"
     }
 ]
