@@ -170,7 +170,26 @@ computed: {
             const achievement = this.achievements.find(a => a.id === highestPacks.id);
             if (achievement) earned.push({ ...achievement, unlockedOn: 'Auto' });
         }
-
+        
+        // List rank achievements - highest tier only
+        const allLevels = [...this.entry.verified, ...this.entry.completed];
+        const listRankTiers = [
+            { id: 'list_rank_100', threshold: 100 },
+            { id: 'list_rank_50', threshold: 50 },
+            { id: 'list_rank_25', threshold: 25 },
+            { id: 'list_rank_10', threshold: 10 },
+            { id: 'list_rank_5', threshold: 5 },
+            { id: 'list_rank_1', threshold: 1 },
+        ];
+        const bestRank = allLevels.reduce((best, level) => {
+            return level.rank < best ? level.rank : best;
+        }, Infinity);
+        const highestListRank = [...listRankTiers].reverse().find(t => bestRank <= t.threshold);
+        if (highestListRank) {
+            const achievement = this.achievements.find(a => a.id === highestListRank.id);
+            if (achievement) earned.push({ ...achievement, unlockedOn: 'Auto' });
+        }
+        
         // Manual achievements
         const manual = this.playerAchievements[user] || [];
         manual.forEach(({ id, unlockedOn }) => {
