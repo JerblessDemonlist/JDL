@@ -331,6 +331,7 @@ filteredList() {
         }
 
         this.loading = false;
+    },
     methods: {
         embed,
         score,
