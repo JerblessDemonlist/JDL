@@ -1,1 +1,44 @@
-{}
+{
+    "Beanie": [
+        {
+            "id": "top_1_player",
+            "unlockedOn": "2024-01-15"
+        }
+    ],
+    "LuckyNS": [
+        {
+            "id": "verifier",
+            "unlockedOn": "2024-03-20"
+        }
+    ],
+    "MathGenius": [
+        {
+            "id": "verifier",
+            "unlockedOn": "2024-03-20"
+        }
+    ],
+    "Xtinct": [
+        {
+            "id": "verifier",
+            "unlockedOn": "2024-03-20"
+        }
+    ],
+    "Xtinct": [
+        {
+            "id": "creator_1",
+            "unlockedOn": "2024-03-20"
+        }
+    ],
+    "Zovori": [
+        {
+            "id": "creator_1",
+            "unlockedOn": "2024-03-20"
+        }
+    ],
+    "Hivehead": [
+        {
+            "id": "creator_1",
+            "unlockedOn": "2024-03-20"
+        }
+    ]
+}
