@@ -4,7 +4,7 @@
     padding-block: 2rem;
 }
 .page-list .list-container {
-    padding-inline: 1rem;
+    padding-top: 0;
 }
 .page-list .list-container .list-sticky {
     position: sticky;
