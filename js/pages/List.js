@@ -21,42 +21,44 @@ export default {
             <Spinner></Spinner>
         </main>
         <main v-else class="page-list">
-            <div class="list-container">
-<div class="search-container">
-    <input
-        type="text"
-        v-model="searchQuery"
-        placeholder="Search levels..."
-        class="search-bar"
-    />
-    <button v-if="searchQuery" class="search-clear" @click="searchQuery = ''">✕</button>
-</div>
-<div class="filter-panel">
-    <button class="filter-toggle" @click="filterOpen = !filterOpen">
-        {{ filterOpen ? 'Hide Filters' : 'Show Filters' }}
-    </button>
-    <div v-if="filterOpen" class="filter-content">
-<div class="filter-match-toggle">
-    <span class="filter-match-label">Match:</span>
-            <button :class="{ active: !matchAll }" @click="matchAll = false">Any</button>
-            <button :class="{ active: matchAll }" @click="matchAll = true">All</button>
+<div class="list-container">
+    <div class="list-sticky">
+        <div class="search-container">
+            <input
+                type="text"
+                v-model="searchQuery"
+                placeholder="Search levels..."
+                class="search-bar"
+            />
+            <button v-if="searchQuery" class="search-clear" @click="searchQuery = ''">✕</button>
         </div>
-        <div class="filter-tags">
-            <button
-                v-for="tag in allTags"
-                :key="tag"
-                class="filter-tag"
-                :class="{ active: selectedTags.includes(tag) }"
-                @click="selectedTags.includes(tag) ? selectedTags.splice(selectedTags.indexOf(tag), 1) : selectedTags.push(tag)"
-            >
-                {{ tag }}
+        <div class="filter-panel">
+            <button class="filter-toggle" @click="filterOpen = !filterOpen">
+                {{ filterOpen ? 'Hide Filters' : 'Show Filters' }}
             </button>
+            <div v-if="filterOpen" class="filter-content">
+                <div class="filter-match-toggle">
+                    <span class="filter-match-label">Match:</span>
+                    <button :class="{ active: !matchAll }" @click="matchAll = false">Any</button>
+                    <button :class="{ active: matchAll }" @click="matchAll = true">All</button>
+                </div>
+                <div class="filter-tags">
+                    <button
+                        v-for="tag in allTags"
+                        :key="tag"
+                        class="filter-tag"
+                        :class="{ active: selectedTags.includes(tag) }"
+                        @click="selectedTags.includes(tag) ? selectedTags.splice(selectedTags.indexOf(tag), 1) : selectedTags.push(tag)"
+                    >
+                        {{ tag }}
+                    </button>
+                </div>
+                <button v-if="selectedTags.length > 0" class="filter-clear" @click="selectedTags = []">
+                    Clear Filters
+                </button>
+            </div>
         </div>
-        <button v-if="selectedTags.length > 0" class="filter-clear" @click="selectedTags = []">
-            Clear Filters
-        </button>
     </div>
-</div>
                 <table class="list" v-if="list">
                     <tr v-for="([level, err], i) in filteredList">
                         <td class="rank">
