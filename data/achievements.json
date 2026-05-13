@@ -147,7 +147,7 @@
         "id": "list_rank_100",
         "name": "List Climber I",
         "description": "Complete a level in the top 100 of the list.",
-        "image": "/assets/achievements/list/list_rank_100.png",
+        "image": "/assets/achievements/list/list_rank_1.png",
         "type": "auto",
         "category": "list_rank",
         "tier": 1
@@ -156,7 +156,7 @@
         "id": "list_rank_50",
         "name": "List Climber II",
         "description": "Complete a level in the top 50 of the list.",
-        "image": "/assets/achievements/list/list_rank_50.png",
+        "image": "/assets/achievements/list/list_rank_2.png",
         "type": "auto",
         "category": "list_rank",
         "tier": 2
@@ -165,7 +165,7 @@
         "id": "list_rank_25",
         "name": "List Climber III",
         "description": "Complete a level in the top 25 of the list.",
-        "image": "/assets/achievements/list/list_rank_25.png",
+        "image": "/assets/achievements/list/list_rank_3.png",
         "type": "auto",
         "category": "list_rank",
         "tier": 3
@@ -174,7 +174,7 @@
         "id": "list_rank_10",
         "name": "List Climber IV",
         "description": "Complete a level in the top 10 of the list.",
-        "image": "/assets/achievements/list/list_rank_10.png",
+        "image": "/assets/achievements/list/list_rank_4.png",
         "type": "auto",
         "category": "list_rank",
         "tier": 4
@@ -192,7 +192,7 @@
         "id": "list_rank_1",
         "name": "List Climber VI",
         "description": "Complete the #1 level on the list.",
-        "image": "/assets/achievements/list/list_rank_1.png",
+        "image": "/assets/achievements/list/list_rank_6.png",
         "type": "auto",
         "category": "list_rank",
         "tier": 6
