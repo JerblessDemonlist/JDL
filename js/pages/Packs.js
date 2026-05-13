@@ -81,12 +81,14 @@ export default {
     },
 
    computed: {
-       packsGroupedByTier() {
-        return this.tiers.map((tier) => ({
-            ...tier,
-            packs: this.filteredPacks.filter((pack) => pack.tier === tier.id),
-        })).filter((tier) => tier.packs.length > 0);
-    },
+        packsGroupedByTier() {
+            return this.tiers.map((tier) => ({
+                ...tier,
+                packs: this.filteredPacks
+                    .filter((pack) => pack.tier === tier.id)
+                    .sort((a, b) => a.name.localeCompare(b.name)),
+            })).filter((tier) => tier.packs.length > 0);
+        },
         filteredPacks() {
             if (!this.searchQuery) return this.packs;
             return this.packs.filter((pack) =>
