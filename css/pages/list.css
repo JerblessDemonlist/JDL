@@ -5,6 +5,17 @@
 }
 .page-list .list-container {
     padding-inline: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.page-list .list-container .search-container,
+.page-list .list-container .filter-panel {
+    position: sticky;
+    top: 0;
+    background-color: var(--color-background);
+    z-index: 10;
+    padding-top: 2rem;
+    margin-top: -2rem;
 }
 .page-list .search-bar {
     width: 100%;
