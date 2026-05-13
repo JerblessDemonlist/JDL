@@ -142,5 +142,59 @@
         "type": "auto",
         "category": "packs",
         "tier": 5
+    },
+    {
+        "id": "list_rank_100",
+        "name": "List Climber I",
+        "description": "Complete a level in the top 100 of the list.",
+        "image": "/assets/achievements/list/list_rank_100.png",
+        "type": "auto",
+        "category": "list_rank",
+        "tier": 1
+    },
+    {
+        "id": "list_rank_50",
+        "name": "List Climber II",
+        "description": "Complete a level in the top 50 of the list.",
+        "image": "/assets/achievements/list/list_rank_50.png",
+        "type": "auto",
+        "category": "list_rank",
+        "tier": 2
+    },
+    {
+        "id": "list_rank_25",
+        "name": "List Climber III",
+        "description": "Complete a level in the top 25 of the list.",
+        "image": "/assets/achievements/list/list_rank_25.png",
+        "type": "auto",
+        "category": "list_rank",
+        "tier": 3
+    },
+    {
+        "id": "list_rank_10",
+        "name": "List Climber IV",
+        "description": "Complete a level in the top 10 of the list.",
+        "image": "/assets/achievements/list/list_rank_10.png",
+        "type": "auto",
+        "category": "list_rank",
+        "tier": 4
+    },
+    {
+        "id": "list_rank_5",
+        "name": "List Climber V",
+        "description": "Complete a level in the top 5 of the list.",
+        "image": "/assets/achievements/list/list_rank_5.png",
+        "type": "auto",
+        "category": "list_rank",
+        "tier": 5
+    },
+    {
+        "id": "list_rank_1",
+        "name": "List Climber VI",
+        "description": "Complete the #1 level on the list.",
+        "image": "/assets/achievements/list/list_rank_1.png",
+        "type": "auto",
+        "category": "list_rank",
+        "tier": 6
     }
 ]
