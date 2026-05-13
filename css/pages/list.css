@@ -6,8 +6,7 @@
 .page-list .list-container {
     padding-inline: 1rem;
 }
-.page-list .list-container .search-container,
-.page-list .list-container .filter-panel {
+.page-list .list-container .list-sticky {
     position: sticky;
     top: 0;
     background-color: var(--color-background);
