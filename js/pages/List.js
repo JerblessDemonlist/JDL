@@ -30,7 +30,7 @@ export default {
                 placeholder="Search levels..."
                 class="search-bar"
             />
-            <button v-if="searchQuery" class="search-clear" @click="searchQuery = ''">✕</button>
+            <button v-if="searchQuery" class="search-clear" @click="clearSearch()">✕</button>
         </div>
         <div class="filter-panel">
             <button class="filter-toggle" @click="filterOpen = !filterOpen">
@@ -331,9 +331,17 @@ filteredList() {
         }
 
         this.loading = false;
-    },
     methods: {
         embed,
         score,
+        clearSearch() {
+            this.searchQuery = '';
+            this.$nextTick(() => {
+                const activeButton = document.querySelector('.page-list .list .level.active button');
+                if (activeButton) {
+                    activeButton.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            });
+        },
     },
 };
