@@ -122,14 +122,16 @@ export default {
         </main>
         <main v-else class="page-list">
             <div class="list-container">
-                <div class="search-container">
-                    <input
-                        type="text"
-                        v-model="searchQuery"
-                        placeholder="Search packs..."
-                        class="search-bar"
-                    />
-                    <button v-if="searchQuery" class="search-clear" @click="searchQuery = ''">✕</button>
+                <div class="list-sticky">
+                    <div class="search-container">
+                        <input
+                            type="text"
+                            v-model="searchQuery"
+                            placeholder="Search packs..."
+                            class="search-bar"
+                        />
+                        <button v-if="searchQuery" class="search-clear" @click="searchQuery = ''">✕</button>
+                    </div>
                 </div>
                 <div v-for="tier in packsGroupedByTier" :key="tier.id">
                 <span class="tier-heading" :style="{ borderColor: tier.color, backgroundColor: tier.color + '33', color: tier.color }">{{ tier.name }}</span>
