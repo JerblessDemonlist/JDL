@@ -5,6 +5,7 @@
 }
 .page-list .list-container {
     padding-top: 0;
+    padding-inline: 1rem;
 }
 .page-list .list-container .list-sticky {
     position: sticky;
@@ -14,6 +15,8 @@
     padding-top: 2rem;
     padding-bottom: 0.5rem;
     margin-top: -2rem;
+    margin-inline: -1rem;
+    padding-inline: 1rem;
 }
 .page-list .list-container .list-sticky::after {
     content: '';
