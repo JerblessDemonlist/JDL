@@ -21,12 +21,16 @@
 .page-list .list-container .list-sticky::after {
     content: '';
     position: absolute;
-    bottom: -1.5rem;
+    bottom: -2rem;
     left: 0;
     right: 0;
-    height: 1.5rem;
+    height: 2rem;
     background: linear-gradient(to bottom, var(--color-background), transparent);
     pointer-events: none;
+}
+.page-list .list-container .list-sticky + table,
+.page-list .list-container .list-sticky + div {
+    margin-top: 2rem;
 }
 .page-list .search-bar {
     width: 100%;
