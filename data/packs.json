@@ -204,9 +204,16 @@
   },
   {
     "id": "Old",
-    "name": "Oldest Completions Pack",
-    "description": "The 5 oldest completions on the JDL.",
+    "name": "OG Pack (Beanie)",
+    "description": "The 5 oldest completions on the JDL (From Beanie).",
     "levels": [10288836, 814678, 21952243, 25241513, 20761188],
+    "tier": "copper"
+  },
+  {
+    "id": "Oldnobean",
+    "name": "OG Pack",
+    "description": "The 5 oldest completions on the JDL.",
+    "levels": [61079355, 814678, 62214792, 45239692, 10565740],
     "tier": "copper"
   },
   {
