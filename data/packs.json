@@ -208,5 +208,33 @@
     "description": "The 5 oldest completions on the JDL.",
     "levels": [10288836, 814678, 21952243, 25241513, 20761188],
     "tier": "copper"
+  },
+  {
+    "id": "2.01",
+    "name": "2.0 Pack I",
+    "description": "Classic 2.0 levels.",
+    "levels": [24301797, 18697406, 25449475],
+    "tier": "copper"
+  },
+  {
+    "id": "2.02",
+    "name": "2.0 Pack II",
+    "description": "More classic 2.0 levels.",
+    "levels": [30194711, 16023141, 35448603],
+    "tier": "silver"
+  },
+  {
+    "id": "2.03",
+    "name": "2.0 Pack III",
+    "description": "Even more classic 2.0 levels.",
+    "levels": [27580467, 38235367, 27122654],
+    "tier": "gold"
+  },
+  {
+    "id": "2.04",
+    "name": "2.0 Pack IV",
+    "description": "Even even more classic 2.0 levels.",
+    "levels": [31462941, 28220417, 54953085],
+    "tier": "platinum"
   }
 ]
