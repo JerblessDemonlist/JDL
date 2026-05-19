@@ -148,7 +148,7 @@
   },
   {
     "id": "RGB",
-    "name": "RGB Trilogy",
+    "name": "The RGB",
     "description": "The RGB Trilogy.",
     "levels": [31462941, 28220417, 26681070],
     "tier": "platinum"
@@ -201,5 +201,14 @@
     "description": "Unique levels that Jerbless members beat as their first extreme.",
     "levels": [25241513, 55184818, 35579890],
     "tier": "silver"
+  },
+  {
+    "id": "Old",
+    "name": "Oldest Completions Pack",
+    "description": "The 5 oldest completions on the JDL.",
+    "levels": [10288836, 814678, 21952243, 25241513, 20761188],
+    "tier": "copper"
   }
+]
+
 ]
