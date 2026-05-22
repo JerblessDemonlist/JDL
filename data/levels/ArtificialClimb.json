@@ -6,7 +6,7 @@
     "verifier": "Beanie",
     "verification": "https://www.youtube.com/watch?v=fABOLn_Qib8",
     "percentToQualify": 75,
-    "tags": "Gimmicky, Overall",
+    "tags": ["Gimmicky", "Overall"],
     "length": "1:05",
     "records": [
     ]
