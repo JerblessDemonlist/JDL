@@ -6,7 +6,7 @@
     "verifier": "Beanie",
     "verification": "https://www.youtube.com/watch?v=gEtDv_2y7hY",
     "percentToQualify": 73,
-    "tags": "Overall, Fast-Paced, Chokepoints",
+    "tags": ["Overall", "Fast-Paced", "Chokepoints"],
     "length": "2:49",
     "records": [
     ]
