@@ -243,5 +243,19 @@
     "description": "Even even more classic 2.0 levels.",
     "levels": [31462941, 28220417, 54953085],
     "tier": "platinum"
+  },
+  {
+    "id": "Memory1",
+    "name": "Memory Pack I",
+    "description": "Levels with memory based gameplay",
+    "levels": [76196489, 77396433, 109637861, 60284098],
+    "tier": "copper"
+  },
+  {
+    "id": "Memory2",
+    "name": "Memory Pack II",
+    "description": "More levels with memory based gameplay",
+    "levels": [16023141, 15265393, 23579781, 38754426],
+    "tier": "gold"
   }
 ]
