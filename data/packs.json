@@ -257,5 +257,13 @@
     "description": "More levels with memory based gameplay",
     "levels": [16023141, 15265393, 23579781, 38754426],
     "tier": "gold"
-  }
+  },
+  {
+    "id": "TeamN2",
+    "name": "TeamN2 Pack",
+    "description": "Levels by TeamN2",
+    "levels": [27908448, 16023141, 15265393],
+    "tier": "silver"
+  },
+    
 ]
