@@ -247,22 +247,36 @@
   {
     "id": "Memory1",
     "name": "Memory Pack I",
-    "description": "Levels with memory based gameplay",
+    "description": "Levels with memory based gameplay.",
     "levels": [76196489, 77396433, 109637861, 60284098],
     "tier": "copper"
   },
   {
     "id": "Memory2",
     "name": "Memory Pack II",
-    "description": "More levels with memory based gameplay",
+    "description": "More levels with memory based gameplay.",
     "levels": [16023141, 15265393, 23579781, 38754426],
     "tier": "gold"
   },
   {
     "id": "TeamN2",
     "name": "TeamN2 Pack",
-    "description": "Levels by TeamN2",
+    "description": "Levels by TeamN2.",
     "levels": [27908448, 16023141, 15265393],
     "tier": "silver"
-  }  
+  },
+  {
+    "id": "Artificial",
+    "name": "Artificial Pack",
+    "description": "Levels starting with Artificial.",
+    "levels": [87033090, 38550757, 27908448, 27122654],
+    "tier": "silver"
+  },
+  {
+    "id": "Riot",
+    "name": "Riot Pack",
+    "description": "Levels uploaded/hosted by Riot.",
+    "levels": [20077821, 10565740, 38235367, 59075347],
+    "tier": "diamond"
+  }
 ]
