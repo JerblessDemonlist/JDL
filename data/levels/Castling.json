@@ -6,7 +6,7 @@
     "verifier": "Beanie",
     "verification": "https://www.youtube.com/watch?v=gohiTN7VKpQ",
     "percentToQualify": 68,
-    "tags": "Fast-Paced, Overall",
+    "tags": ["Fast-Paced", "Overall"],
     "length": "1:17",
     "records": [
     ]
