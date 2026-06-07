@@ -5,7 +5,14 @@
     "creators": ["Kaza"],
     "verifier": "Overconfident",
     "verification": "https://www.youtube.com/watch?v=3NrEgUYFc78",
+    "tags": ["Ship", "Wave", "Overall", "Learny", "Fast-Paced", "High CPS"],
+    "length": "1:05",
     "percentToQualify": 60,
     "records": [
+        {
+            "user": "zovori",
+            "link": "https://www.youtube.com/watch?v=0kAOXv1BLpM",
+            "percent": 100
+        }
     ]
 }
