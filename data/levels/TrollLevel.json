@@ -5,11 +5,12 @@
     "creators": ["Lexycat", "lena", "Glitchy"],
     "verifier": "Xtinct",
     "verification": "https://www.youtube.com/watch?v=5gENx-dGSIk",
+    "": ["Timings", "Chokepoints", "Memory"]
     "percentToQualify": 65,
     "records": [
         {
             "user": "Overconfident",
-            "link": "https://www.youtube.com/watch?v=BVBZl1d5e7s",
+            "link": "https://www.youtube.com/watch?v=V8OnLsDz43M",
             "percent": 100
         }
     ]
