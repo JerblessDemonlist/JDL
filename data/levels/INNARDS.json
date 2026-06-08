@@ -5,11 +5,13 @@
     "creators": ["Kaito"],
     "verifier": "Bluutemp",
     "verification": "https://www.youtube.com/watch?v=r2BI-N6rcas",
+    "tags": ["Wave", "Duals", "Timings", "Chokepoints", "Bossfight"],
+    "length": "1:25",
     "percentToQualify": 66,
     "records": [
         {
             "user": "Overconfident",
-            "link": "https://youtu.be/bZ8utJrJll8?si=KRnA46pcZvr8hsKX",
+            "link": "https://www.youtube.com/watch?v=D5I-RwSe4V8",
             "percent": 100
         },
         {
