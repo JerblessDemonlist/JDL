@@ -5,7 +5,8 @@
     "creators": ["Lexycat", "lena", "Glitchy"],
     "verifier": "Xtinct",
     "verification": "https://www.youtube.com/watch?v=5gENx-dGSIk",
-    "": ["Timings", "Chokepoints", "Memory"]
+    "tags": ["Timings", "Chokepoints", "Memory"],
+    "length": "1:14",
     "percentToQualify": 65,
     "records": [
         {
