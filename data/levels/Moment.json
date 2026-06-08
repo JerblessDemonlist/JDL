@@ -5,6 +5,8 @@
     "creators": ["Lexycat", "Icedcave"],
     "verifier": "LuckyNS",
     "verification": "https://www.youtube.com/watch?v=-BsYEuJQqVY",
+    "tags": ["Ship", "Wave", "Fast-Paced", "Chokepoints",],
+    "length": "1:02",
     "enjoyment": "62.50 [!]",
     "percentToQualify": 74,
     "records": [
@@ -23,6 +25,7 @@
         },
         {            
             "user": "Overconfident",
+            "link": "https://www.youtube.com/watch?v=SnJielCUI7I",
             "percent": 100
         }
     ]
