@@ -184,8 +184,8 @@
   {
     "id": "Solar",
     "name": "Solar System Pack",
-    "description": "Levels that are named after celestial bodies in our solar system.",
-    "levels": [88943354, 80177488, 19759411],
+    "description": "Levels that are named after celestial bodies or features in our solar system.",
+    "levels": [88943354, 80177488, 19759411, 125025200],
     "tier": "silver"
   },
   {
@@ -277,6 +277,20 @@
     "name": "Riot Pack",
     "description": "Levels uploaded/hosted by Riot.",
     "levels": [20077821, 10565740, 38235367, 59075347],
+    "tier": "diamond"
+  },
+  {
+    "id": "Jump",
+    "name": "Jump Pack",
+    "description": "Levels that Jerbless members have jumped to.",
+    "levels": [71025973, 57600307, 79997992, 94156085, 94156085],
+    "tier": "diamond"
+  },
+  {
+    "id": "Halo",
+    "name": "Halo Pack",
+    "description": "Levels that have names relating to Halo in some way.",
+    "levels": [60130895, 69333212, 59075347],
     "tier": "diamond"
   }
 ]
