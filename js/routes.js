@@ -5,7 +5,8 @@ import JerblessList from './pages/JerblessList.js';
 import Packs from './pages/Packs.js';
 
 export default [
-    { path: '/', component: List },
+    { path: '/', component: Home },
+    { path: '/list', component: List },
     { path: '/leaderboard', component: Leaderboard },
     { path: '/roulette', component: Roulette },
     { path: '/jerbless', component: JerblessList },
