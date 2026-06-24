@@ -313,6 +313,14 @@ filteredList() {
             this.packs = packs;
             this.tiers = tiers;
 
+        const levelId = this.$route?.params?.id;
+        if (levelId) {
+            const index = this.list.findIndex(([level]) => level && level.id === Number(levelId));
+            if (index !== -1) {
+                this.selected = index;
+            }
+        }
+
         if (!this.list) {
             this.errors = [
                 "Failed to load list. Retry in a few minutes or notify list staff.",
