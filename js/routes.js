@@ -7,6 +7,7 @@ import Packs from './pages/Packs.js';
 export default [
     { path: '/', component: Home },
     { path: '/list', component: List },
+    { path: '/list/:id', component: List },
     { path: '/leaderboard', component: Leaderboard },
     { path: '/roulette', component: Roulette },
     { path: '/jerbless', component: JerblessList },
