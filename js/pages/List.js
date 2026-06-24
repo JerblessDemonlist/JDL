@@ -66,7 +66,7 @@ export default {
                             <p v-else class="type-label-lg">Legacy</p>
                         </td>
                         <td class="level" :class="{ 'active': selected == list.indexOf(filteredList[i]), 'error': !level }">
-                            <button @click="selected = list.indexOf(filteredList[i])">
+                            <button @click="selectLevel(list.indexOf(filteredList[i]))">
                                 <span class="type-label-lg">{{ level?.name || \`Error (\${err}.json)\` }}</span>
                             </button>
                         </td>
@@ -335,10 +335,17 @@ filteredList() {
     methods: {
         embed,
         score,
+        selectLevel(index) {
+            this.selected = index;
+            const level = this.list[index]?.[0];
+            if (level) {
+                this.$router.replace(`/list/${level.id}`);
+            }
+        },
         clearSearch() {
             this.searchQuery = '';
             this.$nextTick(() => {
-                const activeButton = document.querySelector('.page-list .list .level.active button');
+            const activeButton = document.querySelector('.page-list .list .level.active button');
                 if (activeButton) {
                     activeButton.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }
