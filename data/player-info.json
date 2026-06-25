@@ -29,6 +29,7 @@
     },
         "Xtinct": {
         "youtube": "https://www.youtube.com/@Xtinctlol",
+        "twitch": "https://www.twitch.tv/xtinctgd",
         "country": "US",
         "state": "South Carolina",
         "description": "The one who started Jerbless, and pretty much brought everyone together. We wouldn't be here without him, the blind piggy cyclops."
@@ -37,10 +38,39 @@
         "youtube": "https://www.youtube.com/@TylRo7",
         "country": "US",
         "state": "New York",
-        "description": "N/A"
+        "description": "4 foot 11 ankle biter."
     },
         "Risp": {
         "youtube": "https://www.youtube.com/@RispGD",
+        "country": "US",
+        "description": "N/A"
+    },
+        "SilverSanctuary": {
+        "youtube": "https://www.youtube.com/@SilverSanctuary",
+        "country": "US",
+        "state": "Arizona",
+        "description": "N/A"
+    },
+        "Overconfident": {
+        "youtube": "https://www.youtube.com/@OverconfidentGD",
+        "twitch": "https://www.twitch.tv/overconfidentgd",
+        "country": "US",
+        "state": "Nebraska",
+        "description": "N/A"
+    },
+        "Zovori": {
+        "youtube": "https://www.youtube.com/@Zovori",
+        "country": "AU",
+        "state": "South Australia",
+        "description": "Owner of this list! I make almost every change to the JDL with some help from Hivehead, Mathgenius and AI (I'll learn how to code eventually I'm sorry)"
+    },
+        "MathGenius": {
+        "youtube": "https://www.youtube.com/@MathGeniusGD",
+        "country": "US",
+        "description": "Proffesional Un-uploader."
+    },        
+        "Hivehead": {
+        "youtube": "https://www.youtube.com/@hiveheadgd",
         "country": "US",
         "description": "N/A"
     }
