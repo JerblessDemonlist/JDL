@@ -276,3 +276,33 @@ export async function fetchPlayerAchievements() {
         return {};
     }
 }
+
+export async function fetchPlayerInfo() {
+    try {
+        const res = await fetch('/data/player-info.json');
+        return await res.json();
+    } catch {
+        console.error("Failed to load player info.");
+        return {};
+    }
+}
+
+export async function fetchRecentChanges() {
+    try {
+        const res = await fetch('/data/recent-changes.json');
+        return await res.json();
+    } catch {
+        console.error("Failed to load recent changes.");
+        return [];
+    }
+}
+
+export async function fetchInProgress() {
+    try {
+        const res = await fetch('/data/in-progress.json');
+        return await res.json();
+    } catch {
+        console.error("Failed to load in-progress levels.");
+        return [];
+    }
+}
