@@ -1,10 +1,33 @@
+import { fetchEditors, fetchLeaderboard, fetchPlayerInfo, fetchRecentChanges, fetchInProgress, fetchIcons } from '../content.js';
+import { localize } from '../util.js';
+import Spinner from '../components/Spinner.js';
+
+const roleIconMap = {
+    owner: "crown",
+    admin: "user-gear",
+    helper: "user-shield",
+    dev: "code",
+    trial: "user-lock",
+};
+
 export default {
+    components: { Spinner },
+    data: () => ({
+        loading: true,
+        editors: [],
+        leaderboard: [],
+        playerInfo: {},
+        recentChanges: [],
+        inProgress: [],
+        icons: {},
+        roleIconMap,
+    }),
     template: `
-        <main class="page-home">
-            <div class="home-content">
-                <h1>Welcome to the Jerbless Demonlist</h1>
-                <p>This page is currently under construction. Check out the List, Leaderboard, or Packs pages in the meantime!</p>
-            </div>
+        <main v-if="loading">
+            <Spinner></Spinner>
+        </main>
+        <main v-else class="page-home">
+            <p>Placeholder - more sections coming</p>
         </main>
     `,
 };
