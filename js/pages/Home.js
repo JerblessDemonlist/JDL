@@ -22,7 +22,7 @@ export default {
         icons: {},
         roleIconMap,
     }),
-    template: `
+template: `
         <main v-if="loading">
             <Spinner></Spinner>
         </main>
@@ -30,4 +30,23 @@ export default {
             <p>Placeholder - more sections coming</p>
         </main>
     `,
+    async mounted() {
+        const [editors, [leaderboard], playerInfo, recentChanges, inProgress, icons] = await Promise.all([
+            fetchEditors(),
+            fetchLeaderboard(),
+            fetchPlayerInfo(),
+            fetchRecentChanges(),
+            fetchInProgress(),
+            fetchIcons(),
+        ]);
+
+        this.editors = editors || [];
+        this.leaderboard = leaderboard;
+        this.playerInfo = playerInfo;
+        this.recentChanges = recentChanges;
+        this.inProgress = inProgress;
+        this.icons = icons;
+
+        this.loading = false;
+    },
 };
