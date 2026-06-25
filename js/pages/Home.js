@@ -27,8 +27,23 @@ template: `
             <Spinner></Spinner>
         </main>
         <main v-else class="page-home">
-            <p>Placeholder - more sections coming</p>
-        </main>
+    <div class="home-section">
+        <h2>General Information</h2>
+        <p>
+            Welcome to the Jerbless Demonlist! This list includes every extreme demon beaten by Jerbless members.
+        </p>
+    </div>
+    <div class="home-section">
+        <h2>List Editors</h2>
+        <div class="home-editors">
+            <div v-for="editor in editors" :key="editor.name" class="home-editor">
+                <img :src="\`/assets/\${roleIconMap[editor.role]}.svg\`" :alt="editor.role">
+                <a v-if="editor.link" class="type-label-lg link" target="_blank" :href="editor.link">{{ editor.name }}</a>
+                <p v-else>{{ editor.name }}</p>
+            </div>
+        </div>
+    </div>
+</main>
     `,
     async mounted() {
         const [editors, [leaderboard], playerInfo, recentChanges, inProgress, icons] = await Promise.all([
