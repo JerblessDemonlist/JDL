@@ -292,5 +292,40 @@
     "description": "Levels that have names relating to Halo in some way.",
     "levels": [60130895, 69333212, 59075347],
     "tier": "diamond"
+  },
+  {
+    "id": "Ant",
+    "name": "The Ant Pack",
+    "description": "Levels that are associated to Ant in Jerbless.",
+    "levels": [idk something, 71025973, 27690100],
+    "tier": "diamond"
+  },
+  {
+    "id": "top1i",
+    "name": "Top 1 Pack I",
+    "description": "Levels that were once top 1.",
+    "levels": [814678, 3979721, 10565740],
+    "tier": "copper"
+  },
+  {
+    "id": "top1ii",
+    "name": "Top 1 Pack II",
+    "description": "Levels that were once top 1.",
+    "levels": [26133601, 27122654, 37398911],
+    "tier": "gold"
+  },
+  {
+    "id": "top1iii",
+    "name": "Top 1 Pack III",
+    "description": "Levels that were once top 1.",
+    "levels": [26681070, 37456092, 37398911],
+    "tier": "gold"
+  },
+  {
+    "id": "top1iv",
+    "name": "Top 1 Pack IV",
+    "description": "Levels that were once top 1.",
+    "levels": [42584142, 52374843, 27690100],
+    "tier": "diamond"
   }
 ]
