@@ -1,7 +1,7 @@
 [
   {
     "id": "APT",
-    "name": "Apocalyptic Trilogy",
+    "name": "The Apocalyptic Trilogy",
     "description": "The Apocalyptic Trilogy.",
     "levels": [3979721, 10565740, 25610878],
     "tier": "copper"
@@ -12,13 +12,6 @@
     "description": "A collection of challenging levels created by KrmaL.",
     "levels": [24301797, 20321297, 17711004],
     "tier": "copper"
-  },
-  {
-    "id": "Krmal2",
-    "name": "KrmaL Pack II",
-    "description": "More challenging levels from KrmaL's selection.",
-    "levels": [34057654, 60603962, 58825144],
-    "tier": "gold"
   },
   {
     "id": "Lazerblitz",
@@ -234,14 +227,14 @@
     "id": "2.03",
     "name": "2.0 Pack III",
     "description": "Even more classic 2.0 levels.",
-    "levels": [27580467, 38235367, 27122654],
+    "levels": [27580467, 34057654, 26133601],
     "tier": "gold"
   },
   {
     "id": "2.04",
     "name": "2.0 Pack IV",
     "description": "Even even more classic 2.0 levels.",
-    "levels": [31462941, 28220417, 54953085],
+    "levels": [27122654, 28220417, 54953085],
     "tier": "platinum"
   },
   {
@@ -304,28 +297,14 @@
     "id": "top1i",
     "name": "Top 1 Pack I",
     "description": "Levels that were once top 1.",
-    "levels": [814678, 3979721, 10565740],
-    "tier": "copper"
+    "levels": [26133601, 27122654, 10565740],
+    "tier": "gold"
   },
   {
     "id": "top1ii",
     "name": "Top 1 Pack II",
     "description": "Levels that were once top 1.",
-    "levels": [26133601, 27122654, 37398911],
-    "tier": "gold"
-  },
-  {
-    "id": "top1iii",
-    "name": "Top 1 Pack III",
-    "description": "Levels that were once top 1.",
-    "levels": [26681070, 37456092, 37398911],
-    "tier": "platinum"
-  },
-  {
-    "id": "top1iv",
-    "name": "Top 1 Pack IV",
-    "description": "Levels that were once top 1.",
-    "levels": [42584142, 52374843, 27690100],
+    "levels": [42584142, 26681070, 27690100],
     "tier": "diamond"
   }
 ]
