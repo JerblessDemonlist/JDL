@@ -5,6 +5,8 @@
     "creators": ["Noobas"],
     "verifier": "Ant_Gam3r",
     "verification": "https://www.youtube.com/watch?v=JiBZ8BF3g8k",
+    "tags": ["Wave", "Ship", "Fast-Paced", "Chokepoints"],
+    "length": "0:51",
     "percentToQualify": 74,
     "records": [
         {
@@ -26,7 +28,7 @@
             "percent": 100
         },
         {
-            "user": "Tylr",
+            "user": "TylRo7",
             "link": "https://medal.tv/games/geometry-dash/clips/mxtFfyKuNJ_ZVTKot?invite=cr-MSx5azEsNTA1MzgzNTMw",
             "percent": 100
         }
