@@ -5,6 +5,8 @@
     "creators": ["VelYT"],
     "verifier": "Xtinct",
     "verification": "https://www.youtube.com/watch?v=YIspDSEu11I",
+    "tags": ["Ship", "Chokepoints", "Timings", "Remake"],
+    "length": "1:04",
     "percentToQualify": 75,
     "records": [
         {
@@ -21,7 +23,7 @@
             "percent": 100
         },
         {
-            "user": "Tylr",
+            "user": "TylRo7",
             "percent": 100
         },
         {
