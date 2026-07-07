@@ -26,8 +26,9 @@ template: `
         <main v-if="loading">
             <Spinner></Spinner>
         </main>
-        <main v-else class="main.page-home">
-    <div class="home-section">
+            <main v-else class="page-home">
+                <div class="home-content">
+            <div class="home-section">
         <h2>General Information</h2>
         <p>
             Welcome to the Jerbless Demonlist! This list includes every extreme demon (Any level harder than Red World) beaten by Jerbless members.
@@ -103,6 +104,7 @@ template: `
                         <span class="type-label-lg">{{ level.player }}</span>
                     </div>
                     <p>{{ level.note }}</p>
+                    </div>
                 </div>
             </div>
         </div>
