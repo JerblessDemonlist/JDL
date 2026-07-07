@@ -85,7 +85,28 @@ template: `
             </div>
         </div>
     </div>
-</main>
+        <div class="home-section" v-if="recentChanges.length > 0">
+            <h2>Recent Changes</h2>
+            <div class="home-changes">
+                <div v-for="change in recentChanges" :key="change.date" class="home-change">
+                    <span class="home-change-date">{{ change.date }}</span>
+                    <p>{{ change.description }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="home-section" v-if="inProgress.length > 0">
+            <h2>Levels In Progress</h2>
+            <div class="home-progress">
+                <div v-for="level in inProgress" :key="level.levelName" class="home-progress-item">
+                    <div class="home-progress-header">
+                        <h3>{{ level.levelName }}</h3>
+                        <span class="type-label-lg">{{ level.player }}</span>
+                    </div>
+                    <p>{{ level.note }}</p>
+                </div>
+            </div>
+        </div>
+    </main>
     `,
     async mounted() {
         const [editors, [leaderboard], playerInfo, recentChanges, inProgress, icons] = await Promise.all([
