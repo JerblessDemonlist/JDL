@@ -36,10 +36,12 @@
     </head>
     <body id="app">
         <header :class="{ dark: store.dark }">
-            <div class="logo">
-                <h2>JDL</h2>
-                <p>v1.6.5</p>
-            </div>
+                <div class="logo">
+                    <a href="#/" style="text-decoration: none; color: inherit; display: flex; align-items: flex-end; gap: 1rem;">
+                        <h2>JDL</h2>
+                        <p>v1.6.5</p>
+                    </a>
+                </div>
             <nav class="nav">
                 <router-link class="nav__tab" to="/list">
                     <span class="type-label-lg">List</span>
