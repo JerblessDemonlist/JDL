@@ -1,22 +1,15 @@
 main.page-home {
+    padding: 3rem;
+    box-sizing: border-box;
+}
+
+.page-home .home-content {
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    padding: 3rem;
     max-width: 80rem;
-    width: 100%;
-    box-sizing: border-box;
     margin: 0 auto;
-    overflow-y: auto;
-    height: 100%;
 }
-
-.page-home .home-section {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
 .page-home .home-editors {
     display: flex;
     flex-wrap: wrap;
