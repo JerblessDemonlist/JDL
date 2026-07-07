@@ -77,6 +77,11 @@ main {
     grid-template-rows: minmax(0, 1fr);
     column-gap: 2rem;
 }
+
+main.page-home {
+    display: block;
+    overflow-y: auto;
+}
 main > div {
     overflow-y: auto;
 }
