@@ -26,7 +26,7 @@ template: `
         <main v-if="loading">
             <Spinner></Spinner>
         </main>
-        <main v-else class="page-home">
+        <main v-else class="main.page-home">
     <div class="home-section">
         <h2>General Information</h2>
         <p>
