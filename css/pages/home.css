@@ -1,12 +1,14 @@
-.page-home {
+main.page-home {
     display: flex;
     flex-direction: column;
     gap: 3rem;
     padding: 3rem;
     max-width: 80rem;
+    width: 100%;
+    box-sizing: border-box;
     margin: 0 auto;
     overflow-y: auto;
-    grid-column: 1 / -1;
+    height: 100%;
 }
 
 .page-home .home-section {
