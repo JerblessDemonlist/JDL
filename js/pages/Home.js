@@ -105,7 +105,9 @@ template: `
         this.icons = icons;
 
         this.loading = false;
-        
+
+    },
+    
     methods: {
         localize,
     },
