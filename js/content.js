@@ -94,7 +94,11 @@ export async function fetchLeaderboard() {
             return;
         }
 
-        // Verification
+       // Verification
+        if (!level.verifier) {
+            console.error(`Level "${level.name}" is missing a verifier field.`);
+            return;
+        }
         const verifier = Object.keys(scoreMap).find(
             (u) => u.toLowerCase() === level.verifier.toLowerCase(),
         ) || level.verifier;
