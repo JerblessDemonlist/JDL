@@ -39,10 +39,10 @@ main.page-home {
 }
 
 .page-home .home-editors {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
     gap: 0.75rem;
-    justify-content: flex-end;
+    justify-content: end;
 }
 
 .page-home .home-editor {
