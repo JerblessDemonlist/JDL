@@ -31,7 +31,7 @@ template: `
             <div class="home-hero">
                 <div class="home-hero-left">
                     <div class="home-logo">
-                        <img src="/jerblesslist_icon.png" alt="JDL Logo">
+                        <img src="./jerblesslist_icon.png" alt="JDL Logo">
                     </div>
                 </div>
                 <div class="home-hero-right">
