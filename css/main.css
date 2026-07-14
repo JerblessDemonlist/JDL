@@ -80,6 +80,7 @@ main {
 
 main.page-home {
     display: block !important;
+    grid-template-columns: none !important;
     overflow-y: auto;
 }
 
