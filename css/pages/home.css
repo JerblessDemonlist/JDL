@@ -26,10 +26,9 @@ main.page-home {
     border-bottom: 1px solid var(--color-background-hover);
 }
 
-.page-home .home-logo {
-    font-size: 5rem;
-    line-height: 1;
-    margin: 0;
+.page-home .home-logo img {
+    height: 8rem;
+    width: auto;
 }
 
 .page-home .home-hero-right {
@@ -100,8 +99,8 @@ main.page-home {
 }
 
 .page-home .home-player-icon {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     object-fit: contain;
 }
 
@@ -227,4 +226,8 @@ main.page-home {
     display: flex;
     align-items: center;
     gap: 1rem;
+}
+
+.page-home .home-player-name-row h3 {
+    font-size: 1.5rem;
 }
