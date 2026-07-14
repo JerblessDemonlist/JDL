@@ -229,5 +229,5 @@ main.page-home {
 }
 
 .page-home .home-player-name-row h3 {
-    font-size: 1.5rem;
+    font-size: 2rem !important;
 }
