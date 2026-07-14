@@ -38,6 +38,9 @@ header,
 main {
     background-color: var(--color-background);
     color: var(--color-on-background);
+}
+
+main:not(.page-home) {
     display: grid;
     grid-template-columns: minmax(16rem, 1fr) minmax(40rem, 3fr) minmax(
             16rem,
