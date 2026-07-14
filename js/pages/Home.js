@@ -30,7 +30,9 @@ template: `
         <div class="home-content">
             <div class="home-hero">
                 <div class="home-hero-left">
-                    <h1 class="home-logo">JDL</h1>
+                    <div class="home-logo">
+                        <img src="/jerblesslist_icon.png" alt="JDL Logo">
+                    </div>
                 </div>
                 <div class="home-hero-right">
                     <div class="home-editors">
