@@ -9,7 +9,16 @@ main.page-home {
     gap: 3rem;
     max-width: 80rem;
     margin: 0 auto;
+    width: 100%;
 }
+
+.page-home .home-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-top: 1rem;
+}
+
 .page-home .home-editors {
     display: flex;
     flex-wrap: wrap;
