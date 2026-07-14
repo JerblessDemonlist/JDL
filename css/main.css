@@ -81,6 +81,7 @@ main {
 main.page-home {
     display: block !important;
     grid-template-columns: none !important;
+    column-gap: 0 !important;
     overflow-y: auto;
 }
 
