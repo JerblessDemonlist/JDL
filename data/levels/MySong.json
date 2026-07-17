@@ -5,7 +5,14 @@
     "creators": ["lGenoxide"],
     "verifier": "Xtinct",
     "verification": "https://www.youtube.com/watch?v=bhyTeqeeyFc",
+    "length": "0:50",
+    "tags": ["Wave", "Overall", "Fast-Paced"],
     "percentToQualify": 71,
     "records": [
+        {
+            "user": "Zovori",
+            "link": "https://medal.tv/games/geometry-dash/clips/n8edRAe6RD78EcucN?invite=cr-MSxIWEEsMzExNDU4MDA5",
+            "percent": 100
+        }
     ]
 }
