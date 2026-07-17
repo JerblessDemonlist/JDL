@@ -306,5 +306,26 @@
     "description": "Levels that were once top 1.",
     "levels": [42584142, 26681070, 27690100],
     "tier": "diamond"
+  },
+  {
+    "id": "202512DOC",
+    "name": "2025 12DOC",
+    "description": "Levels that were done as part of the Jerbless 12 Demons of Christmas 2025.",
+    "levels": [123853954, 54953085, 58306889, 23262780, 127135884, 112412828, 69010770],
+    "tier": "diamond"
+  },
+  {
+    "id": "Nerfd",
+    "name": "Supernerfed Pack",
+    "description": "Levels that were heavily nerfed from their original state.",
+    "levels": [20761188, 54588072, 35448603, 28220417, 52374843],
+    "tier": "diamond"
+  },
+  {
+    "id": "anime",
+    "name": "Anime Pack",
+    "description": "Levels that use songs that are used in anime.",
+    "levels": [87425029, 77396433, 83431859],
+    "tier": "copper"
   }
 ]
