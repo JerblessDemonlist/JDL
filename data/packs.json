@@ -52,7 +52,7 @@
     "id": "UED",
     "name": "Unrated Demon Pack",
     "description": "The unrated levels on the list.",
-    "levels": [122055301, 124834378, 117939687, 78421544],
+    "levels": [122055301, 124834378, 117939687, 78421544, 145210597],
     "tier": "silver"
   },
   {
@@ -157,7 +157,7 @@
     "id": "Tylr",
     "name": "Tylr-Sized Pack",
     "description": "The 5 shortest levels on the list.",
-    "levels": [82172844, 80966089, 84507862, 88203501, 138356396],
+    "levels": [82172844, 80966089, 84507862, 145210597, 138356396],
     "tier": "diamond"
   },
   {
