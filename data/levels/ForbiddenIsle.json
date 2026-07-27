@@ -6,7 +6,7 @@
     "verifier": "Beanie",
     "verification": "hhttps://www.youtube.com/watch?v=VWgLrIm1GLI",
     "percentToQualify": 75,
-    "tags": "Timings, Learny, Ship",
+    "tags": ["Timings", "Learny", "Ship"],
     "length": "1:11",
     "records": [
         {
