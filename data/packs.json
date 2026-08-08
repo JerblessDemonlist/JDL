@@ -119,13 +119,6 @@
     "tier": "gold"
   },
   {
-    "id": "Default3",
-    "name": "Default Songs Pack III",
-    "description": "Even more levels using default songs.",
-    "levels": [85383554, 33498127, 59075347],
-    "tier": "diamond"
-  },
-  {
     "id": "Cog",
     "name": "Cognition & Co",
     "description": "Levels using the cognition style",
@@ -150,7 +143,7 @@
     "id": "Boss",
     "name": "Bossfight Pack",
     "description": "Levels that feature Bossfights",
-    "levels": [60603962, 56703691, 23579781],
+    "levels": [146066774, 56703691, 23579781],
     "tier": "platinum"
   },
   {
