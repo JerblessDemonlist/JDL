@@ -3,16 +3,11 @@
     "name": "Phobos",
     "author": "KrmaL",
     "creators": ["A lot of people"],
-    "verifier": "Vernosis",
-    "verification": "https://www.youtube.com/watch?v=OSzQLh8DbZk",
+    "verifier": "Beanie",
+    "verification": "https://youtu.be/WAVH6bA3EEY",
     "tags": ["Overall", "Timings", "Chokepoints", "2.0"],
     "length": "2:13",
     "percentToQualify": 62,
     "records": [
-        {
-            "user": "Beanie",
-            "link": "https://youtu.be/WAVH6bA3EEY",
-            "percent": 100
-        }
     ]
 }
