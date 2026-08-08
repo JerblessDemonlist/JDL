@@ -3,14 +3,9 @@
     "name": "Idols",
     "author": "Zafkeil7",
     "creators": ["A lot of people"],
-    "verifier": "Vernosis",
-    "verification": "https://www.youtube.com/watch?v=EsKfImKvaFc",
+    "verifier": "Beanie",
+    "verification": "https://www.youtube.com/watch?v=3LF7g6rdSyI",
     "percentToQualify": 69,
     "records": [
-        {
-            "user": "Beanie",
-            "link": "https://www.youtube.com/watch?v=3LF7g6rdSyI",
-            "percent": 100
-        }
     ]
 }
