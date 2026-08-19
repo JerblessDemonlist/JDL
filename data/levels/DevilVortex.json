@@ -5,7 +5,13 @@
     "creators": ["Rustam"],
     "verifier": "Beanie",
     "verification": "https://www.youtube.com/watch?v=ZvvTZwSiq_g",
+    "tags": ["Wave", "High CPS", "Chokepoints"],
     "percentToQualify": 60,
     "records": [
+        {
+            "user": "SilverSanctuary",
+            "link": "https://www.youtube.com/watch?v=GQBb4cmT56Q",
+            "percent": 67
+        }
     ]
 }
