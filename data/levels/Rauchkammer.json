@@ -8,7 +8,21 @@
     "percentToQualify": 67,
     "tags": ["Ship", "Wave", "2.2 Ship Physics"],
     "length": "0:41",
-    "description": "Incredibly short easy extreme with an impossible wave ending",
+    "description": "Incredibly short easy extreme with an impossible wave ending. Currently the easiest level on the AREDL",
     "records": [
+        {
+            "user": "Ant_Gam3r",
+            "link": "https://youtu.be/GU3z5AFLQC0",
+            "percent": 100
+        },
+        {
+            "user": "Bluutemp",
+            "percent": 100
+        },
+        {
+            "user": "Beanie",
+            "link": "https://youtu.be/omJ8iaSh3GY",
+            "percent": 100
+        }
     ]
 }
