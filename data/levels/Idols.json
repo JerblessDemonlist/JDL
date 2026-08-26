@@ -3,9 +3,16 @@
     "name": "Idols",
     "author": "Zafkeil7",
     "creators": ["A lot of people"],
-    "verifier": "Beanie",
-    "verification": "https://www.youtube.com/watch?v=3LF7g6rdSyI",
+    "verifier": "Vernosis",
+    "verification": "https://www.youtube.com/watch?v=EsKfImKvaFc",
+    "tags": ["Long", "Nerve Control", "Fast-Paced", "Learny"],
+    "length": "3:51",
     "percentToQualify": 69,
     "records": [
+        {
+            "user": "Beanie",
+            "link": "https://www.youtube.com/watch?v=3LF7g6rdSyI",
+            "percent": 100
+        }
     ]
 }
