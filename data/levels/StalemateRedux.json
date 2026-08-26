@@ -3,9 +3,16 @@
     "name": "Stalemate Redux",
     "author": "TehTactiq",
     "creators": ["TehTactiq", "TheFrozenTide"],
-    "verifier": "Beanie",
-    "verification": "https://www.youtube.com/watch?v=fYJKZ_UABek",
+    "verifier": "Vernosis",
+    "verification": "https://www.youtube.com/watch?v=t9XP1lhMrPo",
+    "length": "1:22",
+    "tags": ["UFO", "Wave", "High CPS", "Timings"],
     "percentToQualify": 55,
     "records": [
+        {
+            "user": "Beanie",
+            "link": "https://www.youtube.com/watch?v=fYJKZ_UABek",
+            "percent": 100
+        },
     ]
 }
