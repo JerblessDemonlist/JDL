@@ -10,6 +10,11 @@
     "percentToQualify": 70,
     "records": [
         {
+            "user": "Vernosis",
+            "link": "https://www.youtube.com/watch?v=NsDP4-PsfQU",
+            "percent": 100
+        },
+        {
             "user": "Ant_Gam3r",
             "link": "https://www.youtube.com/watch?v=cdtCKPtLglM",
             "percent": 100
