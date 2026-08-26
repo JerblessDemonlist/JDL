@@ -3,9 +3,16 @@
     "name": "The Ultimate Phase",
     "author": "Andromeda",
     "creators": ["Andromeda", "More..."],
-    "verifier": "Beanie",
-    "verification": "https://www.youtube.com/watch?v=XAcnjkL1Bvs",
+    "verifier": "Vernosis",
+    "verification": "https://www.youtube.com/watch?v=kUTC700-5UA",
+    "length": "1:39",
+    "tags": ["Ship", "Timings", "Nerve Control", "Chokepoints"],
     "percentToQualify": 72,
     "records": [
+        {
+            "user": "Beanie",
+            "link": "https://www.youtube.com/watch?v=XAcnjkL1Bvs",
+            "percent": 100
+        }
     ]
 }
