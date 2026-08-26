@@ -5,6 +5,8 @@
     "creators": ["Roadbose"],
     "verifier": "MathGenius",
     "verification": "https://www.youtube.com/watch?v=7kFRLhDgN-c",
+    "tags": ["1.6", "Overall", "Timings", "Chokepoints", "Nerve Control"],
+    "length": "1:27",
     "percentToQualify": 64,
     "records": [
         {
@@ -14,6 +16,10 @@
         {
             "user": "Beanie",
             "link": "https://www.youtube.com/watch?v=u0JlINFyhAo",
+            "percent": 100
+        },
+        {
+            "user": "Vernosis",
             "percent": 100
         },
         {
