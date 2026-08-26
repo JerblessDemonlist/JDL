@@ -313,12 +313,5 @@
     "description": "Levels that were heavily nerfed from their original state.",
     "levels": [20761188, 54588072, 35448603, 28220417, 52374843],
     "tier": "diamond"
-  },
-  {
-    "id": "anime",
-    "name": "Anime Pack",
-    "description": "Levels that use songs that are used in anime.",
-    "levels": [87425029, 77396433, 83431859],
-    "tier": "copper"
   }
 ]
