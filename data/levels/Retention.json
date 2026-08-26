@@ -3,9 +3,17 @@
     "name": "Retention",
     "author": "WOOGI1411",
     "creators": ["WOOGI1411"],
-    "verifier": "Beanie",
-    "verification": "https://www.youtube.com/watch?v=hf7fZEqLVyI",
+    "verifier": "Vernosis",
+    "verification": "https://www.youtube.com/watch?v=3VUfd7jRt5U",
+    "tags": ["Duals", "Learny", "Timings"],
+    "length": "1:31",
+    "description": "One of the most iconic 2.0 levels. Very dual heavy and learny, usually quite enjoyed",
     "percentToQualify": 66,
     "records": [
+        {
+            "user": "Beanie",
+            "link": "https://www.youtube.com/watch?v=hf7fZEqLVyI",
+            "percent": 100
+        }
     ]
 }
