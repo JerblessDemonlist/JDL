@@ -3,11 +3,16 @@
     "name": "Auditory Breaker",
     "author": "Lazerblitz",
     "creators": ["Lazerblitz", "Manix648", "Cyclic"],
-    "verifier": "Beanie",
-    "verification": "https://www.youtube.com/watch?v=wG5_E1sv6A0",
+    "verifier": "Vernosis",
+    "verification": "https://www.youtube.com/watch?v=ZcQ5NrKmpT0",
     "percentToQualify": 66,
     "tags": ["NC", "Wave", "Fast-Paced", "Remake"],
     "length": "2:02",
     "records": [
+        {
+            "user": "Beanie",
+            "link": "https://www.youtube.com/watch?v=wG5_E1sv6A0",
+            "percent": 100
+        }
     ]
 }
