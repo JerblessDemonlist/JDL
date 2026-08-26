@@ -1,6 +1,6 @@
 {
     "id": 83431859,
-    "name": "My Song",
+    "name": "My Song (Unnerfed)",
     "author": "lGenoxide",
     "creators": ["lGenoxide"],
     "verifier": "Xtinct",
@@ -9,10 +9,5 @@
     "tags": ["Wave", "Overall", "Fast-Paced"],
     "percentToQualify": 71,
     "records": [
-        {
-            "user": "Zovori",
-            "link": "https://medal.tv/games/geometry-dash/clips/n8edRAe6RD78EcucN?invite=cr-MSxIWEEsMzExNDU4MDA5",
-            "percent": 100
-        }
     ]
 }
