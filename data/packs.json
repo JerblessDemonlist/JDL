@@ -37,15 +37,8 @@
   {
     "id": "IDP",
     "name": "Insane Demon Pack I",
-    "description": "The easiest insane demons on the list.",
-    "levels": [10288836, 814678, 21952243],
-    "tier": "copper"
-  },
-  {
-    "id": "IDPII",
-    "name": "Insane Demon Pack II",
-    "description": "The harder insane demons on the list.",
-    "levels": [79428382, 77396433, 83431859],
+    "description": "Insane demons on the list.",
+    "levels": [10288836, 814678, 21952243, 79428382, 77396433],
     "tier": "copper"
   },
   {
