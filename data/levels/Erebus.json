@@ -9,5 +9,10 @@
     "length": "1:10",
     "percentToQualify": 62,
     "records": [
+        {
+            "user": "Risp",
+            "link": "",
+            "percent": 74
+        }
     ]
 }
