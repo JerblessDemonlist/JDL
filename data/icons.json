@@ -29,6 +29,16 @@
         "spider": "/assets/icons/Bluutemp/spider.png",
         "swing": "/assets/icons/Bluutemp/swing.png"
     },
+    "Grish": {
+        "cube": "/assets/icons/Grish/cube.png",
+        "ship": "/assets/icons/Grish/ship.png",
+        "ball": "/assets/icons/Grish/ball.png",
+        "ufo": "/assets/icons/Grish/ufo.png",
+        "wave": "/assets/icons/Grish/wave.png",
+        "robot": "/assets/icons/Grish/robot.png",
+        "spider": "/assets/icons/Grish/spider.png",
+        "swing": "/assets/icons/Grish/swing.png"
+    },
     "Hivehead": {
         "cube": "/assets/icons/Hivehead/cube.png",
         "ship": "/assets/icons/Hivehead/ship.png",
