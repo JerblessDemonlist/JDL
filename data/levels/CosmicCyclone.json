@@ -10,5 +10,9 @@
     "description": "The official sequel to Sonic Wave.",
     "percentToQualify": 57,
     "records": [
+    {
+        "user": "Beanie",
+        "percent": 88
+    }
     ]
 }
