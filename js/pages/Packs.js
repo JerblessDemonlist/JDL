@@ -13,18 +13,23 @@ export default {
         levels: [],
         packs: [],
         tiers: [],
+        unverifiedLevels: [],
+        unverifiedPacks: [],
         selectedPack: null,
         selectedLevel: null,
         packCompleters: {},
         loading: true,
         searchQuery: '',
+        activeTab: 'regular',
     }),
 
-    async mounted() {
-        const [list, packs, [leaderboard]] = await Promise.all([
+        const [list, packs, [leaderboard], tiers, unverifiedLevels, unverifiedPacks] = await Promise.all([
             fetchList(),
             fetchPacks(),
             fetchLeaderboard(),
+            fetchTiers(),
+            fetchUnverifiedLevels(),
+            fetchUnverifiedPacks(),
         ]);
         const tiers = await fetchTiers();
 
@@ -35,6 +40,8 @@ export default {
         this.levels = levels;
         this.packs = packs;
         this.tiers = tiers;
+        this.unverifiedLevels = unverifiedLevels;
+        this.unverifiedPacks = unverifiedPacks;
 
         // Build pack completers map
         const completers = {};
@@ -72,7 +79,8 @@ export default {
 
         resolveLevels(levelIds) {
             // Keep the order from the pack
-            return levelIds.map(id => this.levels.find(level => level.id === id)).filter(Boolean);
+            const allLevels = [...this.levels, ...this.unverifiedLevels];
+            return levelIds.map(id => allLevels.find(level => level.id === id)).filter(Boolean);
         },
 
         selectLevel(level) {
@@ -87,6 +95,18 @@ export default {
                 packs: this.filteredPacks
                     .filter((pack) => pack.tier === tier.id)
                     .sort((a, b) => a.name.localeCompare(b.name)),
+            })).filter((tier) => tier.packs.length > 0);
+        },
+        filteredUnverifiedPacks() {
+            if (!this.searchQuery) return this.unverifiedPacks;
+            return this.unverifiedPacks.filter((pack) =>
+                pack.name.toLowerCase().includes(this.searchQuery.toLowerCase())
+            );
+        },
+        unverifiedPacksGroupedByTier() {
+            return this.tiers.map((tier) => ({
+                ...tier,
+                packs: this.filteredUnverifiedPacks.filter((pack) => pack.tier === tier.id),
             })).filter((tier) => tier.packs.length > 0);
         },
         filteredPacks() {
@@ -126,16 +146,47 @@ export default {
             <div class="list-container">
                 <div class="list-sticky">
                     <div class="search-container">
-                        <input
-                            type="text"
-                            v-model="searchQuery"
-                            placeholder="Search packs..."
-                            class="search-bar"
-                        />
-                        <button v-if="searchQuery" class="search-clear" @click="searchQuery = ''">✕</button>
-                    </div>
+                    <input
+                        type="text"
+                        v-model="searchQuery"
+                        placeholder="Search packs..."
+                        class="search-bar"
+                    />
+                    <button v-if="searchQuery" class="search-clear" @click="searchQuery = ''">✕</button>
                 </div>
+                <div class="pack-tabs">
+                    <button :class="{ active: activeTab === 'regular' }" @click="activeTab = 'regular'">JDL Packs</button>
+                    <button :class="{ active: activeTab === 'unverified' }" @click="activeTab = 'unverified'">Unverified Packs</button>
+                </div>
+            </div>
+            <template v-if="activeTab === 'regular'">
                 <div v-for="tier in packsGroupedByTier" :key="tier.id">
+                    <span class="tier-heading" :style="{ borderColor: tier.color, backgroundColor: tier.color + '33', color: tier.color }">{{ tier.name }}</span>
+                    <table class="list">
+                        <tr v-for="pack in tier.packs" :key="pack.id">
+                            <td class="level" :class="{ 'active': selectedPack && selectedPack.id === pack.id }">
+                                <button @click="selectPack(pack)">
+                                    <span class="type-label-lg">{{ pack.name }}</span>
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </template>
+            <template v-else>
+                <div v-for="tier in unverifiedPacksGroupedByTier" :key="tier.id">
+                    <span class="tier-heading" :style="{ borderColor: tier.color, backgroundColor: tier.color + '33', color: tier.color }">{{ tier.name }}</span>
+                    <table class="list">
+                        <tr v-for="pack in tier.packs" :key="pack.id">
+                            <td class="level" :class="{ 'active': selectedPack && selectedPack.id === pack.id }">
+                                <button @click="selectPack(pack)">
+                                    <span class="type-label-lg">{{ pack.name }}</span>
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </template>
                 <span class="tier-heading" :style="{ borderColor: tier.color, backgroundColor: tier.color + '33', color: tier.color }">{{ tier.name }}</span>
                 <table class="list">
                     <tr v-for="pack in tier.packs" :key="pack.id">
