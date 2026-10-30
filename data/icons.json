@@ -100,14 +100,14 @@
         "swing": "/assets/icons/SilverSanctuary/swing.png"
     },
     "TylRo7": {
-        "cube": "/assets/icons/Tylr/cube.png",
-        "ship": "/assets/icons/Tylr/ship.png",
-        "ball": "/assets/icons/Tylr/ball.png",
-        "ufo": "/assets/icons/Tylr/ufo.png",
-        "wave": "/assets/icons/Tylr/wave.png",
-        "robot": "/assets/icons/Tylr/robot.png",
-        "spider": "/assets/icons/Tylr/spider.png",
-        "swing": "/assets/icons/Tylr/swing.png"
+        "cube": "/assets/icons/TylRo7/cube.png",
+        "ship": "/assets/icons/TylRo7/ship.png",
+        "ball": "/assets/icons/TylRo7/ball.png",
+        "ufo": "/assets/icons/TylRo7/ufo.png",
+        "wave": "/assets/icons/TylRo7/wave.png",
+        "robot": "/assets/icons/TylRo7/robot.png",
+        "spider": "/assets/icons/TylRo7/spider.png",
+        "swing": "/assets/icons/TylRo7/swing.png"
     },
     "Vernosis": {
         "cube": "/assets/icons/Vernosis/cube.png",
