@@ -1,0 +1,9 @@
+[
+    {
+        "id": "example_unverified",
+        "name": "Example Unverified Pack",
+        "description": "An example unverified pack.",
+        "levels": [12345678, 87654321],
+        "tier": "copper"
+    }
+]
