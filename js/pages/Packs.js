@@ -1,5 +1,5 @@
 import { store } from '../main.js';
-import { fetchList, fetchPacks, fetchLeaderboard, fetchTiers } from '../content.js';
+import { fetchList, fetchPacks, fetchLeaderboard, fetchTiers, fetchUnverifiedLevels, fetchUnverifiedPacks } from '../content.js';
 import { embed } from '../util.js';
 import { score, round } from '../score.js';
 import Spinner from '../components/Spinner.js';
