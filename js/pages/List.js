@@ -160,7 +160,7 @@ export default {
                     </template>
                     <h2>Information</h2>
                     <p>
-                        This is the demonlist for the members of Jerbless, this displays the hardest levels beaten by Jerbless members. Currently trying to figure out how to add packs lol
+                        This is the demonlist for the members of Jerbless, this displays the hardest levels beaten by Jerbless members. Disclaimer: The majority of updates to the original template on this site were vibe-coded.
                     </p>
                     <h3>Enjoyments</h3>
                     <p>
