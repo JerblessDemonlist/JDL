@@ -310,3 +310,38 @@ export async function fetchInProgress() {
         return [];
     }
 }
+
+export async function fetchUnverifiedLevels() {
+    try {
+        const listResult = await fetch(`${dir}/_unverified.json`);
+        const list = await listResult.json();
+        return await Promise.all(
+            list.map(async (path) => {
+                const levelResult = await fetch(`${dir}/levels/${path}.json`);
+                try {
+                    const level = await levelResult.json();
+                    return {
+                        ...level,
+                        path,
+                    };
+                } catch {
+                    console.error(`Failed to load unverified level ${path}.`);
+                    return null;
+                }
+            })
+        ).then(levels => levels.filter(Boolean));
+    } catch {
+        console.error('Failed to load unverified levels.');
+        return [];
+    }
+}
+
+export async function fetchUnverifiedPacks() {
+    try {
+        const res = await fetch('/data/unverified-packs.json');
+        return await res.json();
+    } catch {
+        console.error('Failed to load unverified packs.');
+        return [];
+    }
+}
