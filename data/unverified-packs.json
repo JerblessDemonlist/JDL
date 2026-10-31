@@ -1,9 +1,30 @@
 [
     {
-        "id": "example_unverified",
-        "name": "Example Unverified Pack",
-        "description": "An example unverified pack.",
-        "levels": [12345678, 87654321],
-        "tier": "copper"
+        "id": "NewRGB",
+        "name": "New RGB",
+        "description": "The new RGB.",
+        "levels": [59075347, 60978746, 69685815],
+        "tier": "Diamond"
+    },
+    {
+        "id": "Ending",
+        "name": "Ending Carried Pack",
+        "description": "Levels with endings commonly known as the hardest part.",
+        "levels": [88611404, 69333212, 54953085],
+        "tier": "Diamond"
+    },
+    {
+        "id": "Clanker",
+        "name": "Clanker Pack",
+        "description": "Levels only using the robot gamemode.",
+        "levels": [114530859, 130183035, 79997992, 122938934],
+        "tier": "Diamond"
+    },
+    {
+        "id": "SingleGamemode",
+        "name": "Single Gamemode Pack",
+        "description": "Levels only using a single gamemode.",
+        "levels": [107725613, 112351854, 79997992, 125025200],
+        "tier": "Diamond"
     }
 ]
