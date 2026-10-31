@@ -6,7 +6,7 @@
     "verifier": "Zovori",
     "verification": "https://www.youtube.com/watch?v=LfkwRUZA09s",
     "percentToQualify": 68,
-    "tags": "Ship, Wave, Timings, Chokepoints, Learny, 2.2",
+    "tags": ["Ship", "Wave", "Timings", "Chokepoints", "Learny", "2.2"],
     "length": "1:09",
     "records": [
         {
