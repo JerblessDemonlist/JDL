@@ -306,5 +306,47 @@
     "description": "Levels that were heavily nerfed from their original state.",
     "levels": [20761188, 54588072, 35448603, 28220417, 52374843],
     "tier": "diamond"
+  },
+  {
+    "id": "Slow1",
+    "name": "Slow Pack I",
+    "description": "Levels that are slower paced.",
+    "levels": [58306889, 27580467, 62551239, 48008831],
+    "tier": "gold"
+  },
+  {
+    "id": "Slow2",
+    "name": "Slow Pack II",
+    "description": "Harder levels that are slower paced.",
+    "levels": [57571983, 79997992, 95675702, 58825144],
+    "tier": "platinum"
+  },
+  {
+    "id": ":3",
+    "name": ":3 Pack",
+    "description": ":3",
+    "levels": [76196489, 147758609, 127135884, 118366680],
+    "tier": "silver"
+  },
+  {
+    "id": "SERIOUS",
+    "name": "Super Serious Pack",
+    "description": "No fun allowed",
+    "levels": [27580467, 84507862, 57571983, 88203501],
+    "tier": "diamond"
+  },
+  {
+    "id": "Wavechallenge",
+    "name": "Wave Challenge Pack",
+    "description": "Levels that have ridiculously difficult waves compared to other sections.",
+    "levels": [95675702, 81721025, 88203501],
+    "tier": "diamond"
+  },
+  {
+    "id": "sakupen",
+    "name": "Sakupen Pack",
+    "description": "Levels that are based on Sakupen Hell",
+    "levels": [125034264, 139286842, 23262780],
+    "tier": "gold"
   }
 ]
