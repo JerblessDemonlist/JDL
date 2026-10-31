@@ -23,6 +23,7 @@ export default {
         activeTab: 'regular',
     }),
 
+    async mounted() {
         const [list, packs, [leaderboard], tiers, unverifiedLevels, unverifiedPacks] = await Promise.all([
             fetchList(),
             fetchPacks(),
@@ -31,7 +32,6 @@ export default {
             fetchUnverifiedLevels(),
             fetchUnverifiedPacks(),
         ]);
-        const tiers = await fetchTiers();
 
         const levels = list
             .filter(([level]) => level !== null)
@@ -78,7 +78,6 @@ export default {
         },
 
         resolveLevels(levelIds) {
-            // Keep the order from the pack
             const allLevels = [...this.levels, ...this.unverifiedLevels];
             return levelIds.map(id => allLevels.find(level => level.id === id)).filter(Boolean);
         },
@@ -88,7 +87,7 @@ export default {
         },
     },
 
-   computed: {
+    computed: {
         packsGroupedByTier() {
             return this.tiers.map((tier) => ({
                 ...tier,
@@ -113,8 +112,8 @@ export default {
             if (!this.searchQuery) return this.packs;
             return this.packs.filter((pack) =>
                 pack.name.toLowerCase().includes(this.searchQuery.toLowerCase())
-        );
-    },
+            );
+        },
         packLevels() {
             if (!this.selectedPack) return [];
             return this.resolveLevels(this.selectedPack.levels);
@@ -132,9 +131,9 @@ export default {
         packScore() {
             if (!this.selectedPack) return 0;
             return this.packLevels.reduce((total, level) => {
-            const rank = this.levels.indexOf(level) + 1;
-            return total + score(rank, this.levels.length, 100, level.percentToQualify);
-          }, 0) / 2;
+                const rank = this.levels.indexOf(level) + 1;
+                return total + score(rank, this.levels.length, 100, level.percentToQualify);
+            }, 0) / 2;
         },
     },
 
@@ -146,58 +145,47 @@ export default {
             <div class="list-container">
                 <div class="list-sticky">
                     <div class="search-container">
-                    <input
-                        type="text"
-                        v-model="searchQuery"
-                        placeholder="Search packs..."
-                        class="search-bar"
-                    />
-                    <button v-if="searchQuery" class="search-clear" @click="searchQuery = ''">✕</button>
+                        <input
+                            type="text"
+                            v-model="searchQuery"
+                            placeholder="Search packs..."
+                            class="search-bar"
+                        />
+                        <button v-if="searchQuery" class="search-clear" @click="searchQuery = ''">✕</button>
+                    </div>
+                    <div class="pack-tabs">
+                        <button :class="{ active: activeTab === 'regular' }" @click="activeTab = 'regular'">JDL Packs</button>
+                        <button :class="{ active: activeTab === 'unverified' }" @click="activeTab = 'unverified'">Unverified Packs</button>
+                    </div>
                 </div>
-                <div class="pack-tabs">
-                    <button :class="{ active: activeTab === 'regular' }" @click="activeTab = 'regular'">JDL Packs</button>
-                    <button :class="{ active: activeTab === 'unverified' }" @click="activeTab = 'unverified'">Unverified Packs</button>
-                </div>
-            </div>
-            <template v-if="activeTab === 'regular'">
-                <div v-for="tier in packsGroupedByTier" :key="tier.id">
-                    <span class="tier-heading" :style="{ borderColor: tier.color, backgroundColor: tier.color + '33', color: tier.color }">{{ tier.name }}</span>
-                    <table class="list">
-                        <tr v-for="pack in tier.packs" :key="pack.id">
-                            <td class="level" :class="{ 'active': selectedPack && selectedPack.id === pack.id }">
-                                <button @click="selectPack(pack)">
-                                    <span class="type-label-lg">{{ pack.name }}</span>
-                                </button>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </template>
-            <template v-else>
-                <div v-for="tier in unverifiedPacksGroupedByTier" :key="tier.id">
-                    <span class="tier-heading" :style="{ borderColor: tier.color, backgroundColor: tier.color + '33', color: tier.color }">{{ tier.name }}</span>
-                    <table class="list">
-                        <tr v-for="pack in tier.packs" :key="pack.id">
-                            <td class="level" :class="{ 'active': selectedPack && selectedPack.id === pack.id }">
-                                <button @click="selectPack(pack)">
-                                    <span class="type-label-lg">{{ pack.name }}</span>
-                                </button>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </template>
-                <span class="tier-heading" :style="{ borderColor: tier.color, backgroundColor: tier.color + '33', color: tier.color }">{{ tier.name }}</span>
-                <table class="list">
-                    <tr v-for="pack in tier.packs" :key="pack.id">
-                        <td class="level" :class="{ 'active': selectedPack && selectedPack.id === pack.id }">
-                                <button @click="selectPack(pack)">
-                                    <span class="type-label-lg">{{ pack.name }}</span>
-                                </button>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
+                <template v-if="activeTab === 'regular'">
+                    <div v-for="tier in packsGroupedByTier" :key="tier.id">
+                        <span class="tier-heading" :style="{ borderColor: tier.color, backgroundColor: tier.color + '33', color: tier.color }">{{ tier.name }}</span>
+                        <table class="list">
+                            <tr v-for="pack in tier.packs" :key="pack.id">
+                                <td class="level" :class="{ 'active': selectedPack && selectedPack.id === pack.id }">
+                                    <button @click="selectPack(pack)">
+                                        <span class="type-label-lg">{{ pack.name }}</span>
+                                    </button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </template>
+                <template v-else>
+                    <div v-for="tier in unverifiedPacksGroupedByTier" :key="tier.id">
+                        <span class="tier-heading" :style="{ borderColor: tier.color, backgroundColor: tier.color + '33', color: tier.color }">{{ tier.name }}</span>
+                        <table class="list">
+                            <tr v-for="pack in tier.packs" :key="pack.id">
+                                <td class="level" :class="{ 'active': selectedPack && selectedPack.id === pack.id }">
+                                    <button @click="selectPack(pack)">
+                                        <span class="type-label-lg">{{ pack.name }}</span>
+                                    </button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </template>
             </div>
             <div class="level-container">
                 <div class="level" v-if="selectedLevel">
@@ -244,10 +232,10 @@ export default {
             <div class="meta-container">
                 <div class="meta">
                     <div v-if="selectedPack">
-                        <h2 class="type-title-lg" style="margin-bottom: 1rem;" >{{ selectedPack.name }}</h2>
+                        <h2 class="type-title-lg" style="margin-bottom: 1rem;">{{ selectedPack.name }}</h2>
                         <p>{{ selectedPack.description }}</p>
                         <br>
-                        <p class="type-title-sm">Pack Points: +{{ round(packScore) }}</p>
+                        <p class="type-title-sm" v-if="activeTab === 'regular'">Pack Points: +{{ round(packScore) }}</p>
                         <br>
                         <h3 class="type-title-md" style="margin-bottom: 1rem;">Levels</h3>
                         <table class="list">
@@ -260,15 +248,17 @@ export default {
                             </tr>
                         </table>
                         <br>
-                        <h3 class="type-title-md" style="margin-bottom: 1rem;" v-if="packCompletersForSelected.length > 0">Pack Victors ({{ packCompletersForSelected.length }})</h3>
-                        <table v-if="packCompletersForSelected.length > 0" class="list" style="border-collapse: separate; border-spacing: 0 0.75rem;">
-                            <tr v-for="completer in packCompletersForSelected" :key="completer.user">
-                                <td class="level" >
-                                    <span class="type-label-lg">{{ completer.user }}</span>
-                                </td>
-                            </tr>
-                        </table>
-                        <p v-else style="color: var(--gray);">No one has completed this pack yet.</p>
+                        <template v-if="activeTab === 'regular'">
+                            <h3 class="type-title-md" style="margin-bottom: 1rem;" v-if="packCompletersForSelected.length > 0">Pack Victors ({{ packCompletersForSelected.length }})</h3>
+                            <table v-if="packCompletersForSelected.length > 0" class="list" style="border-collapse: separate; border-spacing: 0 0.75rem;">
+                                <tr v-for="completer in packCompletersForSelected" :key="completer.user">
+                                    <td class="level">
+                                        <span class="type-label-lg">{{ completer.user }}</span>
+                                    </td>
+                                </tr>
+                            </table>
+                            <p v-else style="color: var(--gray);">No one has completed this pack yet.</p>
+                        </template>
                     </div>
                 </div>
             </div>
