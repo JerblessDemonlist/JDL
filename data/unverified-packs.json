@@ -26,5 +26,12 @@
         "description": "Levels only using a single gamemode.",
         "levels": [107725613, 112351854, 79997992, 125025200],
         "tier": "diamond"
+    },
+    {
+        "id": "Nulut",
+        "name": "Nulut Pack",
+        "description": "Levels only songs originally by Nulut (to my knowledge).",
+        "levels": [127148097, 78421544, 77255632, 46763581, 75286957],
+        "tier": "diamond"
     }
 ]
