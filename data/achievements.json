@@ -91,8 +91,8 @@
     },
     {
         "id": "levels_6",
-        "name": "Counquerer",
-        "description": "Complete 200 levels on the list.",
+        "name": "Completionist",
+        "description": "Complete every level on the list.",
         "image": "/assets/achievements/levels/levels_6.png",
         "type": "auto",
         "category": "levels",
