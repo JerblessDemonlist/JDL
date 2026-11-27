@@ -1,4 +1,4 @@
-import { fetchLeaderboard, fetchIcons, fetchAchievements, fetchPlayerAchievements } from '../content.js';
+import { fetchLeaderboard, fetchIcons, fetchAchievements, fetchPlayerAchievements, fetchList } from '../content.js';
 import { localize } from '../util.js';
 
 import Spinner from '../components/Spinner.js';
@@ -144,18 +144,23 @@ computed: {
 
         // Levels achievements - highest tier only
         const levelsTiers = [
-            { id: 'levels_1', threshold: 5 },
-            { id: 'levels_2', threshold: 10 },
-            { id: 'levels_3', threshold: 25 },
-            { id: 'levels_4', threshold: 50 },
-            { id: 'levels_5', threshold: 100 },
-            { id: 'levels_6', threshold: 200 },
-        ];
-        const highestLevels = [...levelsTiers].reverse().find(t => levelsCompleted >= t.threshold);
-        if (highestLevels) {
-            const achievement = this.achievements.find(a => a.id === highestLevels.id);
-            if (achievement) earned.push({ ...achievement, unlockedOn: 'Auto' });
-        }
+        { id: 'levels_1', threshold: 5 },
+        { id: 'levels_2', threshold: 10 },
+        { id: 'levels_3', threshold: 25 },
+        { id: 'levels_4', threshold: 50 },
+        { id: 'levels_5', threshold: 100 },
+    ];
+    const completedRanks = new Set(
+        [...this.entry.verified, ...this.entry.completed].map(l => l.rank)
+    );
+    const completedEveryLevel = this.totalLevels > 0 && completedRanks.size >= this.totalLevels;
+    const highestLevels = completedEveryLevel
+        ? { id: 'levels_6' }
+        : [...levelsTiers].reverse().find(t => levelsCompleted >= t.threshold);
+            if (highestLevels) {
+                const achievement = this.achievements.find(a => a.id === highestLevels.id);
+                if (achievement) earned.push({ ...achievement, unlockedOn: 'Auto' });
+            }
 
         // Packs achievements - highest tier only
         const packsTiers = [
@@ -201,12 +206,14 @@ computed: {
     },
 },
 async mounted() {
-    const [[leaderboard, err], icons, achievements, playerAchievements] = await Promise.all([
+    const [[leaderboard, err], icons, achievements, playerAchievements, list] = await Promise.all([
         fetchLeaderboard(),
         fetchIcons(),
         fetchAchievements(),
         fetchPlayerAchievements(),
+        fetchList(),
     ]);
+    this.totalLevels = list ? list.filter(([level]) => level).length : 0;
     this.leaderboard = leaderboard;
     this.err = err;
     this.icons = icons;
